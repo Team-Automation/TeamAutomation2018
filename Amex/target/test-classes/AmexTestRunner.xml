@@ -4,9 +4,9 @@
 <suite name="Amex FinanceAndBanking" parallel="false">
 
 
-    <parameter name= "OS" value="Windows 10"/>
-    <parameter name="browser" value="firefox"/>
-    <parameter name="browserVersion" value="64.0"/>
+    <parameter name= "OS" value="Windows"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="browserVersion" value="71.0.3578.98"/>
    <parameter name="url" value="https://www.americanexpress.com/"/>
 
 

@@ -3,6 +3,7 @@ package base;
 import org.apache.log4j.Level;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -33,36 +34,74 @@ public class CommonApi {
         //run on local
         logger.setLevel(Level.INFO);
         logger.info("Test is running on local env");
-        getLocalDriver(OS, browser, browserVersion);
+        getLocalDriver(OS,browser);
 
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
     }
 
-    //driver to run on local
-    public WebDriver getLocalDriver(String OS, String browser, String browserVersion) {
-        if (browser.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\geckodriver.exe");
-            driver = new FirefoxDriver();
-        } else if (browser.equalsIgnoreCase("chrome")) {
-            if (OS.equalsIgnoreCase("mac")) {
+
+    public WebDriver getLocalDriver(String OS, String browser){
+        if(browser.equalsIgnoreCase("Chrome")){
+
+            if(OS.equalsIgnoreCase("OS X")){
                 System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
-                driver = new ChromeDriver();
-            } else if (OS.equalsIgnoreCase("windows")) {
+            }else if(OS.equalsIgnoreCase("Windows")){
                 System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
-                driver = new ChromeDriver();
             }
-        } else if (browser.equalsIgnoreCase("ie")) {
-            System.setProperty("webdriver.ie.driver", "Generic\\selenium-browser-driver\\IEDriverServer.exe");
             driver = new ChromeDriver();
-            driver = new InternetExplorerDriver();
-        } else if (browser.equalsIgnoreCase("safari")) {
-            driver = new SafariDriver();
+        } else if(browser.equalsIgnoreCase("Chrome-options")){
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-notifications");
+            if(OS.equalsIgnoreCase("OS X")){
+                System.setProperty("webdriver.chrome.driver", "../Generic/selenium-browser-driver/chromedriver");
+            }else if(OS.equalsIgnoreCase("Windows")){
+                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
+            }
+         // driver = new ChromeDriver(options);
         }
 
+        else if(browser.equalsIgnoreCase("firefox")){
+            if(OS.equalsIgnoreCase("OS X")){
+                System.setProperty("webdriver.gecko.driver", "../Generic/selenium-browser-driver/geckodriver");
+            }else if(OS.equalsIgnoreCase("Windows")) {
+                System.setProperty("webdriver.gecko.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\geckodriver.exe");
+            }
+            FirefoxDriver driver = new FirefoxDriver();
+
+        } else if(browser.equalsIgnoreCase("ie")) {
+            System.setProperty("webdriver.ie.driver", "../Generic/selenium-browser-driver/IEDriverServer.exe");
+            driver = new InternetExplorerDriver();
+        }
         return driver;
+
     }
+
+
+//    //driver to run on local
+//    public WebDriver getLocalDriver(String OS, String browser, String browserVersion) {
+//        if (browser.equalsIgnoreCase("firefox")) {
+//            System.setProperty("webdriver.gecko.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\geckodriver.exe");
+//            driver = new FirefoxDriver();
+//        } else if (browser.equalsIgnoreCase("chrome")) {
+//            if (OS.equalsIgnoreCase("mac")) {
+//                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
+//                driver = new ChromeDriver();
+//            } else if (OS.equalsIgnoreCase("windows")) {
+//                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
+//                driver = new ChromeDriver();
+//            }
+//        } else if (browser.equalsIgnoreCase("ie")) {
+//            System.setProperty("webdriver.ie.driver", "Generic\\selenium-browser-driver\\IEDriverServer.exe");
+//            driver = new ChromeDriver();
+//            driver = new InternetExplorerDriver();
+//        } else if (browser.equalsIgnoreCase("safari")) {
+//            driver = new SafariDriver();
+//        }
+//
+//        return driver;
+//    }
 
 
     @AfterMethod
