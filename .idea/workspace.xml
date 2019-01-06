@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81c22f29-3230-4b59-b357-eb77e71f6b67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Amex/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/Amex/application.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Amex/src/main/java/search/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Amex/src/main/java/search/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Amex/target/classes/search/SearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Amex/target/classes/search/SearchPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/lib/MySQL.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Generic/lib/MySQL.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Generic/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/src/main/java/Util/ConnectDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/src/main/java/Util/DBConnectTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/src/main/java/Util/TestConnectDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/src/main/java/base/CommonApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generic/src/main/java/base/CommonApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/target/classes/Util/ConnectDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/target/classes/Util/DBConnectTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/target/classes/Util/TestConnectDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generic/target/classes/base/CommonApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/Generic/target/classes/base/CommonApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -94,7 +80,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Generic/src/main/java/Util/ConnectToSqlDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
+            <state relative-caret-position="6120">
               <caret line="368" column="50" selection-start-line="368" selection-start-column="50" selection-end-line="368" selection-end-column="50" />
             </state>
           </provider>
@@ -320,7 +306,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546791508633" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546792029241" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -475,21 +461,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24939272" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24939272" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.25932506" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.25932506" />
       <window_info anchor="bottom" id="Messages" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -638,7 +623,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Generic/src/main/java/Util/ConnectToSqlDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
+        <state relative-caret-position="6120">
           <caret line="368" column="50" selection-start-line="368" selection-start-column="50" selection-end-line="368" selection-end-column="50" />
         </state>
       </provider>
