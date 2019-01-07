@@ -91,7 +91,11 @@ public class CommonApi {
         driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
     }
     public void typeByXpath(String locator, String value) {
+<<<<<<< Updated upstream
         driver.findElement(By.xpath(locator)).sendKeys(value, Keys.ENTER);
+=======
+        driver.findElement(By.xpath(locator)).sendKeys(value,Keys.ENTER);
+>>>>>>> Stashed changes
     }
     public void keysInput(String locator) {
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="81c22f29-3230-4b59-b357-eb77e71f6b67" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="81c22f29-3230-4b59-b357-eb77e71f6b67" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Gmail/src/main/java/GmailAPI/GmailCommonAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generic/src/main/java/base/CommonApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Generic/src/main/java/base/CommonApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gmail/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/Gmail/application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/GmailLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/GmailLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gmail/target/classes/GmailLogin/GmailLoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gmail/target/classes/GmailLogin/GmailLoginPage.class" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/Generic/target/" />
@@ -14,12 +25,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Generic/src/main/java/base/CommonApi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="653">
               <caret line="45" column="162" selection-start-line="45" selection-start-column="162" selection-end-line="45" selection-end-column="162" />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/GmailLoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Generic/src/main/java/base/CommonApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-203">
+              <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,6 +57,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/Gmail/pom.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -46,10 +76,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+=======
+        <entry file="file://$PROJECT_DIR$/Gmail/src/test/java/GmailLogin/GmailTestLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/GmailLoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,11 +101,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gmail/src/test/resources/GmailTestRunner.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/Generic/src/main/java/Util/DBConnectTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -100,6 +145,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+=======
+        <entry file="file://$PROJECT_DIR$/Gmail/src/main/java/GmailAPI/GmailCommonAPI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-567">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -128,9 +182,20 @@
         <option value="$PROJECT_DIR$/Generic/src/main/java/Util/DBConnectTest.java" />
         <option value="$PROJECT_DIR$/Generic/src/main/java/Util/TestConnectDB.java" />
         <option value="$PROJECT_DIR$/Generic/src/main/java/Util/ConnectDB.java" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/Gmail/src/test/resources/GmailTestRunner.xml" />
         <option value="$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/GmailLoginPage.java" />
         <option value="$PROJECT_DIR$/Gmail/src/test/java/GmailLogin/GmailTestLogin.java" />
+=======
+        <option value="$PROJECT_DIR$/Gmail/src/test/java/GmailLogin/GmailTestLogin.java" />
+        <option value="$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/Gmail.java" />
+        <option value="$PROJECT_DIR$/Gmail/pom.xml" />
+        <option value="$PROJECT_DIR$/Gmail/src/test/resources/GmailTestRunner.xml" />
+        <option value="$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/Gmail/Gmail.java" />
+        <option value="$PROJECT_DIR$/Gmail/src/main/java/GmailAPI/GmailCommonAPI.java" />
+        <option value="$PROJECT_DIR$/Generic/src/main/java/base/CommonApi.java" />
+        <option value="$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/GmailLoginPage.java" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -147,8 +212,13 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< Updated upstream
     <option name="y" value="25" />
     <option name="width" value="763" />
+=======
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+>>>>>>> Stashed changes
     <option name="height" value="825" />
   </component>
   <component name="ProjectView">
@@ -298,6 +368,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GmailAPI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TeamAutomation2018-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeamAutomation2018-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Gmail" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="GmailLogin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,14 +412,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< Updated upstream
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546794220014" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546891531530" />
+>>>>>>> Stashed changes
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+<<<<<<< Updated upstream
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Gmail/src/test" />
+=======
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Gmail/src/test/resources" />
+      <recent name="C:\Users\adibi\Desktop\nayna\Team_Automation2018\Amex\src\test\resources" />
+      <recent name="C:\Users\adibi\Desktop\nayna\Team_Automation2018\Generic" />
+      <recent name="C:\Users\adibi\Desktop\nayna\Team_Automation2018\Generic\src\main\java\Util" />
+>>>>>>> Stashed changes
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="searchTest" />
@@ -392,10 +484,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/adibi/Desktop/nayna/Team_Automation2018/Amex/src/test/resources/AmexTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Amex" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/Amex/src/test/resources/AmexTestRunner.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+    <configuration name="GmailTestLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Gmail" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GmailLogin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GmailLogin" />
+      <option name="MAIN_CLASS_NAME" value="GmailLogin.GmailTestLogin" />
       <properties />
       <listeners />
       <method v="2">
@@ -422,10 +520,18 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< Updated upstream
         <item itemvalue="Application.DBConnectTest" />
         <item itemvalue="Application.TestConnectDB" />
         <item itemvalue="TestNG.C:/Users/adibi/Desktop/nayna/Team_Automation2018/Amex/src/test/resources/AmexTestRunner.xml" />
         <item itemvalue="TestNG.SearchTest.test1" />
+=======
+        <item itemvalue="TestNG./Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" />
+        <item itemvalue="TestNG.GmailTestLogin" />
+        <item itemvalue="TestNG.GmailTestLogin.test1" />
+        <item itemvalue="Application.DBConnectTest" />
+        <item itemvalue="Application.TestConnectDB" />
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
@@ -443,6 +549,7 @@
     <servers />
   </component>
   <component name="TestHistory">
+<<<<<<< Updated upstream
     <history-entry file="C__Users_adibi_Desktop_nayna_Team_Automation2018_Amex_src_test_resources_AmexTestRunner_xml - 2019.01.06 at 01h 14m 38s.xml">
       <configuration name="C:/Users/adibi/Desktop/nayna/Team_Automation2018/Amex/src/test/resources/AmexTestRunner.xml" configurationId="TestNG" />
     </history-entry>
@@ -479,6 +586,44 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.48266298" />
+=======
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 21m 19s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 26m 08s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 30m 04s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 30m 35s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 31m 55s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 32m 41s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 34m 53s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 36m 43s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 38m 27s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_nazibahfariha_Downloads_TeamAutomation2018-master_Gmail_src_test_resources_GmailTestRunner_xml - 2019.01.07 at 11h 39m 11s.xml">
+      <configuration name="/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/src/test/resources/GmailTestRunner.xml" configurationId="TestNG" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24892704" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -487,6 +632,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13499112" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -496,6 +642,17 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3285968" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5373494" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983629" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3287858" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32605729" />
+>>>>>>> Stashed changes
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -594,6 +751,7 @@
     <entry file="file://$PROJECT_DIR$/Gmail/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/Gmail/src/main/java/Login/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -602,6 +760,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gmail/src/test/java/LoginTest/LoginTestPage.java">
+=======
+    <entry file="file://$PROJECT_DIR$/Gmail/src/test/resources/log4j.properties">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
@@ -617,13 +778,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Amex/src/test/resources/AmexTestRunner.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="45">
           <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+=======
+        <state relative-caret-position="225">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/Gmail/Gmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2072#2073#0" expanded="true" />
+            <element signature="e#2139#2140#0" expanded="true" />
+            <element signature="e#2189#2190#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2304#2305#0" expanded="true" />
+            <element signature="e#2365#2366#0" expanded="true" />
+            <element signature="e#2415#2416#0" expanded="true" />
+            <element signature="e#2473#2474#0" expanded="true" />
+            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#2576#2577#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Walgreens/src/main/java/WalSearch/WalSearchPage.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Walgreens/src/test/resources/WalTestRunner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Walgreens/src/test/java/WalTestHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gmail/src/test/resources/GmailTestRunner.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="225">
           <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
         </state>
@@ -633,6 +838,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+=======
+        <state relative-caret-position="-203">
+          <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gmail/src/main/java/GmailAPI/GmailCommonAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -640,6 +862,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gmail/src/test/resources/GmailTestRunner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gmail/src/main/java/GmailLogin/GmailLoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="18" />
         </state>
       </provider>
     </entry>
