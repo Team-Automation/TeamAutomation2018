@@ -4,10 +4,6 @@ package GmailLogin;
 import GmailAPI.GmailCommonAPI;
 import base.CommonApi;
 
-public class GmailLoginPage extends CommonApi {
-=======
-import GmailAPI.GmailCommonAPI;
-
 public class GmailLoginPage extends GmailCommonAPI {
     public void login(){
         typeOnElementEntry("//*[@id=\"identifierId\"]","nazibah95");
@@ -17,6 +13,5 @@ public class GmailLoginPage extends GmailCommonAPI {
 
 
     }
-
 }
 
