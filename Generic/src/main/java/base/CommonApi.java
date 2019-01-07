@@ -25,8 +25,8 @@ public class CommonApi {
 
     @Parameters({"OS","browser", "browserVersion", "url"})
     @BeforeClass
-    public void setUp(@Optional("Windows 10") String OS, @Optional("firefox") String browser,
-                      @Optional("64.0") String browserVersion,
+    public void setUp(@Optional("OS") String OS, @Optional("browser") String browser,
+                      @Optional("browserVersion") String browserVersion,
                       @Optional("url") String url) throws IOException {
 
 
@@ -35,7 +35,7 @@ public class CommonApi {
         logger.info("Test is running on local env");
         getLocalDriver(OS, browser, browserVersion);
 
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
     }
@@ -43,11 +43,11 @@ public class CommonApi {
     //driver to run on local
     public WebDriver getLocalDriver(String OS, String browser, String browserVersion) {
         if (browser.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Generic/selenium-browser-driver/geckodriver");
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("chrome")) {
             if (OS.equalsIgnoreCase("mac")) {
-                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
                 driver = new ChromeDriver();
             } else if (OS.equalsIgnoreCase("windows")) {
                 System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
@@ -91,11 +91,7 @@ public class CommonApi {
         driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
     }
     public void typeByXpath(String locator, String value) {
-<<<<<<< Updated upstream
-        driver.findElement(By.xpath(locator)).sendKeys(value, Keys.ENTER);
-=======
-        driver.findElement(By.xpath(locator)).sendKeys(value,Keys.ENTER);
->>>>>>> Stashed changes
+        driver.findElement(By.xpath(locator)).sendKeys("value",Keys.ENTER);
     }
     public void keysInput(String locator) {
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
