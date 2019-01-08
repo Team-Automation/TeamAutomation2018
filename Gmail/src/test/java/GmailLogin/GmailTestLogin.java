@@ -10,5 +10,11 @@ public class GmailTestLogin extends GmailLoginPage {
 
 
     }
+
+    @Test
+    public void test2(){
+        search();
+
+    }
 }
 
