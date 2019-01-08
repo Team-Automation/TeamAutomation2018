@@ -35,7 +35,7 @@ public class CommonApi {
         logger.info("Test is running on local env");
         getLocalDriver(OS, browser, browserVersion);
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
     }
@@ -43,11 +43,11 @@ public class CommonApi {
     //driver to run on local
     public WebDriver getLocalDriver(String OS, String browser, String browserVersion) {
         if (browser.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Generic/selenium-browser-driver/geckodriver");
+            System.setProperty("webdriver.gecko.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\geckodriver.exe");
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("chrome")) {
             if (OS.equalsIgnoreCase("mac")) {
-                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
                 driver = new ChromeDriver();
             } else if (OS.equalsIgnoreCase("windows")) {
                 System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
