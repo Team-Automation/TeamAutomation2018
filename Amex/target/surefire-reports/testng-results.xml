@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Amex FinanceAndBanking" duration-ms="7554" started-at="2019-01-07T19:20:17 EST" finished-at="2019-01-07T19:20:24 EST">
+    <groups>
+    </groups>
+    <test name="Amex Search" duration-ms="7554" started-at="2019-01-07T19:20:17 EST" finished-at="2019-01-07T19:20:24 EST">
+      <class name="searchTest.SearchTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:searchTest.SearchTest@26be92ad]" name="setUp" is-config="true" duration-ms="4714" started-at="2019-01-07T19:20:17 EST" finished-at="2019-01-07T19:20:21 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows 10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[64.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.americanexpress.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:searchTest.SearchTest@26be92ad]" name="test1" duration-ms="255" started-at="2019-01-07T19:20:21 EST" finished-at="2019-01-07T19:20:22 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:searchTest.SearchTest@26be92ad]" name="cleanUp" is-config="true" duration-ms="2562" started-at="2019-01-07T19:20:22 EST" finished-at="2019-01-07T19:20:24 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- searchTest.SearchTest -->
+    </test> <!-- Amex Search -->
+  </suite> <!-- Amex FinanceAndBanking -->
+</testng-results>

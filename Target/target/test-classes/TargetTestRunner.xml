@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Target Shopping Website " parallel="false">
+
+    <parameter name="OS" value="macOS Mojave"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="browserVersion" value="64.0"/>
+    <parameter name="url" value="https://www.target.com"/>
+
+    <test name = "Target Home">
+        <classes>
+            <class name="TargetTest">
+                <methods>
+                    <include name="test2"/>
+                </methods>
+                    </class>
+        </classes>
+    </test>
+</suite>

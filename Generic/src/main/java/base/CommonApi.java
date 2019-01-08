@@ -23,10 +23,11 @@ public class CommonApi {
     public WebDriver driver = null;
     public Logger logger = Logger.getLogger(CommonApi.class);
 
-    @Parameters({"OS","browser", "browserVersion", "url"})
+    @Parameters({"OS", "browser", "browserVersion", "url"})
     @BeforeClass
-    public void setUp(@Optional("Windows 10") String OS, @Optional("firefox") String browser,
-                      @Optional("64.0") String browserVersion,
+    public void setUp(@Optional("0S") String OS,
+                      @Optional("browser") String browser,
+                      @Optional("browserVersion") String browserVersion,
                       @Optional("url") String url) throws IOException {
 
 
@@ -43,18 +44,18 @@ public class CommonApi {
     //driver to run on local
     public WebDriver getLocalDriver(String OS, String browser, String browserVersion) {
         if (browser.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "/Users/ahmedfhasan/Downloads/TeamAutomation2018-master/Generic/selenium-browser-driver/geckodriver");
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("chrome")) {
             if (OS.equalsIgnoreCase("mac")) {
-                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "/Users/ahmedfhasan/Downloads/TeamAutomation2018-master/Generic/selenium-browser-driver/chromedriver-2");
                 driver = new ChromeDriver();
             } else if (OS.equalsIgnoreCase("windows")) {
-                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/geckodriver");
                 driver = new ChromeDriver();
             }
         } else if (browser.equalsIgnoreCase("ie")) {
-            System.setProperty("webdriver.ie.driver", "Generic\\selenium-browser-driver\\IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", "Generic/selenium-browser-driver/IEDriverServer.exe");
             driver = new ChromeDriver();
             driver = new InternetExplorerDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
@@ -71,53 +72,35 @@ public class CommonApi {
     }
 
     //Helping methods
-    public void clickByCss(String locator) {
-        driver.findElement(By.cssSelector(locator)).click();
-    }
-
-    public void clickByXpath(String locator) {
-        driver.findElement(By.xpath(locator)).click();
-    }
-
-    public void clickById(String locator) {
+    public void clickByCss(String locator) { driver.findElement(By.cssSelector(locator)).click(); }
+    public void clickByLinkText(String locator) { driver.findElement(By.linkText(locator)).click(); }
+    public void clickByXpath(String locator){ driver.findElement(By.xpath(locator)).click(); }
+    public void clickById(String locator){
         driver.findElement(By.id(locator)).click();
     }
-
-    public void clickByName(String locator) {
+    public void clickByName(String locator){
         driver.findElement(By.id(locator)).click();
     }
-
-    public void typeByCss(String locator, String value) {
-        driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
-    }
-    public void typeByXpath(String locator, String value) {
-<<<<<<< Updated upstream
-        driver.findElement(By.xpath(locator)).sendKeys(value, Keys.ENTER);
-=======
-        driver.findElement(By.xpath(locator)).sendKeys(value,Keys.ENTER);
->>>>>>> Stashed changes
-    }
-    public void keysInput(String locator) {
+    public void typeByCss(String locator, String value){ driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.CLEAR); }
+    public void typeOnCss(String locator, String value){ driver.findElement(By.cssSelector(locator)).sendKeys(value); }
+    public void typeOnXpath(String locator, String value){ driver.findElement(By.xpath(locator)).sendKeys(value); }
+    public void typeOnClass(String locator, String value){ driver.findElement(By.className(locator)).sendKeys(value); }
+    public void typeOnId(String locator, String value){ driver.findElement(By.id(locator)).sendKeys(value); }
+    public void keysInput(String locator){
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
     }
-
-    public void typeByCssThenEnter(String locator, String value) {
-        driver.findElement(By.cssSelector(locator)).sendKeys(Keys.CLEAR, value, Keys.ENTER);
-    }
-
-    public void clearInput(String locator) {
+    public void typeByCssThenEnter(String locator, String value){ driver.findElement(By.cssSelector(locator)).sendKeys(Keys.CLEAR, value, Keys.ENTER); }
+    public void clearInput(String locator){
         driver.findElement(By.cssSelector(locator)).clear();
     }
-
-    public void navigateBack() {
+    public void navigateBack(){
         driver.navigate().back();
     }
-
-    public void navigateForward() {
+    public void navigateForward(){
         driver.navigate().forward();
     }
+    public void mouseHoverByCSS(String locator){
 
-    public void mouseHoverByCSS(String locator) {
         try {
             WebElement element = driver.findElement(By.cssSelector(locator));
             Actions action = new Actions(driver);

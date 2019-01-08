@@ -10,9 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Generic</artifactId>
-
-
-
     <build>
         <plugins>
             <plugin>
@@ -30,13 +27,11 @@
                 <version>2.20.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suitexmlFile>target/test-classes/AmexTestRunner.xml</suitexmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -62,7 +57,6 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.6</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
