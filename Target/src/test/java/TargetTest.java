@@ -18,7 +18,15 @@ public class TargetTest extends Target {
     public void test3 () { createAccount();
     }
 
+    @Test
+    public void test4 () {
+       giftCard();
+    }
 
+    @Test
+    public void test5 (){
+        registriesLists();
+    }
 
 
 

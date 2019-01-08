@@ -28,6 +28,22 @@ public class Target extends CommonApi{
         System.out.println(driver.findElement(By.cssSelector("#username--longInstruction")).getText());
     }
 
+    public void giftCard(){
+        clickByLinkText("Gift Cards");
+        clickByXpath("//*[@id='mainContainer']/div[3]/div/div[2]/div/div[1]/div[1]/div/div/a/div[2]");
+        typeOnCss("#giftCardNumber","123-456-789-123-457");
+        typeOnCss("#accessNumber","12345678");
+        clickByCss("#queryGiftCard");
+        System.out.println(driver.findElement(By.cssSelector(".styles__ToastContent-h3myfk-1.hWreYc")).getText());
+    }
+
+    public void registriesLists(){
+        clickByLinkText("Registries & Lists");
+        typeOnCss("#registrySearchFirstName","Ahmed");
+        typeOnCss("#registrySearchLastName","Hasan");
+        clickByXpath("//*[@type='submit']");
+    }
+
 
 
 }
