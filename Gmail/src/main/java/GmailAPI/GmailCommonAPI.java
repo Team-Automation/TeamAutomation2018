@@ -83,6 +83,7 @@ public class GmailCommonAPI extends CommonApi {
     public void selectElementOnclass (String locator){
         WebElement select4 = driver.findElement(By.className(locator));select4.click();
     }
+
     public void selectOnid2(String locator, String value) {
         Select select2 = new Select(driver.findElement(By.id(locator)));
         select2.selectByVisibleText(value);
