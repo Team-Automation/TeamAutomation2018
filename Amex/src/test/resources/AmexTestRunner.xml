@@ -12,7 +12,8 @@
 
     <test name = "Amex Search">
         <classes>
-            <class name="searchTest.SearchTest"/>
+            <!--<class name="searchTest.SearchTest"/>-->
+            <class name="searchTest.UserTest"/>
         </classes>
     </test>
 

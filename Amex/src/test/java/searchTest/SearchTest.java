@@ -5,7 +5,7 @@ import search.SearchPage;
 
 public class SearchTest extends SearchPage {
     @Test
-   public void test1(){
+   public void test1() throws InterruptedException {
         searchMenu();
     }
 }
