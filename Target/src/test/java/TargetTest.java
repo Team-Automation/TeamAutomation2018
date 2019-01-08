@@ -4,6 +4,7 @@ public class TargetTest extends Target {
 
     @Test
     public void test1(){
+
         search();
     }
 
@@ -11,6 +12,15 @@ public class TargetTest extends Target {
     public void test2 (){
         signIn();
     }
+
+
+    @Test
+    public void test3 () { createAccount();
+    }
+
+
+
+
 
 
 }

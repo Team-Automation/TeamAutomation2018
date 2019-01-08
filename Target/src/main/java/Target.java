@@ -17,6 +17,17 @@ public class Target extends CommonApi{
         System.out.println(driver.findElement(By.cssSelector("#username--longInstruction")).getText());
     }
 
+    public void createAccount()  {
+        clickByCss("#account");
+        clickByXpath("//li[@id='accountNav-createAccount']//div[@class='Row-uds8za-0 kjjHUt']");
+        typeOnCss("#username","AhmedFoysolHasan");
+        typeOnCss("#firstname","Ahmed");
+        typeOnCss("#lastname","Hasan");
+        typeOnCss("#phone","9292477058");
+        typeOnCss("#password","Abcd1234");
+        System.out.println(driver.findElement(By.cssSelector("#username--longInstruction")).getText());
+    }
+
 
 
 }
