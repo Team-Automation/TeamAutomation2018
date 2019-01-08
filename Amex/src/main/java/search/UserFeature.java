@@ -1,13 +1,12 @@
 package search;
 
-import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.sql.SQLException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,8 +48,9 @@ public class UserFeature {
         return data;
     }
 
-    public void searchUserAndSubmitButton() throws IOException {
-
+    public void searchUserAndSubmitButton() throws Exception {
+DatabaseOperation databaseOperation = new DatabaseOperation();
+List <String> list = databaseOperation.getUserDatafromDB();
         List<String> data = getUserData();
         for (int i = 0; i < data.size(); i++) {
             searchForUser(data.get(i));

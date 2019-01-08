@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class UserTest extends CommonApi {
     @Test
-    public void searchData() throws IOException {
+    public void searchData() throws Exception {
         UserFeature userFeature = PageFactory.initElements(driver, UserFeature.class);
 
         userFeature.searchUserAndSubmitButton();
