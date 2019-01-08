@@ -28,7 +28,10 @@ public class TargetTest extends Target {
         registriesLists();
     }
 
-
+    @Test
+    public void test6 () {
+        bestDeal();
+    }
 
 
 }

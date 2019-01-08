@@ -44,6 +44,14 @@ public class Target extends CommonApi{
         clickByXpath("//*[@type='submit']");
     }
 
+    public void bestDeal () {
+        clickByXpath("//*[@id='secondary']");
+        clickByCss(".Row-uds8za-0.kjjHUt");
+
+
+    }
+
+
 
 
 }
