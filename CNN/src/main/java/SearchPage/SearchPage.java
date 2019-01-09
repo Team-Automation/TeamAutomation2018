@@ -46,6 +46,16 @@ public class SearchPage extends CommonApi {
         clickByXpath("//a[@class='nav-section__submenu-item'][contains(text(),'Social Commentary')]");
         clickByClass("cd__headline-text");
     }
+    public void HealthFitness(){
+        clickByXpath("//a[contains(text(),'Health')]");
+        clickByXpath("//a[@class='nav-section__submenu-item'][contains(text(),'Fitness')]");
+        clickByClass("cd__headline-text");
+    }
+    public void starsEntertainment(){
+        clickByXpath("//a[contains(text(),'Entertainment')]");
+        clickByXpath("//a[@title='Stars']");
+        clickByClass("cd__headline-text");
+    }
 
 
 

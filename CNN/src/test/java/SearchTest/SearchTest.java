@@ -24,4 +24,8 @@ public class SearchTest extends SearchPage {
     public void test7(){TechBusiness();}
     @Test
     public void test8 () {SocialOpinion();}
+    @Test
+    public void test9 (){HealthFitness();}
+    @Test
+    public void test10 (){ starsEntertainment();}
 }
