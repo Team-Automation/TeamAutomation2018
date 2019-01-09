@@ -17,6 +17,14 @@ public class GmailTestLogin extends GmailLoginPage {
         composeMail();
 
     }
+    @Test
+    public void test3(){
+
+        googleApps();
+
+    }
+
+
 
 
 }
