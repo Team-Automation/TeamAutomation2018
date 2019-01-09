@@ -24,7 +24,7 @@ public class CommonApi {
     public Logger logger = Logger.getLogger(CommonApi.class);
 
     @Parameters({"OS","browser", "browserVersion", "url"})
-    @BeforeClass
+    @BeforeMethod
     public void setUp(@Optional("OS") String OS, @Optional("browser") String browser,
                       @Optional("browserVersion") String browserVersion,
                       @Optional("url") String url) throws IOException {
@@ -46,8 +46,10 @@ public class CommonApi {
             System.setProperty("webdriver.gecko.driver", "/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Generic/selenium-browser-driver/geckodriver");
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("chrome")) {
+            System.setProperty("webdriver.chrome.driver", "/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Generic/selenium-browser-driver/chromedriver");
+            driver = new ChromeDriver();
             if (OS.equalsIgnoreCase("mac")) {
-                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "F");
                 driver = new ChromeDriver();
             } else if (OS.equalsIgnoreCase("windows")) {
                 System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
@@ -91,7 +93,7 @@ public class CommonApi {
         driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
     }
     public void typeByXpath(String locator, String value) {
-        driver.findElement(By.xpath(locator)).sendKeys("value",Keys.ENTER);
+        driver.findElement(By.xpath(locator)).sendKeys(value,Keys.ENTER);
     }
     public void keysInput(String locator) {
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);

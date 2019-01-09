@@ -8,13 +8,16 @@ public class GmailTestLogin extends GmailLoginPage {
     public void test1() {
         login();
 
+        
 
     }
-
     @Test
     public void test2(){
-        search();
+
+        composeMail();
 
     }
+
+
 }
 
