@@ -5,12 +5,17 @@
 
     <parameter name="OS" value="macOS Mojave"/>
     <parameter name="browser" value="firefox"/>
-    <parameter name="browserVersion" value="64.0"/>
+    <parameter name="browserVersion" value="71.0.3578.98"/>
     <parameter name="url" value="https://www.target.com"/>
 
     <test name = "Target Home">
         <classes>
-            <class name="TargetTest"/>
+            <class name="TargetTest">
+                <methods>
+                    <include name="test7"/>
+                </methods>
+            </class>
+
 
         </classes>
     </test>

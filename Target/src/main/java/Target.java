@@ -47,9 +47,15 @@ public class Target extends CommonApi{
     public void bestDeal () {
         clickByXpath("//*[@id='secondary']");
         clickByCss(".Row-uds8za-0.kjjHUt");
-
-
     }
+
+    public void trending () {
+        clickByCss("[data-menu='trending']");
+        clickByCss(".Row-uds8za-0.kjjHUt");
+    }
+
+
+
 
 
 
