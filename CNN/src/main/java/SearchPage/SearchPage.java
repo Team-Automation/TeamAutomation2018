@@ -9,26 +9,44 @@ public class SearchPage extends CommonApi {
     }
 
     public void liveTv() {
-        clickByCss("#nav-mobileTV");
+        clickByXpath("//a[@id='nav-mobileTV']");
         navigateBack();
     }
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");
         clickByXpath("//a[@class='Header__section'][contains(text(),'Destinations')]");
         clickByXpath("//a[contains(text(),'Brazil')]");
-        navigateBack();
     }
-    public void worldNews() {
+    public void worldAfrica (){
         clickByXpath("//a[@class='nav-menu-links__link'][contains(text(),'World')]");
         clickByXpath("//a[@class='nav-section__submenu-item'][contains(text(),'Africa')]");
-        clickByXpath("//a[@href='/2019/01/07/africa/gabon-army-seizes-country/index.html']//img[@class='media__image media__image--responsive']");
-        navigateBack();
+        clickByXpath("/html[1]/body[1]/div[6]/section[2]/div[6]/div[1]/div[1]/ul[1]/li[1]/article[1]/div[1]/div[1]/h3[1]/a[1]");
     }
-    public void politics() {
+    public void LatestPolitics() {
         clickByXpath("//a[contains(text(),'Politics')]");
-        clickByXpath("//header[@id='nav-header']//ul[@class='buckets']//li[1]");
-        clickByXpath("//a[@href='/2018/12/23/politics/john-roberts-supreme-court-pause-mystery-company-subpoena/index.html']//img[@class='media__image media__image--responsive']");
+        clickByXpath("//p[@id='cnnix-clock-title']");
+    }
+    public void facebook(){
+        clickByXpath("//div[@class='nav-menu__hamburger']");
+        clickByXpath("//a[@class='nav-flyout-footer__social-link nav-flyout-footer__social-link--facebook']");
         navigateBack();
     }
+    public void UScrime(){
+        clickByXpath("//a[@class='nav-menu-links__link'][contains(text(),'U.S.')]");
+        clickByXpath("//a[@class='nav-section__submenu-item'][contains(text(),'Crime + Justice')]");
+        clickByClass("cd__headline-text");
+    }
+    public void TechBusiness(){
+        clickByXpath("//a[@class='nav-menu-links__link'][contains(text(),'Business')]");
+        clickByXpath("//a[@class='nav-menu-links__link'][contains(text(),'Tech')]");
+        clickByClass("cd__headline-text");
+    }
+    public void SocialOpinion(){
+        clickByXpath("//a[@class='nav-menu-links__link'][contains(text(),'Opinion')]");
+        clickByXpath("//a[@class='nav-section__submenu-item'][contains(text(),'Social Commentary')]");
+        clickByClass("cd__headline-text");
+    }
+
+
 
 }
