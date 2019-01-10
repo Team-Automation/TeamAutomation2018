@@ -1,15 +1,15 @@
 package myApi.search;
 
+import base.CommonApi;
 import myApi.EbayApi;
 
-public class SearchPage extends EbayApi {
+public class SearchPage extends CommonApi {
     public void SearchOption(){
-        typeOnElementEntry("gh-tb", "motoralla phone");
-        //nagivateto();
-        clearField("gh-tb");
-        typeOnElementEntry("gh-tb", "books");
-        //nagivateto();
-        clearField("gh-tb");
-        typeOnElementEntry("gh-tb", "toys");
+        typeByCssThenEnter("#gh-ac", "motoralla phone");
+        navigateBack();
+
+        typeByCssThenEnter("#gh-ac", "books");
+        navigateBack();
+        typeByCssThenEnter("#gh-ac", "toys");
     }
 }

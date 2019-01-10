@@ -3,9 +3,9 @@
 
 <suite name="Ebay Shopping Website " parallel="false">
 
-    <parameter name="OS" value="macOS High Sierra"/>
+    <parameter name="OS" value="macOS Sierra"/>
     <parameter name="browser" value="chrome"/>
-    <parameter name="browserVersion" value="71.0.3578.98"/>
+    <parameter name="browserVersion" value="64.0"/>
     <parameter name="url" value="https://www.ebay.com"/>
 
     <test name = "Ebay Home">
