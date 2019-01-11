@@ -1,37 +1,59 @@
 import base.CommonApi;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends CommonApi {
+public class LoginPage  {
 
 
 
     @FindBy(css = "#username")
-    WebElement emailId;
+    WebElement emailBox;
 
     @FindBy(css ="#password")
-    WebElement password;
+    WebElement passwordBox;
+
+    @FindBy(css ="#login")
+    WebElement signInButton;
+
+    @FindBy(css = "#username--longInstruction" )
+    WebElement errorMessage;
+
+    @FindBy(css = "[tabindex='-1']")
+    WebElement singInText;
 
 
-    public void signIn()  {
-        clickByCss("#account");
-        clickByXpath("//*[@id='accountNav-signIn']/a/div");
-        typeOnCss("#username","AhmedFoysolHasan");
+    //public void sigIn()  {
+        //clickByCss("#account");
+       // clickByXpath("//*[@id='accountNav-signIn']/a/div");
 
-        clickByXpath("//button[@id='login']");
-        System.out.println(driver.findElement(By.cssSelector("#username--longInstruction")).getText());
+//
+//    public WebElement getEmailID (){
+//        return emailBox;
+//    }
+//
+//    public  WebElement getPassword () {
+//        return passwordBox;
+//    }
+//
+//    public WebElement signIn () {
+//        return SignInButton;
+//    }
+    public LoginPage login(String email, String password) {
+        emailBox.sendKeys(email);
+        passwordBox.sendKeys(password);
+        signInButton.click();
+        return new LoginPage();
     }
 
-    public WebElement getEmailID (){
-        return emailId;
+    public String getErroMessage(){
+        String actualText = errorMessage.getText();
+        return actualText;
     }
 
-    public  WebElement getPassword () {
-        return password;
+    public WebElement getSingInText () {
+        return singInText;
     }
-
-
-
 
 }

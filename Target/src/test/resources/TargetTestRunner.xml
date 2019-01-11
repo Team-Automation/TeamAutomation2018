@@ -3,7 +3,7 @@
 
 <suite name="Target Shopping Website " parallel="false">
     <listeners>
-        <listener class-name="target.Listeners"/>
+        <listener class-name="Listeners"/>
     </listeners>
 
     <parameter name="OS" value="macOS Mojave"/>
@@ -13,8 +13,8 @@
 
     <test name = "Target Home">
         <classes>
-            <class name="TestSearch">
-            </class>
+            <!--<class name="TestSearch"/>-->
+            <class name="Validation"/>
 
 
         </classes>

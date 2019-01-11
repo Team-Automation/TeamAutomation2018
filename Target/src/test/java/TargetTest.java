@@ -24,6 +24,4 @@ public class TargetTest extends Target {
 
     @Test
     public void test7 () { trending(); }
-
-
 }

@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SearchPage {
-    public WebDriver driver;
-
 
         @FindBy(css = "#search")
         WebElement searchInputWebElement;
