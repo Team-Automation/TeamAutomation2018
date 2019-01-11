@@ -25,7 +25,8 @@ public class CommonApi {
 
     @Parameters({"OS", "browser", "browserVersion", "url"})
     @BeforeMethod
-    public void setUp(@Optional("OS") String OS, @Optional("browser") String browser,
+    public void setUp(@Optional("OS") String OS,
+                      @Optional("browser") String browser,
                       @Optional("browserVersion") String browserVersion,
                       @Optional("url") String url) throws IOException {
 

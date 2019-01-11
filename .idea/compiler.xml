@@ -12,8 +12,5 @@
         <module name="Gmail" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Ebay" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
