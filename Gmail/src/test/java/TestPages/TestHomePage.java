@@ -14,5 +14,7 @@ public class TestHomePage extends HomePage {
     }
     @Test
     public void test1(){homepage.Help(); }
+    @Test
+    public void Email(){homepage.sendEmail();}
 
 }
