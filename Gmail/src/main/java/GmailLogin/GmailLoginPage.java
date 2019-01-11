@@ -7,18 +7,14 @@ import GmailAPI.GmailCommonAPI;
 public class GmailLoginPage extends GmailCommonAPI {
 
 
-    public void login() {
-
+    public void login(){
         typeOnElementEntry("//*[@id='identifierId']", "chocolategirl1995");
         typeOnElementEntry("password", "girl1995");
-
     }
-
 
     public void clickCreateAccount(){
         selectElementOnxpath("//*[@id=\"view_container\"]/div/div/div[2]/div/div[2]/div/div[2]/div/div/content/span");
     }
-
 
     public void createAccountFirstName(){
         clickCreateAccount();
@@ -45,7 +41,6 @@ public class GmailLoginPage extends GmailCommonAPI {
         typeOnElement("//input[@name='ConfirmPasswd']","naz");
     }
 
-
     public void composeMail() throws InterruptedException {
 
         login();
@@ -55,7 +50,6 @@ public class GmailLoginPage extends GmailCommonAPI {
         typeByXpath("//*[@id=':qk']","Hey Cutie");
         getEelementsByxpath("//*[@id=':p5']");
         Thread.sleep(3000);
-
     }
 
     public void googleApps(){
@@ -63,7 +57,5 @@ public class GmailLoginPage extends GmailCommonAPI {
         selectElementOnclass("gb_mf");
         getEelementsByxpath("//*[@id='gb192']/span[1]");
     }
-
-
 
 }
