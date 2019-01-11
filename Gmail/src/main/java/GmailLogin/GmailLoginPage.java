@@ -10,11 +10,14 @@ public class GmailLoginPage extends GmailCommonAPI {
     public void login(){
         typeOnElementEntry("//*[@id='identifierId']", "chocolategirl1995");
         typeOnElementEntry("password", "girl1995");
+
     }
 
     public void clickCreateAccount(){
         selectElementOnxpath("//*[@id=\"view_container\"]/div/div/div[2]/div/div[2]/div/div[2]/div/div/content/span");
+
     }
+
 
     public void createAccountFirstName(){
         clickCreateAccount();
