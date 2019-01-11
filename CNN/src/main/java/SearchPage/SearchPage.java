@@ -1,16 +1,14 @@
 package SearchPage;
 
 import base.CommonApi;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class SearchPage extends CommonApi {
-    public void searchMenu(){
-        clickByXpath("//a[@class='nav-menu-links__link'][contains(text(),'Business')]");
-        navigateBack();
-    }
-
+    @FindBy(xpath = "//a[@id='nav-mobileTV']")
+    public static WebElement televition;
     public void liveTv() {
-        clickByXpath("//a[@id='nav-mobileTV']");
-        navigateBack();
+       televition.click();
     }
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");

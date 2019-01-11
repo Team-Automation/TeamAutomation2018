@@ -1,17 +1,22 @@
 package SearchTest;
 
 import SearchPage.SearchPage;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SearchTest extends SearchPage {
+    SearchPage searchPage;
+    @BeforeMethod
+    public void initializeElement(){
+        searchPage = PageFactory.initElements(driver, SearchPage.class); }
     @Test
-    public void test1() {
-        liveTv();
-    }
+    public void showLiveTV(){
+        searchPage.liveTv(); }
     @Test
-    public void test2() {
-        travelP();
-    }
+    public void test1() { liveTv(); }
+    @Test
+    public void test2() { travelP(); }
     @Test
     public void test3(){ worldAfrica(); }
     @Test
