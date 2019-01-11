@@ -6,7 +6,9 @@ import org.openqa.selenium.support.How;
 
 public class CreateLogSearch {
 
-@FindBy (name = "#userid")
+@FindBy (xpath = "//span[@id='gh-ug']/a[@href='https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.com%2F']")
+WebElement
+    @FindBy (name = "#userid")
     WebElement userName;
 @FindBy (name = "#pass")
     WebElement password;

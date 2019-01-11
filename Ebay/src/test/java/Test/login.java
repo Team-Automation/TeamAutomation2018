@@ -10,7 +10,10 @@ public class login extends EbayApi {
 @Test
     public void createlofsearch(){
     CreateLogSearch createLogSearch= PageFactory.initElements(driver,CreateLogSearch.class);
-    createLogSearch.setUserName("");
+    createLogSearch.setUserName(username);
+    createLogSearch.setPassword(password);
+    createLogSearch.clicksubmit();
+
 
 }
 

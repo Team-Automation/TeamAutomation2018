@@ -91,6 +91,9 @@ public class EbayApi extends CommonApi {
         Select select3 = new Select(driver.findElement(By.name(locator)));
         select3.selectByVisibleText(value);
     }
+public String username= "haquelazimul@yahoo.com";
+    public  String password="1993";
+
 
 
 }

@@ -36,7 +36,7 @@ public class CommonApi {
         logger.info("Test is running on local env");
         getLocalDriver(OS, browser, browserVersion);
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
     }

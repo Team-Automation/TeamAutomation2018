@@ -10,7 +10,8 @@
 
     <test name = "Ebay Home">
         <classes>
-            <class name="TestHome"/>
+            <class name="Test.login"/>
+
         </classes>
     </test>
 </suite>
