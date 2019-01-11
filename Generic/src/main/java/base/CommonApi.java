@@ -1,6 +1,8 @@
 package base;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -9,15 +11,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
-import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
 
 public class CommonApi {
     public WebDriver driver = null;
@@ -35,7 +38,7 @@ public class CommonApi {
         logger.info("Test is running on local env");
         getLocalDriver(OS, browser, browserVersion);
 
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
     }
@@ -146,6 +149,10 @@ public class CommonApi {
         return driver.findElement(By.id(locator)).getText();
 
     }
+    public void typeAndEnterByCss(String locator, String value){
+        driver.findElement(By.cssSelector(locator)).clear();
+        driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
+    }
 
     public String getTextByName(String locator) {
         String st = driver.findElement(By.name(locator)).getText();
@@ -169,6 +176,20 @@ public class CommonApi {
         WebElement element = driver.findElement(By.xpath(locator));
 
         return element;
+    }
+    public String getTextByWebElement(WebElement webElement){
+        String text = webElement.getText();
+        return text;
+    }
+    public void inputValueInTextBoxByWebElement(WebElement webElement, String value){
+        //System.out.println(value +"\n");
+
+        webElement.sendKeys(value + Keys.ENTER);
+
+
+    }
+    public void clearInputBox(WebElement webElement){
+        webElement.clear();
     }
 
     //constant sleep time

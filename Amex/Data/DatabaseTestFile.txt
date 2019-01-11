@@ -1,0 +1,11 @@
+mysql> select * from headerlist;
++----+------------+
+| ID | headers    |
++----+------------+
+|  1 | My Account |
+|  2 | Cards      |
+|  3 | Travel     |
+|  4 | Rewards    |
+|  5 | Business   |
+|  6 | Help       |
++----+------------+

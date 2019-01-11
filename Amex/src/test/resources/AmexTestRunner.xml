@@ -12,7 +12,11 @@
 
     <test name = "Amex Search">
         <classes>
-            <class name="searchTest.SearchTest"/>
+            <!--<class name="searchTest.SearchTest"/>-->
+            <!--<class name="searchTest.UserTest"/>-->
+            <!--<class name="searchTest.XLSXTest"/>-->
+            <!--<class name="searchTest.DatabaseTest"/>-->
+            <class name="searchTest.TestGoogleSheet"/>
         </classes>
     </test>
 

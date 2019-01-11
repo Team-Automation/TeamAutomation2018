@@ -1,7 +1,5 @@
 package Util;
 
-import org.seleniumhq.jetty9.server.Authentication;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -187,7 +185,28 @@ public class ConnectToSqlDB {
         }
         return data;
     }
+    public void insertStringDataFromArrayListToSqlTable(List<String> list, String tableName, String columnName)
+    {
+        try {
+            connectToSqlDatabase();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
+            ps.executeUpdate();
+            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT,`"+columnName+"` varchar(300) DEFAULT NULL,  PRIMARY KEY (`ID`));");
+            ps.executeUpdate();
+            for(String st :list){
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+                ps.setObject(1,st);
+                ps.executeUpdate();
+            }
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
     public void insertDataFromArrayListToSqlTableforString(List<Object> list, String tableName, String columnName)
     {
         try {
