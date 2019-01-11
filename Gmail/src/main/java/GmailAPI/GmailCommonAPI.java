@@ -3,6 +3,7 @@ package GmailAPI;
 import base.CommonApi;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -47,6 +48,10 @@ public class GmailCommonAPI extends CommonApi {
     public void typeOnElementNEnterCss(String locator, String value){
         driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
     }
+    public void typeOnElementNEnterClass (String locator, String value){
+
+        driver.findElement(By.className(locator)).sendKeys(value, Keys.ENTER);
+    }
 
     public void getEelementsByCss(String locator){
         driver.findElement(By.cssSelector(locator)).click();
@@ -73,7 +78,15 @@ public class GmailCommonAPI extends CommonApi {
     }
     public void selectElementOnxpath(String locator){
         WebElement select = driver.findElement(By.xpath(locator));select.click();
+
     }
+    public void selectElementOnclass (String locator){
+        WebElement select4 = driver.findElement(By.className(locator));select4.click();
+    }
+    public void clickByClassName(String locator) {
+        driver.findElement(By.className(locator)).click();
+    }
+
     public void selectOnid2(String locator, String value) {
         Select select2 = new Select(driver.findElement(By.id(locator)));
         select2.selectByVisibleText(value);
