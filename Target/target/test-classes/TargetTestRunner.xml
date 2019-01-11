@@ -2,18 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Target Shopping Website " parallel="false">
+    <listeners>
+        <listener class-name="target.Listeners"/>
+    </listeners>
 
     <parameter name="OS" value="macOS Mojave"/>
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <parameter name="browserVersion" value="71.0.3578.98"/>
     <parameter name="url" value="https://www.target.com"/>
 
     <test name = "Target Home">
         <classes>
-            <class name="TargetTest">
-                <methods>
-                    <include name="test7"/>
-                </methods>
+            <class name="TestSearch">
             </class>
 
 

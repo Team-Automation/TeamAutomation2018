@@ -1,1 +1,2 @@
-2019-01-08 19:39:34,597  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 01:00:02,123  INFO [main] CommonApi:38 - Test is running on local env
+2019-01-11 01:00:02,126 ERROR [main] CommonApi:39 - mine error
