@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Target Shopping Website " parallel="false">
+<suite name="Target Shopping Website " >
     <listeners>
         <listener class-name="Listeners"/>
     </listeners>
@@ -13,9 +13,7 @@
 
     <test name = "Target Home">
         <classes>
-            <!--<class name="TestSearch"/>-->
-            <class name="Validation"/>
-
+            <class name="validation.ValidateText"/>
 
         </classes>
     </test>

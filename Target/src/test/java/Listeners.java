@@ -18,13 +18,14 @@ public class Listeners implements ITestListener {
     }
 
     @Override
-    public void onTestFailure(ITestResult result) {
+    public void onTestFailure(ITestResult iTestResult) {
         //screenshort concept
-//        try {
-//            ca.takeScreenShot(result.getName());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
+        try {
+            ca.takeScreenShot();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }

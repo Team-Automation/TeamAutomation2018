@@ -10,7 +10,12 @@ public class Target extends CommonApi{
 
     public void signIn()  {
         clickByCss("#account");
-        clickByXpath("//*[@id='accountNav-signIn']/a/div");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        clickByXpath("//*[@class='Row-uds8za-0 kjjHUt']");
         typeOnCss("#username","AhmedFoysolHasan");
         typeOnCss("#password","Abcd1234");
         clickByXpath("//button[@id='login']");
