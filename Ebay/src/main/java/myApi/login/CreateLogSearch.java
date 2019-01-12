@@ -23,14 +23,14 @@ public class CreateLogSearch extends EbayApi {
     WebElement signwithFb;
     @FindBy (css = "[_sp='m570\\.l2621']")
     WebElement register;
-@FindBy (css = "#firstname")
-WebElement typeName;
-@FindBy (css = "#lastname")
-WebElement typelname;
-@FindBy (css = "##PASSWORD")
-WebElement typepassword;
-@FindBy (id ="\"ppaFormSbtBtn" )
-WebElement clickregister;
+    @FindBy (css = "#firstname")
+    WebElement typeName;
+    @FindBy (css = "#lastname")
+    WebElement typelname;
+    @FindBy (css = "##PASSWORD")
+    WebElement typepassword;
+    @FindBy (id ="\"ppaFormSbtBtn" )
+    WebElement clickregister;
 
     public void clicksign(){
     sign.click();
@@ -50,13 +50,13 @@ WebElement clickregister;
     public void  clickreg(){
         register.click();
     }
-    public void firstname(String Value){
+    public void setTypeName(String Value){
         typeName.sendKeys(Value);
     }
-    public void lastname(String Value) {
+    public void setTypelname(String Value) {
         typelname.sendKeys(Value);
     }
         public void submitreg() {
-            clickregister.click();
-        }
+        clickregister.click();
+    }
 }

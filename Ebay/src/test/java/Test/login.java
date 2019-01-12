@@ -7,48 +7,61 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class login extends EbayApi{
+public class login extends EbayApi {
     CreateLogSearch createLogSearch;
     SearchItem search;
 
     @BeforeMethod
-    public void initialize () {
-        createLogSearch= PageFactory.initElements(driver,CreateLogSearch.class);
-        search=PageFactory.initElements(driver,SearchItem.class);
+    public void initialize() {
+        createLogSearch = PageFactory.initElements(driver, CreateLogSearch.class);
+        search = PageFactory.initElements(driver, SearchItem.class);
     }
+
     @Test
-    public void invalidLogin(){
+    public void invalidLogin() {
         createLogSearch.clicksign();
         createLogSearch.setUserName(username);
         createLogSearch.setPassword(password);
         createLogSearch.clicksubmit();
     }
+
     @Test
-    public void emailBoxcheck(){
+    public void emailBoxcheck() {
         createLogSearch.clicksign();
         createLogSearch.setUserName(username);
     }
+
     @Test
-    public void passwordBoxCheck () {
+    public void passwordBoxCheck() {
         createLogSearch.clicksign();
         createLogSearch.setPassword(password);
     }
+
     @Test
     public void signWithFb() {
         createLogSearch.clicksign();
         createLogSearch.clickFb();
     }
+
     @Test
-    public void clickregister(){
+    public void clickregister() {
         createLogSearch.clicksign();
         createLogSearch.clickreg();
     }
+
     @Test
-    public void
-//    @Test
-//    public void searches(){
-//        search.searchandsubmit();
-//    }
+    public void enterFName() {
+        createLogSearch.clickreg();
+        createLogSearch.setTypeName(typename);
+    }
+
+    @Test
+    public void enterLName() {
+        createLogSearch.clickreg();
+        createLogSearch.setTypelname(typelName);
+    }
+    
+
 
 
 }
