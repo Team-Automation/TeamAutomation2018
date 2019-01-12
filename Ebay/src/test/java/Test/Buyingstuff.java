@@ -7,16 +7,18 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class Buyingstuff  extends EbayApi {
-   CreateLogSearch createLogSearch;
+   //CreateLogSearch createLogSearch;
     BuyProduct buys;
-
-    public void initialize1() {
-        createLogSearch = PageFactory.initElements(driver, CreateLogSearch.class);
-        buys=PageFactory.initElements(driver,BuyProduct.class);
-    }
     @Test
-    public void startSearch(){
+    public void initialize1() {
+        //createLogSearch = PageFactory.initElements(driver, CreateLogSearch.class);
+        buys=PageFactory.initElements(driver,BuyProduct.class);
         buys.dosearch(searchproduct);
+        buys.clickit();
+        buys.clickpolo();
     }
-    
-}
+
+    //public void startSearch(){
+       // buys.dosearch(searchproduct);
+    }
+
