@@ -1,0 +1,8 @@
+00:26:40.918 [main] INFO  base.CommonApi - Test is running on local env
+00:26:40.919 [main] ERROR base.CommonApi - mine error
+00:26:44.940 [main] INFO  base.CommonApi - Navigaed to Home Page
+00:26:45.457 [main] INFO  base.CommonApi - Successfully validated Text message
+00:26:45.586 [main] INFO  base.CommonApi - Test is running on local env
+00:26:45.586 [main] ERROR base.CommonApi - mine error
+00:26:48.778 [main] INFO  base.CommonApi - Navigaed to Home Page
+00:26:49.214 [main] INFO  base.CommonApi - Test is running on local env

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Target Shopping Website " >
+    <listeners>
+        <listener class-name="Listeners"/>
+        <listener class-name="extendReports.ExtentReporterNG"/>
+    </listeners>
+
+    <parameter name="OS" value="macOS Mojave"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserVersion" value="71.0.3578.98"/>
+    <parameter name="url" value="https://www.target.com"/>
+
+    <test name = "Target Home">
+        <classes>
+            <class name="validation.ValidateLink">
+
+                <!--<methods>-->
+                    <!--<include name="checkWellChosen"/>-->
+                <!--</methods>-->
+            </class>
+        </classes>
+    </test>
+</suite>

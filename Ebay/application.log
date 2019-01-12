@@ -1,0 +1,22 @@
+2019-01-12 02:10:43,538  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:11:10,902  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:11:15,170  INFO [main] CommonApi:49 - clicked to register account
+2019-01-12 02:11:15,281  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:11:19,858  INFO [main] CommonApi:76 - created account
+2019-01-12 02:11:20,002  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:11:24,639  INFO [main] CommonApi:32 - email checked
+2019-01-12 02:11:24,812  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:11:29,110  INFO [main] CommonApi:55 - first name added
+2019-01-12 02:11:29,247  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:11:33,271  INFO [main] CommonApi:61 - last name added
+2019-01-12 02:11:33,430  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:11:37,547  INFO [main] CommonApi:67 - passowrd entered
+2019-01-12 02:11:37,736  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:11:43,854  INFO [main] CommonApi:26 - Tried using invalid password to log in
+2019-01-12 02:11:44,042  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:12:04,046  INFO [main] CommonApi:81 - searched 3 items 
+2019-01-12 02:12:04,216  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:12:08,735  INFO [main] CommonApi:38 - Invalid password used to login
+2019-01-12 02:12:08,899  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-12 02:12:13,798  INFO [main] CommonApi:44 - clicked alternative log in method
+2019-01-12 02:12:13,936  INFO [main] CommonApi:36 - Test is running on local env
