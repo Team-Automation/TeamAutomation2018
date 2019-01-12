@@ -37,7 +37,7 @@ public class HomePage extends GmailCommonAPI {
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
         loginPassword.sendKeys("girl1995", Keys.ENTER);
         composeButton.click();
-        recipientEmail.sendKeys("chocolategirl1995@gmail.com", Keys.ENTER);
+        recipientEmail.sendKeys("chocolategirl1995@gmail.com");
         emailSubject.sendKeys("Hey");
         emailBody.sendKeys("Naz");
         sendButton.click();
