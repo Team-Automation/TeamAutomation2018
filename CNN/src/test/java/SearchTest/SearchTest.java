@@ -23,6 +23,11 @@ public class SearchTest extends SearchPage {
         searchPage.getStyle().click();
     }
     @Test
+    public void sports(){
+        searchPage.getSports().click();
+        searchPage.getNFL().click();
+    }
+    @Test
     public void test1() { liveTv(); }
     @Test
     public void test2() { travelP(); }

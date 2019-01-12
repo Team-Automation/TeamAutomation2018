@@ -20,12 +20,23 @@ public class SearchPage extends CommonApi {
     @FindBy (className = "nav-section__submenu-item")
     WebElement liveVideo;
     public WebElement getLiveVideo() {
-        return liveVideo; }
+        return liveVideo;
+    }
     @FindBy (xpath = "//a[contains(text(),'Style')]")
     WebElement style;
     public WebElement getStyle(){
-        return style; }
-
+        return style;
+    }
+    @FindBy (xpath = "//a[contains(text(),'Sports')]")
+    WebElement sports;
+    public WebElement getSports(){
+        return sports;
+    }
+    @FindBy (xpath = "//a[contains(text(),'NFL')]")
+    WebElement NFL;
+    public WebElement getNFL(){
+        return NFL;
+    }
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");
         clickByXpath("//a[@class='Header__section'][contains(text(),'Destinations')]");
