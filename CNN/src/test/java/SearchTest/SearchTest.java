@@ -12,6 +12,11 @@ public class SearchTest extends SearchPage {
     public void initializeElement(){
         searchPage = PageFactory.initElements(driver, SearchPage.class); }
     @Test
+    public void searchBangladesh(){
+        searchPage.getBangladesh().click();
+        searchPage.getTypeBangladesh().sendKeys("bangladesh",Keys.ENTER);
+    }
+    @Test
     public void showLiveTV(){
         searchPage.liveTv(); }
     @Test
@@ -53,11 +58,12 @@ public class SearchTest extends SearchPage {
         searchPage.getUSSpaceFirstArt();
     }
     @Test
-    public void AsiaFristArticle(){
+    public void AsiaFirstArticle(){
         searchPage.getWorld().click();
         searchPage.getWorldAsia().click();
         searchPage.getWorldAsiaHeadline().click();
     }
+
     //logInProblem
 //    @Test
 //    public void wayToLogIn() throws InterruptedException{

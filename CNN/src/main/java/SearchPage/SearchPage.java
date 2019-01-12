@@ -16,7 +16,16 @@ public class SearchPage extends CommonApi {
     WebElement video;
     public WebElement getVideoLive() {
         return video; }
-
+    @FindBy (css = "#search-button")
+    WebElement bangladesh;
+    public WebElement getBangladesh(){
+        return bangladesh;
+    }
+    @FindBy (css = "#search-input-field")
+    WebElement TypeBangladesh;
+    public WebElement getTypeBangladesh(){
+        return TypeBangladesh;
+    }
     @FindBy (className = "nav-section__submenu-item")
     WebElement liveVideo;
     public WebElement getLiveVideo() {
@@ -112,6 +121,7 @@ public class SearchPage extends CommonApi {
     public WebElement getWorldAsiaHeadline(){
         return worldAsiaHeadline;
     }
+
     //LogInProblems
 //    @FindBy (id = "menu")
 //    WebElement processToLogInLogIn;
