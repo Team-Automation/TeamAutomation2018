@@ -24,8 +24,42 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement sendButton;
     @FindBy(xpath = "//a[contains(text(),'Help')]")
     public static WebElement helpOption;
-    @FindBy(xpath = "//a[contains(text(),'Create a Google Account')]")
-    public static WebElement 
+    @FindBy(xpath = "//section[@class='primary-container']//section[1]//h2[1]//*[2]")
+    public static WebElement popularArticles;
+    @FindBy(xpath = "/html/body/div[2]/div/section/div/div/article/nav/section[1]/div/div/div[1]/a")
+    public static WebElement createGoogleAccount;
+    @FindBy(xpath = "//h3[@class='zippy index1 goog-zippy-expanded']")
+    public static WebElement checkGoogleAccount;
+    @FindBy(xpath = "//a[contains(text(),'enter your email address')]")
+    public static WebElement checkGoogleAccountEnterEmail;
+    @FindBy(xpath = "//input[@id='identifierId']")
+    public static WebElement enterYourEmailAddress;
+    @FindBy(id = "identifierId")
+    public static WebElement recoverAccount;
+    @FindBy (xpath = "//a[contains(text(),'Create a strong password & a more secure account')]")
+    public static WebElement createStrongPassword;
+    @FindBy (xpath = "//a[@class='zippy index1 goog-zippy-collapsed']")
+    public static WebElement makeYourPasswordUnique;
+    @FindBy (xpath = "//a[contains(text(),'use a tool to manage your saved passwords')]")
+    public static WebElement manageYourSavedPasswords;
+    @FindBy(xpath = "//a[contains(text(),'Verify your account')]")
+    public static WebElement verifyYourAccount;
+    @FindBy (xpath = "//a[contains(text(),'Control what others see about you across Google se')]")
+    public static WebElement controlWhatOthersSeeAboutYouAcrossGoogleSearch;
+    @FindBy(xpath = "//h3[@class='zippy index1 goog-zippy-collapsed']")
+    public static WebElement whatInfoCanBeShared;
+    @FindBy(xpath = "//h3[@class='zippy index2 goog-zippy-expanded']")
+    public static WebElement whereThisInfoShowsUp;
+    @FindBy(xpath = "//h3[@class='zippy index3 goog-zippy-collapsed']")
+    public static WebElement previewWhatYourInfoLooksLikeToOthers;
+    @FindBy (xpath = "//a[contains(text(),'Someone changed your password')]")
+    public static WebElement someoneChangedYourPassword;
+    @FindBy (xpath = "//a[contains(text(),'recover your account')]")
+    public static WebElement recoverYourAccount;
+    @FindBy (xpath = "/html/body/div[2]/header/div[4]/div/div/div/div/span/a/span")
+    public static WebElement googleAccount;
+    @FindBy(xpath = "//*[@id=\"gb\"]/div[2]/div[1]/div[1]/svg/path")
+    public static WebElement viewBox;
 
 
 
@@ -46,9 +80,31 @@ public class HomePage extends GmailCommonAPI {
         Thread.sleep(3000);
     }
 
-    public void Help() {
+    public void HelpCreateGoogleAccount() {
         helpOption.click();
+       // popularArticles.click();
+        createGoogleAccount.click();
+        checkGoogleAccount.click();
+        checkGoogleAccountEnterEmail.click();
+        enterYourEmailAddress.sendKeys("chocolategirl1995", Keys.ENTER);
 
 
+
+
+
+
+
+    }
+
+    public void helpGoogleAccount(){
+        helpOption.click();
+        googleAccount.click();
+
+
+    }
+
+    public void GoogleAccount(){
+        helpOption.click();
+        viewBox.click();
     }
 }

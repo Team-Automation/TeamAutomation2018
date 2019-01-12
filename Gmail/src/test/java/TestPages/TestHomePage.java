@@ -18,7 +18,11 @@ public class TestHomePage extends HomePage {
     @Test
     public void Email() throws InterruptedException {homepage.sendEmail();}
     @Test
-    public void test1(){homepage.Help(); }
+    public void test1(){homepage.HelpCreateGoogleAccount(); }
+    @Test
+    public void test2(){homepage.helpGoogleAccount();}
+    @Test
+    public void test3(){homepage.GoogleAccount();}
 
 
 }
