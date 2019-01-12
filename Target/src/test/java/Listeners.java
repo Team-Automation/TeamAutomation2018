@@ -22,7 +22,7 @@ public class Listeners implements ITestListener {
         //screenshort concept
 
         try {
-            ca.takeScreenShot();
+            ca.takeScreenShot(iTestResult.getName());
         } catch (IOException e) {
             e.printStackTrace();
         }

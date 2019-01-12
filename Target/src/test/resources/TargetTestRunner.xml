@@ -4,6 +4,7 @@
 <suite name="Target Shopping Website " >
     <listeners>
         <listener class-name="Listeners"/>
+        <listener class-name="extendReports.ExtentReporterNG"/>
     </listeners>
 
     <parameter name="OS" value="macOS Mojave"/>
@@ -13,8 +14,12 @@
 
     <test name = "Target Home">
         <classes>
-            <class name="validation.ValidateText"/>
+            <class name="validation.ValidateLink">
 
+                <!--<methods>-->
+                    <!--<include name="checkWellChosen"/>-->
+                <!--</methods>-->
+            </class>
         </classes>
     </test>
 </suite>

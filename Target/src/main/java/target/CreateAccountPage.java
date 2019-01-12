@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class CreateAccountPage extends HomePage {
-
     @FindBy(css = "#username")
     WebElement emailBox;
 
@@ -70,5 +69,6 @@ public class CreateAccountPage extends HomePage {
     public WebElement getCreateAccountText () {
         return createAccountText;
     }
+
 
 }
