@@ -33,13 +33,23 @@ public class login extends EbayApi{
         createLogSearch.clicksign();
         createLogSearch.setPassword(password);
     }
-
     @Test
-    public void searches(){
-        search.searchandsubmit();
-
-
+    public void signWithFb() {
+        createLogSearch.clicksign();
+        createLogSearch.clickFb();
     }
+    @Test
+    public void clickregister(){
+        createLogSearch.clicksign();
+        createLogSearch.clickreg();
+    }
+    @Test
+    public void
+//    @Test
+//    public void searches(){
+//        search.searchandsubmit();
+//    }
+
 
 }
 
