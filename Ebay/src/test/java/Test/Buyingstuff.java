@@ -8,12 +8,25 @@ import org.testng.annotations.Test;
 
 public class Buyingstuff  extends EbayApi {
     BuyProduct buys;
+    CreateLogSearch createLogSearch;
     @Test
     public void initialize1() {
-        //createLogSearch = PageFactory.initElements(driver, CreateLogSearch.class);
+        createLogSearch = PageFactory.initElements(driver, CreateLogSearch.class);
         buys=PageFactory.initElements(driver,BuyProduct.class);
         buys.dosearch(searchproduct);
         buys.clickit();
+        buys.clickpolo();
+    }
+    @Test
+    public void trysearch(){
+        buys.dosearch(searchproduct);
+    }
+    @Test
+    public void clicksearch(){
+        buys.clickit();
+    }
+    @Test
+    public void clickproduct(){
         buys.clickpolo();
     }
 }
