@@ -5,11 +5,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class SearchPage extends CommonApi {
+
     @FindBy(xpath = "//a[@id='nav-mobileTV']")
     public static WebElement televition;
     public void liveTv() {
        televition.click();
     }
+
+    @FindBy (xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Video')]")
+    WebElement video;
+    public WebElement getVideoLive() {
+        return video; }
+
+    @FindBy (className = "nav-section__submenu-item")
+    WebElement liveVideo;
+    public WebElement getLiveVideo() {
+        return liveVideo; }
+    @FindBy (xpath = "//a[contains(text(),'Style')]")
+    WebElement style;
+    public WebElement getStyle(){
+        return style; }
 
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");

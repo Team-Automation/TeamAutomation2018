@@ -14,6 +14,15 @@ public class SearchTest extends SearchPage {
     public void showLiveTV(){
         searchPage.liveTv(); }
     @Test
+    public void liveVideos(){
+        searchPage.getVideoLive().click();
+        searchPage.getLiveVideo().click();
+    }
+    @Test
+    public void style(){
+        searchPage.getStyle().click();
+    }
+    @Test
     public void test1() { liveTv(); }
     @Test
     public void test2() { travelP(); }
