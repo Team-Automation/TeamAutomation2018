@@ -23,9 +23,5 @@ public class BuyProduct extends EbayApi{
         public void clickpolo(){
             product1.click();
         }
-        public void choos
-
-
-
-    }
+}
 

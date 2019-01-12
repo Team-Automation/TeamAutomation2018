@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class Buyingstuff  extends EbayApi {
-   //CreateLogSearch createLogSearch;
     BuyProduct buys;
     @Test
     public void initialize1() {
@@ -17,9 +16,5 @@ public class Buyingstuff  extends EbayApi {
         buys.clickit();
         buys.clickpolo();
     }
-
-
-    //public void startSearch(){
-       // buys.dosearch(searchproduct);
-    }
+}
 
