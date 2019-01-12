@@ -79,12 +79,32 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement themes;
 
 
-
     public void login(){
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
         loginPassword.sendKeys("girl1995", Keys.ENTER);
     }
 
+    public void sendEmailCompose(){
+        login();
+        composeButton.click();
+    }
+    public void sendEmailRecipientEmail(){
+        sendEmailCompose();
+        recipientEmail.sendKeys("chocolategirl1995@gmail.com", Keys.ENTER);
+    }
+    public void sendEmailemailSubject(){
+        sendEmailRecipientEmail();
+        emailSubject.sendKeys("Hey");
+    }
+    public void sendEmailemailBody(){
+        sendEmailemailSubject();
+        emailBody.sendKeys("Naz");
+    }
+    public void sendEmailSendButton() throws InterruptedException {
+        sendEmailemailBody();
+        sendButton.click();
+        Thread.sleep(3000);
+    }
 
     public void sendEmail() throws InterruptedException {
         login();
@@ -126,13 +146,11 @@ public class HomePage extends GmailCommonAPI {
     public void EmailStarred(){
         login();
         starred.click();
-
     }
+
     public void EmailSettings(){
         login();
         emailSettings.click();
         settingsThemes.click();
-
-
     }
 }
