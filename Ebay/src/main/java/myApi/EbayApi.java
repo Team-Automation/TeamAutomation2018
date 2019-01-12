@@ -95,7 +95,7 @@ public class EbayApi extends CommonApi {
     public String password= "1993";
     public String typename= "Lazimul";
     public String typelName= "haque";
-    public String createpassword="710727";
+    public String cpassword="710727";
 
 
 

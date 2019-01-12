@@ -4,17 +4,18 @@ import myApi.EbayApi;
 import myApi.login.CreateLogSearch;
 import myApi.search.SearchItem;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class login extends EbayApi {
     CreateLogSearch createLogSearch;
-    SearchItem search;
+    //SearchItem search;
 
     @BeforeMethod
     public void initialize() {
         createLogSearch = PageFactory.initElements(driver, CreateLogSearch.class);
-        search = PageFactory.initElements(driver, SearchItem.class);
+       // search = PageFactory.initElements(driver, SearchItem.class);
     }
 
     @Test
@@ -45,7 +46,6 @@ public class login extends EbayApi {
 
     @Test
     public void clickregister() {
-        createLogSearch.clicksign();
         createLogSearch.clickreg();
     }
 
@@ -63,17 +63,19 @@ public class login extends EbayApi {
     @Test
     public void enterPwd(){
         createLogSearch.clickreg();
-        createLogSearch.setCreatepassword(createpassword);
+        createLogSearch.setCreatepassword(cpassword);
     }
     @Test
     public void createAccount(){
         createLogSearch.clickreg();
         createLogSearch.setTypeName(typename);
         createLogSearch.setTypelname(typelName);
-        createLogSearch.setCreatepassword(createpassword);
+        createLogSearch.setCreatepassword(cpassword);
         createLogSearch.submitreg();
 
     }
+    @AfterMethod
+    Q
 
 
 
