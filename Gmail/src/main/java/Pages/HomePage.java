@@ -7,8 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends GmailCommonAPI {
-    @FindBy(xpath = "//a[contains(text(),'Help')]")
-    public static WebElement helpOption;
+
     @FindBy(xpath = "//input[@id='identifierId']")
     public static WebElement loginUsername;
     @FindBy(xpath = "//input[@name='password']")
@@ -23,6 +22,10 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement emailBody;
     @FindBy(xpath = "//*[@id=':p5']")
     public static WebElement sendButton;
+    @FindBy(xpath = "//a[contains(text(),'Help')]")
+    public static WebElement helpOption;
+    @FindBy(xpath = "//a[contains(text(),'Create a Google Account')]")
+    public static WebElement 
 
 
 
@@ -45,8 +48,6 @@ public class HomePage extends GmailCommonAPI {
 
     public void Help() {
         helpOption.click();
-        helpOption.sendKeys("");
-        helpOption.sendKeys("value", Keys.ENTER);
 
 
     }

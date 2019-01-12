@@ -12,11 +12,13 @@ public class TestHomePage extends HomePage {
     public void initializeElement(){
         homepage = PageFactory.initElements(driver,HomePage.class);
     }
-    @Test
-    public void test1(){homepage.Help(); }
+
     @Test
     public void gmailLogin(){homepage.login();}
     @Test
     public void Email() throws InterruptedException {homepage.sendEmail();}
+    @Test
+    public void test1(){homepage.Help(); }
+
 
 }
