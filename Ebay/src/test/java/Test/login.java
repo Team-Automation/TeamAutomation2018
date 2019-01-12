@@ -14,6 +14,8 @@ public class login extends EbayApi {
     createLogSearch.setUserName(username);
     createLogSearch.setPassword(password);
     createLogSearch.clicksubmit();
+    navigateBack();
+    //To Serch Items
 
 
 }

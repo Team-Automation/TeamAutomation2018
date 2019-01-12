@@ -15,6 +15,7 @@ WebElement sign;
 @FindBy (id = "sgnBt")
     WebElement signin;
 
+
 public void clicksign(){
     sign.click();
 }
@@ -26,7 +27,13 @@ public void clicksign(){
     }
     public void clicksubmit(){
         signin.click();
+
     }
+    @FindBy (how = How.ID ,using="gh-ac")
+    public static WebElement searchInput;
+@FindBy (how = How.ID, using = "gh-btn")
+    public static  WebElement clickSearch;
+
 
 
 }
