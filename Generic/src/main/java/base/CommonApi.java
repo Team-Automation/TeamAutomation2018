@@ -256,6 +256,7 @@ public class CommonApi {
     public void takeScreenShot() throws IOException {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file, new File("screenShots.png"));
+        System.out.println("screenshots taken");
     }
 
     //upload a file/image
