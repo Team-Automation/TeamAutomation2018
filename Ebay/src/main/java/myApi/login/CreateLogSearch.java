@@ -61,5 +61,7 @@ public class CreateLogSearch extends EbayApi {
     }
         public void submitreg() {
         clickregister.click();
+            System.out.println("This concludes the first part of testing");
     }
+
 }

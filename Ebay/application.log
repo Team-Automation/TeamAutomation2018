@@ -1,9 +1,12 @@
-2019-01-11 23:31:50,353  INFO [main] CommonApi:36 - Test is running on local env
-2019-01-11 23:31:57,191  INFO [main] CommonApi:36 - Test is running on local env
-2019-01-11 23:32:02,482  INFO [main] CommonApi:36 - Test is running on local env
-2019-01-11 23:32:07,980  INFO [main] CommonApi:36 - Test is running on local env
-2019-01-11 23:32:12,631  INFO [main] CommonApi:36 - Test is running on local env
-2019-01-11 23:32:17,580  INFO [main] CommonApi:36 - Test is running on local env
-2019-01-11 23:32:22,202  INFO [main] CommonApi:36 - Test is running on local env
-2019-01-11 23:32:28,512  INFO [main] CommonApi:36 - Test is running on local env
-2019-01-11 23:32:33,951  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:51:23,071  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:51:29,912  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:51:35,811  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:51:40,506  INFO [main] CommonApi:32 - email checked
+2019-01-11 23:51:40,639  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:51:45,049  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:51:49,666  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:51:54,152  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:52:00,245  INFO [main] CommonApi:26 - Tried using invalid password to log in
+2019-01-11 23:52:00,403  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:52:21,765  INFO [main] CommonApi:36 - Test is running on local env
+2019-01-11 23:52:26,616  INFO [main] CommonApi:36 - Test is running on local env
