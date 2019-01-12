@@ -128,6 +128,8 @@ public class HomePage extends GmailCommonAPI {
         starred.click();
 
     }
+
+    
     public void EmailSettings(){
         login();
         emailSettings.click();
