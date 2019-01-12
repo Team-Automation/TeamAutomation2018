@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Ebay Shopping Website " parallel="false">
+
+    <parameter name="OS" value="macOS Sierra"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserVersion" value="64.0"/>
+    <parameter name="url" value="https://www.ebay.com"/>
+
+    <test name = "Ebay Home">
+        <classes>
+            <class name="TestHome"/>
+            <class name="Test.login"/>
+            <class name="Test.Buyingstuff"/>
+
+        </classes>
+    </test>
+</suite>
