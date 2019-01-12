@@ -11,12 +11,12 @@ public class login extends EbayApi {
     public void createlofsearch(){
     CreateLogSearch createLogSearch= PageFactory.initElements(driver,CreateLogSearch.class);
     createLogSearch.clicksign();
-    createLogSearch.setUserName(username);
+   createLogSearch.setUserName(username);
     createLogSearch.setPassword(password);
     createLogSearch.clicksubmit();
     navigateBack();
-    //To Serch Items
-
+    //To Search Items
+createLogSearch.searchandsubmit();
 
 }
 

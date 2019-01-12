@@ -29,7 +29,8 @@ public class CreateLogSearch {
     }
     public void clicksubmit(){
         signin.click();
-    }
+
+  }
     @FindBy (how = How.ID ,using="gh-ac")
     public static WebElement searchInput;
     @FindBy (how = How.ID, using = "gh-btn")
@@ -61,7 +62,8 @@ public class CreateLogSearch {
         List<String>list=getsearchmenu();
         for(int i=0; i<list.size();i++){
             searchFor(list.get(i));
-            clicksubmit();
+            clickSubmit();
+            clearInput();
         }
     }
 
