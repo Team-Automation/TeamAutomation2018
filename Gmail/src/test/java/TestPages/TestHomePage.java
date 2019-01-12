@@ -29,6 +29,16 @@ public class TestHomePage extends HomePage {
     public void test7(){homepage.EmailStarred();}
     @Test
     public void test10 (){homepage.EmailSettings();}
+    @Test
+    public void test11 (){homepage.sendEmailCompose();}
+    @Test
+    public void test12(){homepage.sendEmailRecipientEmail();}
+    @Test
+    public void test13(){homepage.sendEmailemailSubject();}
+    @Test
+    public void test14(){homepage.sendEmailemailBody();}
+    @Test
+    public void test15() throws InterruptedException {homepage.sendEmailSendButton();}
 
 
 }

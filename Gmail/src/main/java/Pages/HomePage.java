@@ -84,6 +84,28 @@ public class HomePage extends GmailCommonAPI {
         loginPassword.sendKeys("girl1995", Keys.ENTER);
     }
 
+    public void sendEmailCompose(){
+        login();
+        composeButton.click();
+    }
+    public void sendEmailRecipientEmail(){
+        sendEmailCompose();
+        recipientEmail.sendKeys("chocolategirl1995@gmail.com", Keys.ENTER);
+    }
+    public void sendEmailemailSubject(){
+        sendEmailRecipientEmail();
+        emailSubject.sendKeys("Hey");
+    }
+    public void sendEmailemailBody(){
+        sendEmailemailSubject();
+        emailBody.sendKeys("Naz");
+    }
+    public void sendEmailSendButton() throws InterruptedException {
+        sendEmailemailBody();
+        sendButton.click();
+        Thread.sleep(3000);
+    }
+
     public void sendEmail() throws InterruptedException {
         login();
         composeButton.click();
