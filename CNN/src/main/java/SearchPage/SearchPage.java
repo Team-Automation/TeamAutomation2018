@@ -82,6 +82,21 @@ public class SearchPage extends CommonApi {
     public WebElement getTravelFoodsArticle1st() {
         return travelFoodsArticle1st;
     }
+    @FindBy (className = "nav-menu-links__link")
+    WebElement USSpace;
+    public WebElement getUSSpace() {
+        return USSpace;
+    }
+    @FindBy (className = "nav-section__submenu-item")
+    WebElement USSpacekAndScience;
+    public WebElement getUSSpacekAndScience() {
+        return USSpacekAndScience;
+    }
+    @FindBy (className = "cd__headline-text")
+    WebElement USSpaceFirstArt;
+    public WebElement getUSSpaceFirstArt() {
+        return USSpaceFirstArt;
+    }
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");
         clickByXpath("//a[@class='Header__section'][contains(text(),'Destinations')]");

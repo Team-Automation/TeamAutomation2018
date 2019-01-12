@@ -42,8 +42,14 @@ public class SearchTest extends SearchPage {
     @Test
     public void travelFood(){
         searchPage.getTravelFood().click();
-        searchPage.getTravelFood().click();
+        searchPage.getTravelFoods().click();
         searchPage.getTravelFoodsArticle1st();
+    }
+    @Test
+    public void USSpaceAndScience1stArticle(){
+        searchPage.getUSSpace().click();
+        searchPage.getUSSpacekAndScience();
+        searchPage.getUSSpaceFirstArt();
     }
     @Test
     public void test1() { liveTv(); }
