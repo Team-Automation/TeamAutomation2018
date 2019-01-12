@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage extends GmailCommonAPI {
     @FindBy(xpath = "//a[contains(text(),'Help')]")
     public static WebElement helpOption;
-    @FindBy (xpath = "//input[@id='identifierId']")
+    @FindBy(xpath = "//input[@id='identifierId']")
     public static WebElement loginUsername;
     @FindBy(xpath = "//input[@name='password']")
     public static WebElement loginPassword;
@@ -17,7 +17,7 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement composeButton;
     @FindBy(xpath = "//*[@id=':px']")
     public static WebElement recipientEmail;
-    @FindBy(xpath = "//input[@id=':19j']")
+    @FindBy(xpath = "//*[@id=':pf']")
     public static WebElement emailSubject;
     @FindBy(xpath = "//*[@id=':qk']")
     public static WebElement emailBody;
@@ -26,21 +26,27 @@ public class HomePage extends GmailCommonAPI {
 
 
 
+    public void login(){
+        loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
+        loginPassword.sendKeys("girl1995", Keys.ENTER);
+
+    }
+
+
+    public void sendEmail() throws InterruptedException {
+        login();
+        composeButton.click();
+        recipientEmail.sendKeys("chocolategirl1995@gmail.com", Keys.ENTER);
+        emailSubject.sendKeys("Hey");
+        emailBody.sendKeys("Naz");
+        sendButton.click();
+        Thread.sleep(3000);
+    }
+
     public void Help() {
         helpOption.click();
         helpOption.sendKeys("");
         helpOption.sendKeys("value", Keys.ENTER);
-
-
-    }
-    public void sendEmail(){
-        loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
-        loginPassword.sendKeys("girl1995", Keys.ENTER);
-        composeButton.click();
-        recipientEmail.sendKeys("chocolategirl1995@gmail.com");
-        emailSubject.sendKeys("Hey");
-        emailBody.sendKeys("Naz");
-        sendButton.click();
 
 
     }
