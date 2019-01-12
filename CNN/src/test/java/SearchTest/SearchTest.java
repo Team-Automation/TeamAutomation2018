@@ -34,6 +34,11 @@ public class SearchTest extends SearchPage {
         searchPage.getFirstArticle();
     }
     @Test
+    public void USEnergy(){
+        searchPage.getUSEnergy().click();
+        searchPage.getUSEE().click();
+    }
+    @Test
     public void test1() { liveTv(); }
     @Test
     public void test2() { travelP(); }

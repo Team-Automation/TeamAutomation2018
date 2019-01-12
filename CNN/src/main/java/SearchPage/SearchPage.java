@@ -52,6 +52,16 @@ public class SearchPage extends CommonApi {
     public WebElement getFirstArticle() {
         return firstArticle;
     }
+    @FindBy (className = "nav-menu-links__link")
+    WebElement USEnergy;
+    public WebElement getUSEnergy() {
+        return USEnergy;
+    }
+    @FindBy (className = "nav-section__submenu-item")
+    WebElement USEE;
+    public WebElement getUSEE() {
+        return USEE;
+    }
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");
         clickByXpath("//a[@class='Header__section'][contains(text(),'Destinations')]");
