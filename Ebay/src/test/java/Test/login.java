@@ -60,7 +60,11 @@ public class login extends EbayApi {
         createLogSearch.clickreg();
         createLogSearch.setTypelname(typelName);
     }
-    
+    @Test
+    public void enterPwd(){
+        createLogSearch.clickreg();
+        createLogSearch.submitreg();
+    }
 
 
 
