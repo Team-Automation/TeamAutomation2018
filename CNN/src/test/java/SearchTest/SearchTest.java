@@ -46,10 +46,16 @@ public class SearchTest extends SearchPage {
         searchPage.getTravelFoodsArticle1st();
     }
     @Test
-    public void USSpaceAndScience1stArticle(){
+    public void SpaceAndScience1stArticle(){
         searchPage.getUSSpace().click();
         searchPage.getUSSpacekAndScience();
         searchPage.getUSSpaceFirstArt();
+    }
+    @Test
+    public void AsiaFristArticle(){
+        searchPage.getWorld().click();
+        searchPage.getWorldAsia().click();
+        searchPage.getWorldAsiaHeadline().click();
     }
     @Test
     public void test1() { liveTv(); }
