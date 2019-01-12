@@ -4,6 +4,7 @@
 <suite name="Target Shopping Website " >
     <listeners>
         <listener class-name="Listeners"/>
+        <listener class-name="extendReports.ExtentReporterNG"/>
     </listeners>
 
     <parameter name="OS" value="macOS Mojave"/>
@@ -12,14 +13,14 @@
     <parameter name="url" value="https://www.target.com"/>
 
     <test name = "Target Home">
-        <packages>
-            <package name="validation"/>
-        </packages>
+        <!--<packages>-->
+            <!--<package name="validation"/>-->
+        <!--</packages>-->
         <classes>
             <class name="TargetTest"/>
-            <class name="TestSearch"/>
-            <class name="LoginPageTest"/>
-            <class name="CreateAccountPageTest"/>
+            <!--<class name="TestSearch"/>-->
+
+            <!--<class name="CreateAccountPageTest"/>-->
         </classes>
 
 

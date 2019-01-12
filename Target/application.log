@@ -1,38 +1,24 @@
-2019-01-11 18:26:34,291  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:26:34,294 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:26:56,596  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:26:56,597 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:27:04,787  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:27:04,788 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:27:12,180  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:27:12,180 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:27:20,742  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:27:20,742 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:27:29,864  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:27:29,864 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:27:36,328  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:27:36,328 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:27:43,001  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:27:43,001 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:27:48,520  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:27:48,520 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:27:54,147  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:27:54,148 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:28:01,149  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:28:01,149 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:28:06,680  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:28:06,680 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:28:11,995  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:28:11,995 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:28:18,331  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:28:18,332 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:28:27,508  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:28:27,508 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:28:51,557  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:28:51,562 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:28:59,132  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:28:59,132 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:29:04,039  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:29:04,040 ERROR [main] CommonApi:39 - mine error
-2019-01-11 18:29:12,835  INFO [main] CommonApi:38 - Test is running on local env
-2019-01-11 18:29:12,835 ERROR [main] CommonApi:39 - mine error
+2019-01-11 22:08:46,044  INFO [main] CommonApi:41 - Test is running on local env
+2019-01-11 22:08:46,046 ERROR [main] CommonApi:42 - mine error
+2019-01-11 22:08:50,892  INFO [main] CommonApi:41 - Test is running on local env
+2019-01-11 22:08:50,893 ERROR [main] CommonApi:42 - mine error
+2019-01-11 22:08:58,019  INFO [main] CommonApi:41 - Test is running on local env
+2019-01-11 22:08:58,019 ERROR [main] CommonApi:42 - mine error
+2019-01-11 22:09:03,641  INFO [main] CommonApi:41 - Test is running on local env
+2019-01-11 22:09:03,641 ERROR [main] CommonApi:42 - mine error
+2019-01-11 22:09:10,578  INFO [main] CommonApi:41 - Test is running on local env
+2019-01-11 22:09:10,579 ERROR [main] CommonApi:42 - mine error
+2019-01-11 22:09:17,358  INFO [main] CommonApi:41 - Test is running on local env
+2019-01-11 22:09:17,359 ERROR [main] CommonApi:42 - mine error
+2019-01-11 22:09:22,052  INFO [main] CommonApi:41 - Test is running on local env
+2019-01-11 22:09:22,053 ERROR [main] CommonApi:42 - mine error
+2019-01-11 22:09:26,689 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2019-01-11 22:09:26,690 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2019-01-11 22:09:26,692 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2019-01-11 22:09:26,693 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2019-01-11 22:09:26,693 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/Users/ahmedfhasan/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2019-01-11 22:09:26,862 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2019-01-11 22:09:26,862 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2019-01-11 22:09:26,862 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2019-01-11 22:09:26,862 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2019-01-11 22:09:26,862 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/Users/ahmedfhasan/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
