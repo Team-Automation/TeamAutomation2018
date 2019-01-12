@@ -70,6 +70,8 @@ public class login extends EbayApi {
         createLogSearch.clickreg();
         createLogSearch.setTypeName(typename);
         createLogSearch.setTypelname(typelName);
+        createLogSearch.setCreatepassword(createpassword);
+        createLogSearch.submitreg();
 
     }
 
