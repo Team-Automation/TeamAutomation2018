@@ -4,8 +4,7 @@ import myApi.EbayApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class BuyProduct {
-    public class buy extends EbayApi{
+public class BuyProduct extends EbayApi{
         @FindBy (css = "#gh-ac")
         WebElement searchproduct;
         @FindBy (id = "gh-btn")
@@ -25,4 +24,4 @@ public class BuyProduct {
 
 
     }
-}
+
