@@ -23,6 +23,12 @@ public class TestHomePage extends HomePage {
     public void test2(){homepage.helpGoogleAccount();}
     @Test
     public void test3(){homepage.GoogleAccount();}
+    @Test
+    public void test6(){homepage.GoogleApps();}
+    @Test
+    public void test7(){homepage.EmailStarred();}
+    @Test
+    public void test10 (){homepage.EmailSettings();}
 
 
 }

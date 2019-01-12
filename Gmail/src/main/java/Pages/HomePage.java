@@ -5,6 +5,7 @@ import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.Test;
 
 public class HomePage extends GmailCommonAPI {
 
@@ -60,13 +61,28 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement googleAccount;
     @FindBy(xpath = "//*[@id=\"gb\"]/div[2]/div[1]/div[1]/svg/path")
     public static WebElement viewBox;
+    @FindBy(xpath = "//*[@class='gb_mf']")
+    public static WebElement googleAppsViewBox;
+    @FindBy (xpath = "//*[@id='gb192']/span[1]")
+    public static WebElement userAccount;
+    @FindBy (xpath = "//div[@class='GiKO7c'][contains(text(),'Home')]")
+    public static WebElement homeGoogleAccount;
+    @FindBy (xpath = "//div[contains(text(),'Get started')]")
+    public static WebElement getstarted;
+    @FindBy(xpath = "//*[@id=\":kh\"]/div/div[2]/span/a")
+    public static WebElement starred;
+    @FindBy(xpath = "//div[@class='asa']")
+    public static WebElement emailSettings;
+    @FindBy(xpath = "//div[contains(text(),'Themes')]")
+    public static WebElement settingsThemes;
+    @FindBy(xpath = "//div[@id=':14x.custom-6']//div[@class='a7U']")
+    public static WebElement themes;
 
 
 
     public void login(){
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
         loginPassword.sendKeys("girl1995", Keys.ENTER);
-
     }
 
 
@@ -82,29 +98,41 @@ public class HomePage extends GmailCommonAPI {
 
     public void HelpCreateGoogleAccount() {
         helpOption.click();
-       // popularArticles.click();
+        popularArticles.click();
         createGoogleAccount.click();
         checkGoogleAccount.click();
         checkGoogleAccountEnterEmail.click();
         enterYourEmailAddress.sendKeys("chocolategirl1995", Keys.ENTER);
-
-
-
-
-
-
-
     }
 
     public void helpGoogleAccount(){
         helpOption.click();
         googleAccount.click();
-
-
     }
 
     public void GoogleAccount(){
         helpOption.click();
         viewBox.click();
+    }
+
+    public void GoogleApps(){
+        login();
+        googleAppsViewBox.click();
+        userAccount.click();
+        homeGoogleAccount.click();
+        getstarted.click();
+    }
+
+    public void EmailStarred(){
+        login();
+        starred.click();
+
+    }
+    public void EmailSettings(){
+        login();
+        emailSettings.click();
+        settingsThemes.click();
+
+
     }
 }
