@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Downloads">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/poi-3.11.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/poi-ooxml-schemas-3.11.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/xmlbeans-2.3.0.jar!/" />
+      <root url="file://$USER_HOME$/Downloads" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads" recursive="false" type="SOURCES" />
+  </library>
+</component>
