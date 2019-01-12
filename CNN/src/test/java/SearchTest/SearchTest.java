@@ -28,6 +28,12 @@ public class SearchTest extends SearchPage {
         searchPage.getNFL().click();
     }
     @Test
+    public void opinion(){
+        searchPage.getOpinion().click();
+        searchPage.getSocialC().click();
+        searchPage.getFirstArticle();
+    }
+    @Test
     public void test1() { liveTv(); }
     @Test
     public void test2() { travelP(); }

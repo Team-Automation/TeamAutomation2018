@@ -37,6 +37,21 @@ public class SearchPage extends CommonApi {
     public WebElement getNFL(){
         return NFL;
     }
+    @FindBy (className = "nav-menu-links__link")
+    WebElement opinion;
+    public WebElement getOpinion(){
+        return opinion;
+    }
+    @FindBy (className = "nav-section__submenu-item")
+    WebElement socialC;
+    public WebElement getSocialC() {
+        return socialC;
+    }
+    @FindBy (className = "cd__headline-text")
+    WebElement firstArticle;
+    public WebElement getFirstArticle() {
+        return firstArticle;
+    }
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");
         clickByXpath("//a[@class='Header__section'][contains(text(),'Destinations')]");
