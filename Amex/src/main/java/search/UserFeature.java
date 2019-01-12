@@ -1,14 +1,18 @@
 package search;
 
 
+import Report.TestLogger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 
 public class UserFeature {
@@ -19,10 +23,13 @@ public class UserFeature {
     @FindBy(how = How.CSS, using = "#login-submit")
     public static WebElement submitButtonWebElement;
 
+
     public WebElement getUserInputWebElement() {
 
         return userInputWebElement;
     }
+
+
 
     public WebElement getSubmitButtonWebElement() {
         return submitButtonWebElement;
@@ -31,6 +38,8 @@ public class UserFeature {
     public void searchForUser(String value) {
         getUserInputWebElement().sendKeys(value);
     }
+
+
 
     public void submitSearchButton() {
         getSubmitButtonWebElement().click();
@@ -48,15 +57,19 @@ public class UserFeature {
         return data;
     }
 
-    public void searchUserAndSubmitButton() throws Exception {
-DatabaseOperation databaseOperation = new DatabaseOperation();
-List <String> list = databaseOperation.getUserDatafromDB();
+
+    public void searchUserAndSubmitButtonwithoutPassword() throws Exception {
+//        DatabaseOperation databaseOperation = new DatabaseOperation();
+//        List<String> list = databaseOperation.getUserDatafromDB();
         List<String> data = getUserData();
+
         for (int i = 0; i < data.size(); i++) {
+
             searchForUser(data.get(i));
             submitSearchButton();
             clearField();
         }
-
     }
 }
+
+

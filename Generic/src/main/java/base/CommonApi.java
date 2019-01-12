@@ -1,44 +1,58 @@
 package base;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
-import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
 
 public class CommonApi {
     public WebDriver driver = null;
-    public Logger logger = Logger.getLogger(CommonApi.class);
+    public static Logger logger = Logger.getLogger(CommonApi.class);
+//    public String browserstack_username= "joynabaminadib1";
+//    public String browserstack_accesskey = "ZgKEp1eLEcYqFVVWqow3";
+//    public String saucelabs_username = "joynabaminadib";
+//    public String saucelabs_accesskey = "a9127a33-4076-4273-8976-1941775c3a1f";
 
-    @Parameters({"OS","browser", "browserVersion", "url"})
-    @BeforeClass
-    public void setUp(@Optional("OS") String OS, @Optional("browser") String browser,
-                      @Optional("browserVersion") String browserVersion,
-                      @Optional("url") String url) throws IOException {
+    @Parameters({"useCloudEnv","userName","key","OS","browser","browserVersion","url"})
+    @BeforeMethod
+    public void setUp(@Optional("false")Boolean useCloudEnv, @Optional("joynabaminadib") String userName,@Optional("a9127a33-4076-4273-8976-1941775c3a1f")
+            String key, @Optional("Windows 10")String OS,@Optional("firefox") String browser,
+                      @Optional("64.0") String browserVersion, @Optional("http://www.americanexpress.com") String url)throws IOException {
+         if(useCloudEnv==true){
+            //run on cloud
+            logger.setLevel(Level.INFO);
+            logger.info("Test is running on cloud env");
+            getCloudDriver(userName,key,OS,browser,browserVersion);
+            System.out.println("Tests is running on Saucelabs, please wait for result");
 
-
-        //run on local
-        logger.setLevel(Level.INFO);
-        logger.info("Test is running on local env");
-        getLocalDriver(OS, browser, browserVersion);
-
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        }else{
+            //run on local
+            logger.setLevel(Level.INFO);
+            logger.info("Test is running on local env");
+            getLocalDriver(OS,browser,browserVersion);
+        }
+        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
     }
+        //driver.manage().window().maximize();
 
     //driver to run on local
     public WebDriver getLocalDriver(String OS, String browser, String browserVersion) {
@@ -49,13 +63,13 @@ public class CommonApi {
             if (OS.equalsIgnoreCase("mac")) {
                 System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
                 driver = new ChromeDriver();
-            } else if (OS.equalsIgnoreCase("windows")) {
+            } else if (OS.equalsIgnoreCase("Windows 10")) {
                 System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
                 driver = new ChromeDriver();
             }
         } else if (browser.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", "Generic\\selenium-browser-driver\\IEDriverServer.exe");
-            driver = new ChromeDriver();
+
             driver = new InternetExplorerDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
             driver = new SafariDriver();
@@ -63,8 +77,19 @@ public class CommonApi {
 
         return driver;
     }
+    public WebDriver getCloudDriver(String userName,String key,
+                                    String OS,String browser,String browserVersion)throws IOException{
+        DesiredCapabilities cap = new DesiredCapabilities();
+        cap.setCapability("platform", "Windows 10");
+        cap.setBrowserName(browser);
+        cap.setCapability("version",browserVersion);
+        cap.setCapability("name","amextest");
+        cap.setCapability("extendeddebugging","true");
+        cap.setCapability("build","3.0");
+        this.driver = new RemoteWebDriver(new URL("http://"+userName+":"+key+"@ondemand.saucelabs.com:80/wd/hub"), cap);
 
-
+        return driver;
+    }
     @AfterMethod
     public void cleanUp() {
         driver.quit();
@@ -91,7 +116,9 @@ public class CommonApi {
         driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
     }
     public void typeByXpath(String locator, String value) {
-        driver.findElement(By.xpath(locator)).sendKeys("value",Keys.ENTER);
+
+        driver.findElement(By.xpath(locator)).sendKeys(value, Keys.ENTER);
+
     }
     public void keysInput(String locator) {
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
@@ -144,6 +171,10 @@ public class CommonApi {
         return driver.findElement(By.id(locator)).getText();
 
     }
+    public void typeAndEnterByCss(String locator, String value){
+        driver.findElement(By.cssSelector(locator)).clear();
+        driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
+    }
 
     public String getTextByName(String locator) {
         String st = driver.findElement(By.name(locator)).getText();
@@ -167,6 +198,20 @@ public class CommonApi {
         WebElement element = driver.findElement(By.xpath(locator));
 
         return element;
+    }
+    public String getTextByWebElement(WebElement webElement){
+        String text = webElement.getText();
+        return text;
+    }
+    public void inputValueInTextBoxByWebElement(WebElement webElement, String value){
+        //System.out.println(value +"\n");
+
+        webElement.sendKeys(value + Keys.ENTER);
+
+
+    }
+    public void clearInputBox(WebElement webElement){
+        webElement.clear();
     }
 
     //constant sleep time
