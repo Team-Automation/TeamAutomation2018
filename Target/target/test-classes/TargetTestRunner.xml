@@ -12,9 +12,16 @@
     <parameter name="url" value="https://www.target.com"/>
 
     <test name = "Target Home">
+        <packages>
+            <package name="validation"/>
+        </packages>
         <classes>
-            <class name="validation.ValidateText"/>
-
+            <class name="TargetTest"/>
+            <class name="TestSearch"/>
+            <class name="LoginPageTest"/>
+            <class name="CreateAccountPageTest"/>
         </classes>
+
+
     </test>
 </suite>

@@ -5,7 +5,7 @@ public class Target extends CommonApi{
 
     public void search(){
         typeOnId("search","Iphone Xs Max");
-        clickByXpath("//*[@type='submi']");
+        clickByXpath("//*[@type='submit']");
     }
 
     public void signIn()  {
