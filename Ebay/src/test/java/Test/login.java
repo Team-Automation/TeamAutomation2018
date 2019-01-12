@@ -10,14 +10,13 @@ import org.testng.annotations.Test;
 
 public class login extends EbayApi {
     CreateLogSearch createLogSearch;
-    //SearchItem search;
+    SearchItem search;
 
     @BeforeMethod
     public void initialize() {
         createLogSearch = PageFactory.initElements(driver, CreateLogSearch.class);
-       // search = PageFactory.initElements(driver, SearchItem.class);
+        search = PageFactory.initElements(driver, SearchItem.class);
     }
-
     @Test
     public void invalidLogin() {
         createLogSearch.clicksign();
@@ -25,36 +24,30 @@ public class login extends EbayApi {
         createLogSearch.setPassword(password);
         createLogSearch.clicksubmit();
     }
-
     @Test
     public void emailBoxcheck() {
         createLogSearch.clicksign();
         createLogSearch.setUserName(username);
     }
-
     @Test
     public void passwordBoxCheck() {
         createLogSearch.clicksign();
         createLogSearch.setPassword(password);
     }
-
     @Test
     public void signWithFb() {
         createLogSearch.clicksign();
         createLogSearch.clickFb();
     }
-
     @Test
     public void clickregister() {
         createLogSearch.clickreg();
     }
-
     @Test
     public void enterFName() {
         createLogSearch.clickreg();
         createLogSearch.setTypeName(typename);
     }
-
     @Test
     public void enterLName() {
         createLogSearch.clickreg();
@@ -72,13 +65,15 @@ public class login extends EbayApi {
         createLogSearch.setTypelname(typelName);
         createLogSearch.setCreatepassword(cpassword);
         createLogSearch.submitreg();
-
+    }
+    @Test
+    public void itemSearch(){
+        search.searchandsubmit();
     }
     @AfterMethod
-    Q
-
-
-
+    public void clear(){
+        cleanUp();
+    }
 }
 
 

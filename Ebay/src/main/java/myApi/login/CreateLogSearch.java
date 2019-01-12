@@ -27,7 +27,7 @@ public class CreateLogSearch extends EbayApi {
     WebElement typeName;
     @FindBy (css = "#lastname")
     WebElement typelname;
-    @FindBy (css = "##PASSWORD")
+    @FindBy (css = "#PASSWORD")
     WebElement cpassword;
     @FindBy (id ="ppaFormSbtBtn" )
     WebElement clickregister;
