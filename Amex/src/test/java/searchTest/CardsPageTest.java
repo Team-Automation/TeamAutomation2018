@@ -1,14 +1,19 @@
 package searchTest;
 
+import Report.ExtentManager;
+import Report.ExtentTestManager;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import search.CardsPage;
 import search.MyAccountPage;
 
 public class CardsPageTest extends CardsPage{
+
     CardsPage cardsPage;
+
     @BeforeMethod
     public void setUP(){
         cardsPage = PageFactory.initElements(driver,CardsPage.class);
