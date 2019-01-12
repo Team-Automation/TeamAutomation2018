@@ -28,7 +28,7 @@ public class CreateLogSearch extends EbayApi {
     @FindBy (css = "#lastname")
     WebElement typelname;
     @FindBy (css = "##PASSWORD")
-    WebElement typepassword;
+    WebElement createpassword;
     @FindBy (id ="\"ppaFormSbtBtn" )
     WebElement clickregister;
 
@@ -55,6 +55,9 @@ public class CreateLogSearch extends EbayApi {
     }
     public void setTypelname(String Value) {
         typelname.sendKeys(Value);
+    }
+    public void setCreatepassword(String Value){
+        createpassword.sendKeys(Value);
     }
         public void submitreg() {
         clickregister.click();
