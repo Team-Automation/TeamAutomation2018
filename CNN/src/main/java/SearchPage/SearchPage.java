@@ -81,7 +81,7 @@ public class SearchPage extends CommonApi {
     public WebElement getTravelFood(){
         return travelFood;
     }
-    @FindBy (xpath = "Header__section")
+    @FindBy (className = "Header__section")
     WebElement travelFoods;
     public WebElement getTravelFoods() {
         return travelFoods;
@@ -122,32 +122,40 @@ public class SearchPage extends CommonApi {
         return worldAsiaHeadline;
     }
 
-    //LogInProblems
-//    @FindBy (id = "menu")
-//    WebElement processToLogInLogIn;
-//    public WebElement getProcessToLogInLogIn() {
-//        return processToLogInLogIn;
-//    }
-//    @FindBy (linkText = "CNN Store")
-//    WebElement CNNStore;
-//    public WebElement getCNNStore(){
-//        return CNNStore;
-//    }
-//    @FindBy (xpath = "//a[@class='nav-account-link']")
-//    WebElement logIn;
-//    public WebElement getLogIn(){
-//        return logIn;
-//    }
-//    @FindBy (css = "#user_email")
-//    WebElement email;
-//    public WebElement getEmail(){
-//        return email;
-//    }
-//    @FindBy (css = "#user_password")
-//    WebElement password;
-//    public WebElement getPassword(){
-//        return password;
-//    }
+    //LogInProblem
+    @FindBy (id = "menu")
+    WebElement processToLogInLogIn;
+    public WebElement getProcessToLogInLogIn() {
+        return processToLogInLogIn;
+    }
+    @FindBy (linkText = "CNN Store")
+    WebElement CNNStore;
+    public WebElement getCNNStore(){
+        return CNNStore;
+    }
+    @FindBy (xpath = "//a[@class='nav-account-link']")
+    WebElement logIn;
+    public WebElement getLogIn(){
+        return logIn;
+    }
+    @FindBy (css = "#user_email")
+    WebElement email;
+    public WebElement getEmail(){
+        return email;
+    }
+    @FindBy (css = "#user_password")
+    WebElement password;
+    public WebElement getPassword(){
+        return password;
+    }
+    public void logIn(){
+        clickByXpath("//div[@class='nav-menu__hamburger']");
+        clickByClass("nav-flyout__submenu-link");
+        clickByXpath("//a[@class='nav-account-link']");
+        typeByCSS("#user_email","CR7@gmail.com");
+        typeByCss("#user_password","ImTheBest");
+    }
+
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");
         clickByXpath("//a[@class='Header__section'][contains(text(),'Destinations')]");
