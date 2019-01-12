@@ -1,6 +1,7 @@
 package SearchTest;
 
 import SearchPage.SearchPage;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -57,6 +58,16 @@ public class SearchTest extends SearchPage {
         searchPage.getWorldAsia().click();
         searchPage.getWorldAsiaHeadline().click();
     }
+    //logInProblem
+//    @Test
+//    public void wayToLogIn() throws InterruptedException{
+//        searchPage.getProcessToLogInLogIn().click();
+//        searchPage.getCNNStore().click();
+//        Thread.sleep(2000);
+//        searchPage.getLogIn().click();
+//        searchPage.getEmail().sendKeys("Ahmed", Keys.ENTER);
+//        searchPage.getPassword().sendKeys("fewggfguqgw",Keys.ENTER);
+//    }
     @Test
     public void test1() { liveTv(); }
     @Test

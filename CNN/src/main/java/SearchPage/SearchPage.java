@@ -112,6 +112,32 @@ public class SearchPage extends CommonApi {
     public WebElement getWorldAsiaHeadline(){
         return worldAsiaHeadline;
     }
+    //LogInProblems
+//    @FindBy (id = "menu")
+//    WebElement processToLogInLogIn;
+//    public WebElement getProcessToLogInLogIn() {
+//        return processToLogInLogIn;
+//    }
+//    @FindBy (linkText = "CNN Store")
+//    WebElement CNNStore;
+//    public WebElement getCNNStore(){
+//        return CNNStore;
+//    }
+//    @FindBy (xpath = "//a[@class='nav-account-link']")
+//    WebElement logIn;
+//    public WebElement getLogIn(){
+//        return logIn;
+//    }
+//    @FindBy (css = "#user_email")
+//    WebElement email;
+//    public WebElement getEmail(){
+//        return email;
+//    }
+//    @FindBy (css = "#user_password")
+//    WebElement password;
+//    public WebElement getPassword(){
+//        return password;
+//    }
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");
         clickByXpath("//a[@class='Header__section'][contains(text(),'Destinations')]");
