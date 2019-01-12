@@ -14,6 +14,7 @@ public class GmailLoginPage extends GmailCommonAPI {
 
     public void clickCreateAccount(){
         selectElementOnxpath("//*[@id=\"view_container\"]/div/div/div[2]/div/div[2]/div/div[2]/div/div/content/span");
+
     }
 
     public void createAccountFirstName(){
@@ -28,7 +29,7 @@ public class GmailLoginPage extends GmailCommonAPI {
 
     public void createAccountUserName(){
         createAccountLastName();
-        typeOnElement("Username","naz95");
+        typeOnElement("Username","naz11211995");
     }
 
     public void createAccountPassword(){
@@ -51,6 +52,7 @@ public class GmailLoginPage extends GmailCommonAPI {
         getEelementsByxpath("//*[@id=':p5']");
         Thread.sleep(3000);
     }
+
 
     public void googleApps(){
         login();
