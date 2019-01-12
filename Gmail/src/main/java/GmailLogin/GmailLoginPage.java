@@ -46,9 +46,9 @@ public class GmailLoginPage extends GmailCommonAPI {
 
         login();
         getEelementsByCss(".T-I.J-J5-Ji.T-I-KE.L3");
-        typeByXpath("//*[@id=':px']","Rashidsohaib325@gmail.com");
+        typeByXpath("//*[@id=':px']","chocolategirl1995@gmail.com");
         typeByXpath("//*[@id=':pf']","naz");
-        typeByXpath("//*[@id=':qk']","Hey Cutie");
+        typeByXpath("//*[@id=':qk']","Hey");
         getEelementsByxpath("//*[@id=':p5']");
         Thread.sleep(3000);
     }

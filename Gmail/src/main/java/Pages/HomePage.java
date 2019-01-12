@@ -79,12 +79,10 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement themes;
 
 
-
     public void login(){
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
         loginPassword.sendKeys("girl1995", Keys.ENTER);
     }
-
 
     public void sendEmail() throws InterruptedException {
         login();
@@ -126,15 +124,11 @@ public class HomePage extends GmailCommonAPI {
     public void EmailStarred(){
         login();
         starred.click();
-
     }
 
-    
     public void EmailSettings(){
         login();
         emailSettings.click();
         settingsThemes.click();
-
-
     }
 }
