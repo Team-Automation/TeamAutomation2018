@@ -18,7 +18,7 @@ public class ConnectToSqlDB {
 
     public static Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\lib\\MySQL.properties");
+        InputStream ism = new FileInputStream("/Users/ahmedfhasan/Downloads/TeamAutomation2018-master/Generic/lib/MySQL.properties");
         prop.load(ism);
         ism.close();
         return prop;
@@ -117,7 +117,6 @@ public class ConnectToSqlDB {
                 ps.setInt(1,ArrayData[n]);
                 ps.executeUpdate();
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } catch (SQLException e) {
