@@ -1,5 +1,6 @@
 package search;
 
+import Report.TestLogger;
 import base.CommonApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,7 @@ public class CardsPage extends CommonApi {
     @FindBy(xpath = "//div[@class='pq_hero_headline blue-light mb']")
     WebElement offers;
     public String clickCards1() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
        cards.click();
         sleepFor(2);
        preQualified.click();
@@ -24,6 +26,7 @@ public class CardsPage extends CommonApi {
     @FindBy(xpath = "//p[contains(text(),'Get savings on dining, shopping, entertainment and')]")
     WebElement amexOffers;
     public String clickCards2() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cards.click();
         sleepFor(2);
         cashBackCreditCards.click();
@@ -35,6 +38,7 @@ public class CardsPage extends CommonApi {
     @FindBy(xpath = "//div[contains(text(),'Built in flexibility to help you manage your cash ')]")
     WebElement plumCards;
     public String clickCards3() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cards.click();
         sleepFor(2);
         cardBenefits.click();
@@ -46,6 +50,7 @@ public class CardsPage extends CommonApi {
     @FindBy(xpath = "//div[@class='card-tile-wrap']//div[1]//div[1]//section[1]//div[1]//div[3]//div[1]//div[1]//h3[1]//a[1]//span[1]")
     WebElement platinumCard;
     public String clickCards4() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cards.click();
         sleepFor(2);
         businessCards.click();
@@ -57,6 +62,7 @@ public class CardsPage extends CommonApi {
     @FindBy(id = "error-information-button")
     WebElement errorMsg;
     public String clickCards5() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cards.click();
         sleepFor(2);
         corporateSolution.click();

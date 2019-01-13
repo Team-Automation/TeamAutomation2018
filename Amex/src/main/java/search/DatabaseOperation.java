@@ -1,6 +1,7 @@
 package search;
 
-import util.ConnectToSqlDB;
+import Util.ConnectToSqlDB;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;

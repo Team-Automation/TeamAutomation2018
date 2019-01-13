@@ -28,4 +28,20 @@ public class SearchTest extends SearchPage {
         Assert.assertEquals (actual,expected);
 
     }
+    @Test
+    public void test2() throws InterruptedException, Exception {
+
+        String actual = searchPage.clicksearch2();
+        String expected = "The sitemap page can guide you to links for all your needs on AmericanExpress.com";
+        Assert.assertEquals (actual,expected);
+
+    }
+    @Test
+    public void test3() throws InterruptedException, Exception {
+
+        String actual = searchPage.clicksearch3();
+        String expected = "https://global.americanexpress.com/search?term=APR";
+        Assert.assertEquals (actual,expected);
+
+    }
 }

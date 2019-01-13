@@ -30,6 +30,27 @@ public class SearchPage extends CommonApi {
             String text = ficoScore.getText();
             return text ;
         }
-////p[contains(text(),'Get tips on how to improve your FICO credit score ')]
+
+    @FindBy(xpath = "//p[contains(text(),'The sitemap page can guide you to links for all yo')]")
+    WebElement siteMap;
+
+
+    public String clicksearch2() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("Investor Relations");
+        searchSubmit.click();
+        String text = siteMap.getText();
+        return text ;
+    }
+
+    public String clicksearch3() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("APR");
+        searchSubmit.click();
+       String url = driver.getTitle();
+        return url ;
+    }
     }
 
