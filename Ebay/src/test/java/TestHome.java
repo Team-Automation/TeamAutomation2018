@@ -7,5 +7,6 @@ public class TestHome extends SearchPage {
         register();
         SearchOption();
         login();
+
     }
 }

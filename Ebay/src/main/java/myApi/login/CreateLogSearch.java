@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CreateLogSearch extends EbayApi {
+
     @FindBy (xpath = "//span[@id='gh-ug']/a[@href='https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.com%2F']")
     WebElement sign;
     @FindBy (name = "userid")

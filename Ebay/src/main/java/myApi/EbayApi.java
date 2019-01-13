@@ -98,6 +98,12 @@ public class EbayApi extends CommonApi {
     public String cpassword="710727";
     public String searchproduct="polo";
 
+//    public static String convertToString(String st) {
+//        String splitString;
+//        splitString = StringUtils.join(StringUtils.splitByCharacterTypeCamelCase(st), ' ');
+//        return splitString;
+//    }
+
 
 
 
