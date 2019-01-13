@@ -11,6 +11,7 @@
     <test name = "Gmail Home">
         <classes>
             <class name="GmailLogin.GmailTestLogin"/>
+            <class name="TestPages.TestHomePage"/>
         </classes>
     </test>
 
