@@ -43,14 +43,87 @@ public class SearchPage extends CommonApi {
         String text = siteMap.getText();
         return text ;
     }
-
+    @FindBy(xpath = "//a[@title='Where can I find my Annual Percentage Rate (APR) online?']")
+    WebElement APR;
     public String clicksearch3() throws Exception {
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("APR");
         searchSubmit.click();
-       String url = driver.getTitle();
-        return url ;
+       String text = APR.getText();
+        return text ;
     }
+    @FindBy(xpath = "//a[@title='Where can I find my Annual Percentage Rate (APR) online?']")
+    WebElement travelBenefits;
+    public String clicksearch4() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("Travel");
+        searchSubmit.click();
+        String text = travelBenefits.getText();
+        return text ;
+    }
+    @FindBy(xpath = "//p[contains(text(),'American Express Serve® Cash Back, your prepaid de')]")
+    WebElement cashback;
+    public String clicksearch5() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("Cash Back");
+        searchSubmit.click();
+        String text = cashback.getText();
+        return text ;
+    }
+    @FindBy(xpath = "//p[contains(text(),'American Express Serve® Cash Back, your prepaid de')]")
+    WebElement ATM;
+    public String clicksearch6() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("ATM");
+        searchSubmit.click();
+        String text = ATM.getText();
+        return text ;
+    }
+    @FindBy(xpath = "//p[contains(text(),'American Express Serve® Cash Back, your prepaid de')]")
+    WebElement prepaid;
+    public String clicksearch7() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("Prepaid Cards");
+        searchSubmit.click();
+        String text = prepaid.getText();
+        return text ;
+
+    }
+    @FindBy(xpath = "//a[@title='Accept Credit Cards | American Express®']")
+    WebElement accept;
+    public String clicksearch8() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("Accept Credit Card");
+        searchSubmit.click();
+        String text =accept.getText();
+        return text ;
+    }
+    @FindBy(xpath = "//p[contains(text(),'American Express Supplier Management and Supply Ch')]")
+    WebElement supplier;
+    public String clicksearch9() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("Supplier Management");
+        searchSubmit.click();
+        String text =supplier.getText();
+        return text ;
+    }
+    @FindBy(xpath = "//p[contains(text(),'Choose the Membership Rewards® Program best for yo')]")
+    WebElement membership;
+    public String clicksearch10() throws Exception {
+        searchbutton.click();
+        sleepFor(2);
+        search.sendKeys("Membership");
+        searchSubmit.click();
+        String text = membership.getText();
+        return text;
+    }
+
     }
 
