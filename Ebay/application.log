@@ -1,20 +1,6 @@
-2019-01-12 22:18:27,600  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:18:35,669  INFO [main] CommonApi:49 - clicked to register account
-2019-01-12 22:18:35,875  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:18:42,542  INFO [main] CommonApi:76 - created account
-2019-01-12 22:18:42,875  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:18:50,605  INFO [main] CommonApi:32 - email checked
-2019-01-12 22:18:50,778  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:18:56,488  INFO [main] CommonApi:55 - first name added
-2019-01-12 22:18:56,661  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:19:02,273  INFO [main] CommonApi:61 - last name added
-2019-01-12 22:19:02,420  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:19:07,798  INFO [main] CommonApi:67 - passowrd entered
-2019-01-12 22:19:07,978  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:19:16,323  INFO [main] CommonApi:26 - Tried using invalid password to log in
-2019-01-12 22:19:16,540  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:19:40,168  INFO [main] CommonApi:81 - searched 3 items 
-2019-01-12 22:19:40,394  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:19:46,979  INFO [main] CommonApi:38 - Invalid password used to login
-2019-01-12 22:19:47,156  INFO [main] CommonApi:39 - Test is running on local env
-2019-01-12 22:19:54,217  INFO [main] CommonApi:44 - clicked alternative log in method
+2019-01-13 01:46:25,164  INFO [main] CommonApi:39 - Test is running on local env
+2019-01-13 01:46:31,915  INFO [main] CommonApi:39 - Test is running on local env
+2019-01-13 01:46:46,196  INFO [main] CommonApi:39 - Test is running on local env
+2019-01-13 01:46:50,203  INFO [main] CommonApi:39 - Test is running on local env
+2019-01-13 01:46:54,027  INFO [main] CommonApi:39 - Test is running on local env
+2019-01-13 01:46:58,128  INFO [main] CommonApi:39 - Test is running on local env
