@@ -21,7 +21,7 @@ import java.util.List;
 
 public class GoogleSheetReader {
     // Application name.
-    private static final String APPLICATION_NAME = "My Project 35062";
+    private static final String APPLICATION_NAME = "My Project 54717";
     // Directory to store user credentials for this application.
     private static final java.io.File DATA_STORE_DIR = new java.io.File(System.getProperty("user.dir"), ".credentials/sheets-googleapis/");
     // Global instance of the {@link FileDataStoreFactory}.
