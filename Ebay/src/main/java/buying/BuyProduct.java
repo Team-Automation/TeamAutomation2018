@@ -11,6 +11,8 @@ public class BuyProduct extends EbayApi{
         WebElement clickproduct;
         @FindBy (xpath = "//*[@id=\"srp-river-results-listing8\"]/div/div[1]/div/a/div/img")
         WebElement product1;
+        @FindBy (className = "gh-p")
+        WebElement sell;
 
         public void dosearch(String Value){
             searchproduct.sendKeys(Value);
@@ -21,8 +23,8 @@ public class BuyProduct extends EbayApi{
         public void clickpolo(){
             product1.click();
         }
-        public void assignit(){
-
+        public void clickSell(){
+            sell.click();
         }
 
 
