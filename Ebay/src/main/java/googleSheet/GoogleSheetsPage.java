@@ -28,9 +28,8 @@ import static org.openqa.selenium.support.How.*;
             logInButton.click();
         }
 //    public void switchToLogInForm() {
-//        driver.switchTo().frame("Amex login");
+//        driver.switchTo().frame("Ebay login");
 //   }
-
         public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
             // Build a new authorized API client service.
             Sheets service = getSheetsService();

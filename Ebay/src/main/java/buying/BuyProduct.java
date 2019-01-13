@@ -20,11 +20,9 @@ public class BuyProduct extends EbayApi{
 
         public void dosearch(String Value) {
             searchproduct.sendKeys(Value);
-
         }
         public void clickit()  {
             clickproduct.click();
-
         }
         public void clickpolo(){
             product1.click();
@@ -34,9 +32,6 @@ public class BuyProduct extends EbayApi{
         }
         public void clickmotor(){
             motor.click();
-
         }
-
-
-    }
+}
 
