@@ -3,10 +3,12 @@
 
 <suite name="CNN News" >
 
-
-    <parameter name="OS" value="mac"/>
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="userName" value="hasibahmed92"/>
+    <parameter name="key" value="83da5359-90fb-4468-a525-2e38129f1e42"/>
+    <parameter name="OS" value="OS X"/>
     <parameter name="browser" value="chrome"/>
-    <parameter name="browserVersion" value="64.0"/>
+    <parameter name="browserVersion" value="71.0.3578.98"/>
     <parameter name="url" value="https://www.cnn.com/"/>
 
 

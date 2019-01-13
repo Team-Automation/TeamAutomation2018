@@ -1,10 +1,12 @@
 package SearchPage;
 
+import base.Common;
 import base.CommonApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SearchPage extends CommonApi {
+public class SearchPage extends Common {
+
 
     @FindBy(xpath = "//a[@id='nav-mobileTV']")
     public static WebElement televition;
@@ -146,7 +148,7 @@ public class SearchPage extends CommonApi {
         clickByXpath("//div[@class='nav-menu__hamburger']");
         clickByClass("nav-flyout__submenu-link");
         clickByXpath("//a[@class='nav-account-link']");
-        typeByCSS("#user_email","CR7@gmail.com");
+        typeByCss("#user_email","CR7@gmail.com");
         typeByCss("#user_password","ImTheBest"); }
 
     public void travelP() {
