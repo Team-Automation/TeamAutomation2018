@@ -9,13 +9,8 @@ import org.testng.annotations.Test;
 public class TestHomePage extends HomePage {
 
     HomePage homepage;
-    CommonApi commonApi;
-
     @BeforeMethod
-    public void initializeElement(){
-        homepage = PageFactory.initElements(driver,HomePage.class);
-        commonApi =PageFactory.initElements(driver,CommonApi.class);
-    }
+    public void initializeElement(){ homepage = PageFactory.initElements(driver,HomePage.class); }
 
     @Test
     public void gmailLogin(){homepage.login(); }

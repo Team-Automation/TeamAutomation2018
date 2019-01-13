@@ -11,41 +11,83 @@ import base.CommonApi;
         import java.util.List;
 
 public class ReadGmailWebElements extends CommonApi {
-    @FindBy(how = How.XPATH, xpath = "//h2[contains(text(),'About')]")
-    WebElement about;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='About American Express'][contains(text(),'About American Express')]")
-    WebElement aboutAmericanExpress;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Investor Relations'][contains(text(),'Investor Relations')]")
-    WebElement investorRelations;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Careers'][contains(text(),'Careers')]")
-    WebElement careers;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Site Map'][contains(text(),'Site Map')]")
-    WebElement siteMap;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Contact Us'][contains(text(),'Contact Us')]")
-    WebElement contactUs;
-    @FindBy(how = How.XPATH, xpath = "//h2[contains(text(),'Products & Services')]")
-    WebElement productAndServices;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Credit Cards'][contains(text(),'Credit Cards')]")
-    WebElement creditCards;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Small Business Credit Cards'][contains(text(),'Small Business Credit Cards')]")
-    WebElement smallBusinessCreditCards;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Corporate Cards'][contains(text(),'Corporate Cards')]")
-    WebElement corporateCards;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Prepaid Cards'][contains(text(),'Prepaid Cards')]")
-    WebElement prepaidCards;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Savings Accounts & CDs'][contains(text(),'Savings Accounts & CDs')]")
-    WebElement savingsAcoountsAndCds;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Gift Cards'][contains(text(),'Gift Cards')]")
-    WebElement giftCards;
+    @FindBy(xpath = "//input[@id='identifierId']")
+    public static WebElement loginUsername;
+    @FindBy(xpath = "//input[@name='password']")
+    public static WebElement loginPassword;
+    @FindBy(css = ".T-I.J-J5-Ji.T-I-KE.L3")
+    public static WebElement composeButton;
+    @FindBy(xpath = "//*[@id=':px']")
+    public static WebElement recipientEmail;
+    @FindBy(xpath = "//*[@id=':pf']")
+    public static WebElement emailSubject;
+    @FindBy(xpath = "//*[@id=':qk']")
+    public static WebElement emailBody;
+    @FindBy(xpath = "//*[@id=':p5']")
+    public static WebElement sendButton;
+    @FindBy(xpath = "//a[contains(text(),'Help')]")
+    public static WebElement helpOption;
+    @FindBy(xpath = "//section[@class='primary-container']//section[1]//h2[1]//*[2]")
+    public static WebElement popularArticles;
+    @FindBy(xpath = "/html/body/div[2]/div/section/div/div/article/nav/section[1]/div/div/div[1]/a")
+    public static WebElement createGoogleAccount;
+    @FindBy(xpath = "//h3[@class='zippy index1 goog-zippy-expanded']")
+    public static WebElement checkGoogleAccount;
+    @FindBy(xpath = "//a[contains(text(),'enter your email address')]")
+    public static WebElement checkGoogleAccountEnterEmail;
+    @FindBy(xpath = "//input[@id='identifierId']")
+    public static WebElement enterYourEmailAddress;
+    @FindBy(id = "identifierId")
+    public static WebElement recoverAccount;
+    @FindBy (xpath = "//a[contains(text(),'Create a strong password & a more secure account')]")
+    public static WebElement createStrongPassword;
+    @FindBy (xpath = "//a[@class='zippy index1 goog-zippy-collapsed']")
+    public static WebElement makeYourPasswordUnique;
+    @FindBy (xpath = "//a[contains(text(),'use a tool to manage your saved passwords')]")
+    public static WebElement manageYourSavedPasswords;
+    @FindBy(xpath = "//a[contains(text(),'Verify your account')]")
+    public static WebElement verifyYourAccount;
+    @FindBy (xpath = "//a[contains(text(),'Control what others see about you across Google se')]")
+    public static WebElement controlWhatOthersSeeAboutYouAcrossGoogleSearch;
+    @FindBy(xpath = "//h3[@class='zippy index1 goog-zippy-collapsed']")
+    public static WebElement whatInfoCanBeShared;
+    @FindBy(xpath = "//h3[@class='zippy index2 goog-zippy-expanded']")
+    public static WebElement whereThisInfoShowsUp;
+    @FindBy(xpath = "//h3[@class='zippy index3 goog-zippy-collapsed']")
+    public static WebElement previewWhatYourInfoLooksLikeToOthers;
+    @FindBy (xpath = "//a[contains(text(),'Someone changed your password')]")
+    public static WebElement someoneChangedYourPassword;
+    @FindBy (xpath = "//a[contains(text(),'recover your account')]")
+    public static WebElement recoverYourAccount;
+    @FindBy (xpath = "/html/body/div[2]/header/div[4]/div/div/div/div/span/a/span")
+    public static WebElement googleAccount;
+    @FindBy(xpath = "//*[@id=\"gb\"]/div[2]/div[1]/div[1]/svg/path")
+    public static WebElement viewBox;
+    @FindBy(xpath = "//*[@class='gb_mf']")
+    public static WebElement googleAppsViewBox;
+    @FindBy (xpath = "//*[@id='gb192']/span[1]")
+    public static WebElement userAccount;
+    @FindBy (xpath = "//div[@class='GiKO7c'][contains(text(),'Home')]")
+    public static WebElement homeGoogleAccount;
+    @FindBy (xpath = "//div[contains(text(),'Get started')]")
+    public static WebElement getstarted;
+    @FindBy(xpath = "//*[@id=\":kh\"]/div/div[2]/span/a")
+    public static WebElement starred;
+    @FindBy(xpath = "//div[@class='asa']")
+    public static WebElement emailSettings;
+    @FindBy(xpath = "//div[contains(text(),'Themes')]")
+    public static WebElement settingsThemes;
+    @FindBy(xpath = "//div[@id=':14x.custom-6']//div[@class='a7U']")
+    public static WebElement themes;
 
     public List webElementList(){
         List<WebElement> webElements = new ArrayList<>();
-        webElements.add(about);
-        webElements.add(aboutAmericanExpress);
-        webElements.add(investorRelations);
-        webElements.add(careers);
-        webElements.add(siteMap);
-        webElements.add(contactUs);
+        webElements.add(loginUsername);
+        webElements.add(loginPassword);
+        webElements.add(composeButton);
+        webElements.add(recipientEmail);
+        webElements.add(emailSubject);
+        webElements.add(emailBody);
 
         List<String> list = new ArrayList<>();
         for (int i = 0; i<webElements.size();i++){
@@ -56,13 +98,13 @@ public class ReadGmailWebElements extends CommonApi {
     }
     public List webElementList1(){
         List<WebElement> webElements1 = new ArrayList<>();
-        webElements1.add(productAndServices);
-        webElements1.add(creditCards);
-        webElements1.add(smallBusinessCreditCards);
-        webElements1.add (corporateCards);
-        webElements1.add(prepaidCards);
-        webElements1.add(savingsAcoountsAndCds);
-        webElements1.add(giftCards);
+        webElements1.add(helpOption);
+        webElements1.add(createGoogleAccount);
+        webElements1.add(checkGoogleAccount);
+        webElements1.add (checkGoogleAccountEnterEmail);
+        webElements1.add(enterYourEmailAddress);
+        webElements1.add(recoverAccount);
+        webElements1.add(googleAccount);
 
         List<String> list = new ArrayList<>();
         for (int i = 0; i<webElements1.size();i++){
