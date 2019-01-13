@@ -2,6 +2,8 @@ package GmailLogin;
 
 
 import GmailAPI.GmailCommonAPI;
+import base.CommonApi;
+import org.openqa.selenium.support.PageFactory;
 
 
 public class GmailLoginPage extends GmailCommonAPI {

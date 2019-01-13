@@ -1,6 +1,7 @@
 package TestPages;
 
 import Pages.HomePage;
+import base.CommonApi;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -8,13 +9,16 @@ import org.testng.annotations.Test;
 public class TestHomePage extends HomePage {
 
     HomePage homepage;
+    CommonApi commonApi;
+
     @BeforeMethod
     public void initializeElement(){
         homepage = PageFactory.initElements(driver,HomePage.class);
+        commonApi =PageFactory.initElements(driver,CommonApi.class);
     }
 
     @Test
-    public void gmailLogin(){homepage.login();}
+    public void gmailLogin(){homepage.login(); }
     @Test
     public void Email() throws InterruptedException {homepage.sendEmail();}
     @Test
