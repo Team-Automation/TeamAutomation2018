@@ -162,11 +162,7 @@
                 <artifactId>poi-ooxml-schemas</artifactId>
                 <version>3.11</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>openxml4j</artifactId>
-                <version>1.0-beta</version>
-            </dependency>
+           
         </dependencies>
     </dependencyManagement>
 </project>
