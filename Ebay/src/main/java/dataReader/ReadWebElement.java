@@ -14,37 +14,31 @@ import java.util.List;
 public class ReadWebElement extends CommonApi {
         @FindBy(how = How.XPATH, xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[1]/ul/li[1]/h3/a")
         WebElement BUY;
-        @FindBy(xpath = "")
+        @FindBy(xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[1]/ul/li[2]/a")
         WebElement Registration;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Investor Relations'][contains(text(),'Investor Relations')]")
+        @FindBy(xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[1]/ul/li[3]/a")
         WebElement Money;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Careers'][contains(text(),'Careers')]")
-        WebElement careers;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Site Map'][contains(text(),'Site Map')]")
+        @FindBy(xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[1]/ul/li[4]/a")
         WebElement BuyingHelp;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Contact Us'][contains(text(),'Contact Us')]")
+       @FindBy(xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[1]/ul/li[5]/a")
         WebElement Stores;
-        @FindBy(how = How.XPATH, xpath = "//h2[contains(text(),'Products & Services')]")
+        @FindBy(how = How.XPATH, xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[2]/ul/li[1]/h3/a")
         WebElement Sell;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Credit Cards'][contains(text(),'Credit Cards')]")
+        @FindBy(xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[2]/ul/li[2]/a")
         WebElement StartSelling;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Small Business Credit Cards'][contains(text(),'Small Business Credit Cards')]")
+        @FindBy(xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[2]/ul/li[3]/a")
         WebElement Learntosell;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Corporate Cards'][contains(text(),'Corporate Cards')]")
+        @FindBy(xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[2]/ul/li[4]/a")
         WebElement BusinessSellers;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Prepaid Cards'][contains(text(),'Prepaid Cards')]")
+        @FindBy(xpath = "//*[@id=\"gf-BIG\"]/table/tbody/tr/td[2]/ul/li[5]/a")
         WebElement Affiliates;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Savings Accounts & CDs'][contains(text(),'Savings Accounts & CDs')]")
-        WebElement products;
-        @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Gift Cards'][contains(text(),'Gift Cards')]")
-        WebElement giftCards;
 
         public List webElementList(){
             List<WebElement> webElements = new ArrayList<>();
             webElements.add(BUY);
             webElements.add(Registration);
             webElements.add(Money);
-            webElements.add(careers);
+            //webElements.add(careers);
             webElements.add(BuyingHelp);
             webElements.add(Stores);
 
@@ -62,8 +56,6 @@ public class ReadWebElement extends CommonApi {
             webElements1.add(Learntosell);
             webElements1.add (BusinessSellers);
             webElements1.add(Affiliates);
-            webElements1.add(products);
-            webElements1.add(giftCards);
 
             List<String> list = new ArrayList<>();
             for (int i = 0; i<webElements1.size();i++){
