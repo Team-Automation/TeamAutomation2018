@@ -6,8 +6,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -38,13 +37,13 @@ import java.util.concurrent.TimeUnit;
 
 public class CommonApi {
     public WebDriver driver = null;
-    public static ExtentReports extent;
-    public static Logger logger = Logger.getLogger(CommonApi.class);
+   public static ExtentReports extent;
+//    public static Logger logger = Logger.getLogger(CommonApi.class);
 //    public String browserstack_username= "joynabaminadib1";
 //    public String browserstack_accesskey = "ZgKEp1eLEcYqFVVWqow3";
 //    public String saucelabs_username = "joynabaminadib";
 //    public String saucelabs_accesskey = "a9127a33-4076-4273-8976-1941775c3a1f";
-@BeforeSuite
+@BeforeMethod
 public void extentSetup(ITestContext context) {
     ExtentManager.setOutputDirectory(context);
     extent = ExtentManager.getInstance();
@@ -85,7 +84,7 @@ public void extentSetup(ITestContext context) {
         }
         driver.quit();
     }
-    @AfterSuite
+    @AfterMethod
     public void generateReport() {
         extent.close();
     }
@@ -100,19 +99,21 @@ public void extentSetup(ITestContext context) {
     public void setUp(@Optional("false")Boolean useCloudEnv, @Optional("joynabaminadib") String userName,@Optional("a9127a33-4076-4273-8976-1941775c3a1f")
             String key, @Optional("Windows 10")String OS,@Optional("firefox") String browser,
                       @Optional("64.0") String browserVersion, @Optional("http://www.americanexpress.com") String url)throws IOException {
-         if(useCloudEnv==true){
+         if(useCloudEnv == true){
             //run on cloud
-            logger.setLevel(Level.INFO);
-            logger.info("Test is running on cloud env");
+//            logger.setLevel(Level.INFO);
+//            logger.info("Test is running on cloud env");
             getCloudDriver(userName,key,OS,browser,browserVersion);
             System.out.println("Tests is running on Saucelabs, please wait for result");
 
         }else{
             //run on local
-            logger.setLevel(Level.INFO);
-            logger.info("Test is running on local env");
+//            logger.setLevel(Level.INFO);
+//            logger.info("Test is running on local env");
             getLocalDriver(OS,browser,browserVersion);
+             System.out.println("Test is running on local environment");
         }
+
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         driver.navigate().to(url);
         driver.manage().window().maximize();
