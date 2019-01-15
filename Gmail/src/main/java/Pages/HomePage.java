@@ -1,10 +1,12 @@
 package Pages;
 
 import GmailAPI.GmailCommonAPI;
+import base.CommonApi;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class HomePage extends GmailCommonAPI {
 
@@ -24,6 +26,26 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement sendButton;
     @FindBy(xpath = "//a[contains(text(),'Help')]")
     public static WebElement helpOption;
+    @FindBy(xpath = "//*[@id=\"gb\"]/div[2]/div[1]/div[1]/svg/path")
+    public static WebElement viewBox;
+    @FindBy(xpath = "//*[@class='gb_mf']")
+    public static WebElement googleAppsViewBox;
+    @FindBy (xpath = "//*[@id='gb192']/span[1]")
+    public static WebElement userAccount;
+    @FindBy (xpath = "//div[@class='GiKO7c'][contains(text(),'Home')]")
+    public static WebElement homeGoogleAccount;
+    @FindBy (xpath = "//div[contains(text(),'Get started')]")
+    public static WebElement getstarted;
+    @FindBy(xpath = "//*[@id=\":kh\"]/div/div[2]/span/a")
+    public static WebElement starred;
+    @FindBy(xpath = "//div[@class='asa']")
+    public static WebElement emailSettings;
+    @FindBy(xpath = "//div[contains(text(),'Themes')]")
+    public static WebElement settingsThemes;
+    @FindBy(xpath = "//div[@id=':14x.custom-6']//div[@class='a7U']")
+    public static WebElement themes;
+    @FindBy (xpath = "//div[@id=':jx']")
+    public static  WebElement olderMessages;
     @FindBy(xpath = "//section[@class='primary-container']//section[1]//h2[1]//*[2]")
     public static WebElement popularArticles;
     @FindBy(xpath = "/html/body/div[2]/div/section/div/div/article/nav/section[1]/div/div/div[1]/a")
@@ -58,29 +80,12 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement recoverYourAccount;
     @FindBy (xpath = "/html/body/div[2]/header/div[4]/div/div/div/div/span/a/span")
     public static WebElement googleAccount;
-    @FindBy(xpath = "//*[@id=\"gb\"]/div[2]/div[1]/div[1]/svg/path")
-    public static WebElement viewBox;
-    @FindBy(xpath = "//*[@class='gb_mf']")
-    public static WebElement googleAppsViewBox;
-    @FindBy (xpath = "//*[@id='gb192']/span[1]")
-    public static WebElement userAccount;
-    @FindBy (xpath = "//div[@class='GiKO7c'][contains(text(),'Home')]")
-    public static WebElement homeGoogleAccount;
-    @FindBy (xpath = "//div[contains(text(),'Get started')]")
-    public static WebElement getstarted;
-    @FindBy(xpath = "//*[@id=\":kh\"]/div/div[2]/span/a")
-    public static WebElement starred;
-    @FindBy(xpath = "//div[@class='asa']")
-    public static WebElement emailSettings;
-    @FindBy(xpath = "//div[contains(text(),'Themes')]")
-    public static WebElement settingsThemes;
-    @FindBy(xpath = "//div[@id=':14x.custom-6']//div[@class='a7U']")
-    public static WebElement themes;
 
 
     public void login(){
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
         loginPassword.sendKeys("girl1995", Keys.ENTER);
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
     }
 
     public void sendEmailCompose(){
@@ -152,4 +157,10 @@ public class HomePage extends GmailCommonAPI {
         emailSettings.click();
         settingsThemes.click();
     }
+    public void EmailOlderMessages(){
+        login();
+        olderMessages.click();
+
+    }
+
 }

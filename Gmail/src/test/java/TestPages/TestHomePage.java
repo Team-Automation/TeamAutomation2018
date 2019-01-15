@@ -17,27 +17,29 @@ public class TestHomePage extends HomePage {
     @Test
     public void Email() throws InterruptedException {homepage.sendEmail();}
     @Test
-    public void test1(){homepage.HelpCreateGoogleAccount(); }
+    public void TestHelpCreateGoogleAccount(){homepage.HelpCreateGoogleAccount(); }
     @Test
-    public void test2(){homepage.helpGoogleAccount();}
+    public void TesthelpGoogleAccount(){homepage.helpGoogleAccount();}
     @Test
-    public void test3(){homepage.GoogleAccount();}
+    public void TestGoogleAccount(){homepage.GoogleAccount();}
     @Test
-    public void test6(){homepage.GoogleApps();}
+    public void TestGoogleApps(){homepage.GoogleApps();}
     @Test
-    public void test7(){homepage.EmailStarred();}
+    public void TestEmailStarred(){homepage.EmailStarred();}
     @Test
-    public void test10 (){homepage.EmailSettings();}
+    public void TestEmailSettings (){homepage.EmailSettings();}
     @Test
-    public void test11 (){homepage.sendEmailCompose();}
+    public void TestSendEmailCompose (){homepage.sendEmailCompose();}
     @Test
-    public void test12(){homepage.sendEmailRecipientEmail();}
+    public void TestSendEmailRecipientEmail(){homepage.sendEmailRecipientEmail();}
     @Test
-    public void test13(){homepage.sendEmailemailSubject();}
+    public void TestSendEmailemailSubject(){homepage.sendEmailemailSubject();}
     @Test
-    public void test14(){homepage.sendEmailemailBody();}
+    public void TestSendEmailemailBody(){homepage.sendEmailemailBody();}
     @Test
-    public void test15() throws InterruptedException {homepage.sendEmailSendButton();}
+    public void TestSendEmailSendButton() throws InterruptedException {homepage.sendEmailSendButton();}
+    @Test
+    public void TestEmailOlderMessages(){homepage.EmailOlderMessages();}
 
 
 }

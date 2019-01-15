@@ -13,13 +13,13 @@ import static googleAPI.GoogleSheetReader.getSheetsService;
 import static org.openqa.selenium.support.How.*;
 
 public class GoogleSheetPage extends CommonApi {
-    @FindBy(how = CSS, using = "#login-user")
+    @FindBy(how = CSS, using = "#identifierId")
     public static WebElement user;
     @FindBy(how = CSS, using = "#login-password")
     public static WebElement password;
-    @FindBy(css = "#login-submit")
+    @FindBy(xpath = "//span[contains(text(),'Next')]")
     public static WebElement logInButton;
-    @FindBy(css = "#alertMsg")
+    @FindBy(xpath = "//div[@class='GQ8Pzc']")
     public static WebElement logInErrorMesage;
 
     public void clickLogIn() throws InterruptedException {
@@ -52,13 +52,13 @@ public class GoogleSheetPage extends CommonApi {
         for (List row : col2Value) {
             sleepFor(1);
             inputValueInTextBoxByWebElement(user, row.get(0).toString());
-            inputValueInTextBoxByWebElement(password, row.get(1).toString());
+            //inputValueInTextBoxByWebElement(password, row.get(1).toString());
             sleepFor(1);
             //actual.add(getCurrentPageTitle());
             actual.add(getTextByWebElement(logInErrorMesage));
             System.out.println(getTextByWebElement(logInErrorMesage));
             clearInputBox(user);
-            clearInputBox(password);
+            //clearInputBox(password);
             sleepFor(1);
         }
         return actual;

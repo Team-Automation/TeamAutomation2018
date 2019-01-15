@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Gmail Automation Script ]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="OS" value="macOS Mojave"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="browserVersion" value="64.0"/>
+  <parameter name="url" value="https://www.gmail.com"/>
+  <test thread-count="5" name="Gmail Home(failed)" verbose="0">
+    <classes>
+      <class name="TestPages.TestHomePage">
+        <methods>
+          <include name="gmailLogin"/>
+          <include name="TestEmailSettings"/>
+          <include name="TestSendEmailRecipientEmail"/>
+          <include name="TestGoogleApps"/>
+          <include name="TestSendEmailSendButton"/>
+          <include name="extentSetup"/>
+          <include name="startExtent"/>
+          <include name="cleanUp"/>
+          <include name="TesthelpGoogleAccount"/>
+          <include name="TestGoogleAccount"/>
+          <include name="TestSendEmailemailSubject"/>
+          <include name="TestEmailStarred"/>
+          <include name="TestSendEmailCompose"/>
+          <include name="TestEmailOlderMessages"/>
+          <include name="generateReport"/>
+          <include name="initializeElement"/>
+          <include name="Email"/>
+          <include name="TestHelpCreateGoogleAccount"/>
+          <include name="setUp"/>
+          <include name="TestSendEmailemailBody"/>
+        </methods>
+      </class> <!-- TestPages.TestHomePage -->
+      <class name="GmailLogin.GmailTestLogin">
+        <methods>
+          <include name="test1"/>
+          <include name="generateReport"/>
+          <include name="test10"/>
+          <include name="extentSetup"/>
+          <include name="test9"/>
+          <include name="setUp"/>
+          <include name="startExtent"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- GmailLogin.GmailTestLogin -->
+    </classes>
+  </test> <!-- Gmail Home(failed) -->
+</suite> <!-- Failed suite [Gmail Automation Script ] -->

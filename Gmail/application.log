@@ -1,1 +1,6 @@
-2019-01-13 12:19:29,152  INFO [main] CommonApi:42 - Test is running on local env
+2019-01-14 19:14:14,905  INFO [main] CommonApi:117 - Test is running on local env
+2019-01-14 19:16:39,140 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2019-01-14 19:16:39,144 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2019-01-14 19:16:39,145 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2019-01-14 19:16:39,147 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2019-01-14 19:16:39,148 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/Users/nazibahfariha/.m2/repository/com/relevantcodes/extentreports/2.41.1/extentreports-2.41.1.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
