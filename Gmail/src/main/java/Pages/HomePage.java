@@ -1,6 +1,7 @@
 package Pages;
 
 import GmailAPI.GmailCommonAPI;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,10 +26,28 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement helpOption;
     @FindBy(xpath = "//*[@id=\"gb\"]/div[2]/div[1]/div[1]/svg/path")
     public static WebElement viewBox;
-    @FindBy(xpath = "//*[@class='gb_mf']")
+    @FindBy(xpath = "//*[@class='gb_kf']")
     public static WebElement googleAppsViewBox;
     @FindBy (xpath = "//*[@id='gb192']/span[1]")
     public static WebElement userAccount;
+    @FindBy(xpath = "//a[@id='gb1']//span[@class='gb_W']")
+    public static WebElement googleSearch;
+    @FindBy(xpath = "//a[@id='gb8']//span[@class='gb_W']")
+    public static WebElement googleMaps;
+    @FindBy(xpath = "//a[@id='gb36']//span[@class='gb_W']")
+    public static WebElement youTube;
+
+
+
+
+
+
+
+
+
+
+
+
     @FindBy (xpath = "//div[@class='GiKO7c'][contains(text(),'Home')]")
     public static WebElement homeGoogleAccount;
     @FindBy (xpath = "//div[contains(text(),'Get started')]")
@@ -97,6 +116,37 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement displayDensity;
     @FindBy(xpath = "//*[@id=\"gbwa\"]/div/a/svg/path")
     public static WebElement getGoogleAppsViewBox;
+    @FindBy(xpath = "//input[@placeholder='Search mail']")
+    public static WebElement searchMail;
+    @FindBy (xpath = "//*[@id=\":n3\"]/span")
+    public static WebElement searchEmailResult;
+    @FindBy(xpath = "//*[@id=\":159\"]")//*[@id=\":15f\"]")   //*[@id=\":15c\"]"//*[@id=":159"]
+    public static WebElement emailReply;
+    @FindBy (xpath = "//*[@id=\":1a4\"]")//*[@id=':1as']")//*[@id=\":1as\"]")//*[@id=":1a4"]
+    public static WebElement replyEmailBody;
+    @FindBy (xpath = "//*[@id=\":18p\"]")//div[@id=':17n']")
+    public static WebElement replyEmailSendButton;
+    @FindBy(xpath ="//*[@id=\":kc\"]/div/div[2]/span/a")
+    public static WebElement sentEmails;
+    @FindBy(xpath = "//a[@title='Sent']")
+    public static WebElement sent;
+
+
+
+    public void searchEmail(){
+        login();
+        searchMail.sendKeys("naz", Keys.ENTER);
+        searchEmailResult.click();
+        emailReply.click();
+        replyEmailBody.sendKeys("wuv you");
+        replyEmailSendButton.click();
+        sentEmails.click();
+    }
+
+    public void SentEmails(){
+        login();
+        sent.click();
+    }
 
 
 
@@ -151,7 +201,7 @@ public class HomePage extends GmailCommonAPI {
 
     public void HelpCreateGoogleAccount() {
         helpOption.click();
-        popularArticles.click();
+//        popularArticles.click();
         createGoogleAccount.click();
         checkGoogleAccount.click();
         checkGoogleAccountEnterEmail.click();
@@ -172,9 +222,37 @@ public class HomePage extends GmailCommonAPI {
         login();
         googleAppsViewBox.click();
         userAccount.click();
-        homeGoogleAccount.click();
-        getstarted.click();
+//        homeGoogleAccount.click();
+        getstarted.click();//*[@id="yDmH0d"]/div[2]/c-wiz/div[1]/c-wiz/c-wiz/div/div[4]/div/div/c-wiz/section/article[1]/div/div/div[2]/div[2]/a/div
     }
+    public void ShowGoogleApps(){
+        login();
+        googleAppsViewBox.click();
+    }
+
+    public void ShowUserAccount(){
+        ShowGoogleApps();
+        userAccount.click();
+    }
+    public void ShowGoogleSearch(){
+        ShowGoogleApps();
+        googleSearch.click();
+    }
+    public void ShowGoogleMaps(){
+        ShowGoogleApps();
+        googleMaps.click();
+    }
+    public void Show
+
+
+
+
+
+
+
+
+
+
 
     public void EmailStarred(){
         login();

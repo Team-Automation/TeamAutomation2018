@@ -16,14 +16,25 @@ public class TestHomePage extends HomePage {
     public void gmailLogin(){homepage.login(); }
     @Test
     public void Email() throws InterruptedException {homepage.sendEmail();}
-    @Test
-    public void TestHelpCreateGoogleAccount(){homepage.HelpCreateGoogleAccount(); }
-    @Test
-    public void TesthelpGoogleAccount(){homepage.helpGoogleAccount();}
-    @Test
-    public void TestGoogleAccount(){homepage.GoogleAccount();}
+    //@Test
+    //public void TestHelpCreateGoogleAccount(){homepage.HelpCreateGoogleAccount(); }
+   //@Test
+    //public void TesthelpGoogleAccount(){homepage.helpGoogleAccount();}
+//    @Test
+//    public void TestGoogleAccount(){homepage.GoogleAccount();}
     @Test
     public void TestGoogleApps(){homepage.GoogleApps();}
+
+    @Test
+    public void TestShowGoogleApps(){homepage.ShowGoogleApps();}
+    @Test
+    public void TestShowUserAccount(){homepage.ShowUserAccount();}
+    @Test
+    public void TestShowGoogleSearch(){homepage.ShowGoogleSearch();}
+    @Test
+    public void TestShowGoogleMaps(){homepage.ShowGoogleMaps();}
+
+
     @Test
     public void TestEmailStarred(){homepage.EmailStarred();}
     @Test
@@ -46,6 +57,10 @@ public class TestHomePage extends HomePage {
     public void test2 (){homepage.privacy();}
     @Test
     public void test3 (){homepage.GoogleAppsViewBox();}
+    @Test
+    public void test4(){homepage.searchEmail();}//works
+    @Test
+    public void test5(){homepage.SentEmails();}
 
 
 }
