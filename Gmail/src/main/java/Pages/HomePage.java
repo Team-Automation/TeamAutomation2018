@@ -83,16 +83,19 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement terms;
     @FindBy(xpath = "//a[@class='bCzwPe YySNWc']")
     public static WebElement termsYourGoogleAccount;
-    @FindBy(xpath = "//*[@id=\"yDmH0d\"]/c-wiz/div/div/c-wiz[1]/div[1]/ul/li[1]/a")
+    @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/c-wiz[1]/div[2]/div[3]/ul/li[1]/a")
     public static WebElement termsOverview;
-    @FindBy(xpath = "//*[@id=\"yDmH0d\"]/c-wiz/div/div/div[2]/div[1]/c-wiz/div/ul/li[2]/a")
+    @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/div[2]/div[3]/c-wiz/div/div/p[1]/a")
     public static WebElement termsViewArchivedVersions;
+    @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/c-wiz[1]/div[1]/div/div/content/span/svg/path[2]")
+    public static WebElement menu;
 
 
 
     public void term(){
         terms.click();
-        termsOverview.click();
+        termsViewArchivedVersions.click();
+        
     }
 
 
