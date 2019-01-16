@@ -93,9 +93,6 @@ public class HomePage extends GmailCommonAPI {
     public void term(){
         terms.click();
         termsOverview.click();
-
-
-
     }
 
 
