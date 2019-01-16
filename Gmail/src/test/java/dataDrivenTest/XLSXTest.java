@@ -25,10 +25,4 @@ public class XLSXTest extends CommonApi {
         Assert.assertEquals(actual,expected);
 
     }
-//    @Test
-//    public void webElementName1(){   // data driven test, using data from excel sheets
-//        List actual = readGmailWebElements.webElementList1();
-//        List expected = readGmailWebElements.expectedWebElement1();
-//        Assert.assertEquals(actual,expected);
-//    }
 }
