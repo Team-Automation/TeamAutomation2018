@@ -27,7 +27,7 @@ public class TestGoogleSheet extends GoogleSheetPage {
 
         int i = 0;
         String spreadsheetId = "1gq_58APDxt94-6iXS_uppef0SAVCYiBx7vdA3jT73UQ";
-        String range = "Sheet1!A2:Z";
+        String range = "Sheet1!A2:Y";
         List<String> actualErrorMessage = googleSheetsPage.signInByInvalidIdPass(spreadsheetId, range);
         List<List<Object>> expectedErrorMessage = googleSheetsPage.getSpreadSheetRecords(spreadsheetId, range);
         for (List row : expectedErrorMessage) {

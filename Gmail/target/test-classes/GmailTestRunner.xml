@@ -3,15 +3,21 @@
 
 <suite name="Gmail Automation Script " parallel="false">
 
-    <parameter name="OS" value="macOS Mojave"/>
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="userName" value="nazibah"/>
+    <parameter name="key" value="53197c7f-ceb3-4fd0-81e9-ff02a894c5f7"/>
+
+
+    <parameter name="OS" value="macOS 10.14"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="browserVersion" value="64.0"/>
     <parameter name="url" value="https://www.gmail.com"/>
 
     <test name = "Gmail Home">
         <classes>
-            <class name="GmailLogin.GmailTestLogin"/>
-            <class name="TestPages.TestHomePage"/>
+            <!--<class name="GmailLogin.GmailTestLogin"/>-->
+            <!--<class name="TestPages.TestHomePage"/>-->
+            <class name="dataDrivenTest.XLSXTest"/>
         </classes>
     </test>
 

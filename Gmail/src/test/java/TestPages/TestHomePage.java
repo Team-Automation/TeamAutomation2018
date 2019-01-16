@@ -40,6 +40,8 @@ public class TestHomePage extends HomePage {
     public void TestSendEmailSendButton() throws InterruptedException {homepage.sendEmailSendButton();}
     @Test
     public void TestEmailOlderMessages(){homepage.EmailOlderMessages();}
+    @Test
+    public void test1 (){homepage.term();}
 
 
 }

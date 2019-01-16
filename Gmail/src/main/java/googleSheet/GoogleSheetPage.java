@@ -15,8 +15,6 @@ import static org.openqa.selenium.support.How.*;
 public class GoogleSheetPage extends CommonApi {
     @FindBy(how = CSS, using = "#identifierId")
     public static WebElement user;
-    @FindBy(how = CSS, using = "#login-password")
-    public static WebElement password;
     @FindBy(xpath = "//span[contains(text(),'Next')]")
     public static WebElement logInButton;
     @FindBy(xpath = "//div[@class='GQ8Pzc']")
@@ -53,7 +51,7 @@ public class GoogleSheetPage extends CommonApi {
             sleepFor(1);
             inputValueInTextBoxByWebElement(user, row.get(0).toString());
             //inputValueInTextBoxByWebElement(password, row.get(1).toString());
-            sleepFor(1);
+          //  sleepFor(1);
             //actual.add(getCurrentPageTitle());
             actual.add(getTextByWebElement(logInErrorMesage));
             System.out.println(getTextByWebElement(logInErrorMesage));

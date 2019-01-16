@@ -7,6 +7,24 @@
   <parameter name="url" value="https://www.gmail.com"/>
   <test thread-count="5" name="Gmail Home(failed)" verbose="0">
     <classes>
+      <class name="GmailLogin.GmailTestLogin">
+        <methods>
+          <include name="test5"/>
+          <include name="test1"/>
+          <include name="test10"/>
+          <include name="extentSetup"/>
+          <include name="startExtent"/>
+          <include name="cleanUp"/>
+          <include name="test7"/>
+          <include name="generateReport"/>
+          <include name="test8"/>
+          <include name="test9"/>
+          <include name="setUp"/>
+          <include name="test2"/>
+          <include name="test3"/>
+          <include name="test4"/>
+        </methods>
+      </class> <!-- GmailLogin.GmailTestLogin -->
       <class name="TestPages.TestHomePage">
         <methods>
           <include name="gmailLogin"/>
@@ -18,6 +36,7 @@
           <include name="startExtent"/>
           <include name="cleanUp"/>
           <include name="TesthelpGoogleAccount"/>
+          <include name="test1"/>
           <include name="TestGoogleAccount"/>
           <include name="TestSendEmailemailSubject"/>
           <include name="TestEmailStarred"/>
@@ -31,18 +50,6 @@
           <include name="TestSendEmailemailBody"/>
         </methods>
       </class> <!-- TestPages.TestHomePage -->
-      <class name="GmailLogin.GmailTestLogin">
-        <methods>
-          <include name="test1"/>
-          <include name="generateReport"/>
-          <include name="test10"/>
-          <include name="extentSetup"/>
-          <include name="test9"/>
-          <include name="setUp"/>
-          <include name="startExtent"/>
-          <include name="cleanUp"/>
-        </methods>
-      </class> <!-- GmailLogin.GmailTestLogin -->
     </classes>
   </test> <!-- Gmail Home(failed) -->
 </suite> <!-- Failed suite [Gmail Automation Script ] -->

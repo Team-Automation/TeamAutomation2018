@@ -5,7 +5,6 @@ import base.CommonApi;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.Test;
 import reporting.TestLogger;
 
 public class HomePage extends GmailCommonAPI {
@@ -80,12 +79,29 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement recoverYourAccount;
     @FindBy (xpath = "/html/body/div[2]/header/div[4]/div/div/div/div/span/a/span")
     public static WebElement googleAccount;
+    @FindBy (xpath = "//a[contains(text(),'Terms')]")
+    public static WebElement terms;
+    @FindBy(xpath = "//a[@class='bCzwPe YySNWc']")
+    public static WebElement termsYourGoogleAccount;
+    @FindBy(xpath = "//*[@id=\"yDmH0d\"]/c-wiz/div/div/c-wiz[1]/div[1]/ul/li[1]/a")
+    public static WebElement termsOverview;
+    @FindBy(xpath = "//*[@id=\"yDmH0d\"]/c-wiz/div/div/div[2]/div[1]/c-wiz/div/ul/li[2]/a")
+    public static WebElement termsViewArchivedVersions;
+
+
+
+    public void term(){
+        terms.click();
+        termsOverview.click();
+
+
+
+    }
 
 
     public void login(){
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
-        loginPassword.sendKeys("girl1995", Keys.ENTER);
-        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        loginPassword.sendKeys("nazi1995", Keys.ENTER);
     }
 
     public void sendEmailCompose(){

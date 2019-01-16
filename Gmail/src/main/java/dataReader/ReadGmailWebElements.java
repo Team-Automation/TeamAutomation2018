@@ -79,15 +79,18 @@ public class ReadGmailWebElements extends CommonApi {
     public static WebElement settingsThemes;
     @FindBy(xpath = "//div[@id=':14x.custom-6']//div[@class='a7U']")
     public static WebElement themes;
+    @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[1]/a")
+    public static WebElement help;
+    @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[2]/a")
+    public static WebElement privacy;
+    @FindBy (xpath = "//*[@id=\"initialView\"]/footer/ul/li[3]/a")
+    public static WebElement terms;
 
     public List webElementList(){
         List<WebElement> webElements = new ArrayList<>();
-        webElements.add(loginUsername);
-        webElements.add(loginPassword);
-        webElements.add(composeButton);
-        webElements.add(recipientEmail);
-        webElements.add(emailSubject);
-        webElements.add(emailBody);
+        webElements.add(help);
+        webElements.add(privacy);
+        webElements.add(terms);
 
         List<String> list = new ArrayList<>();
         for (int i = 0; i<webElements.size();i++){
@@ -96,44 +99,34 @@ public class ReadGmailWebElements extends CommonApi {
         System.out.println(list);
         return list;
     }
-    public List webElementList1(){
-        List<WebElement> webElements1 = new ArrayList<>();
-        webElements1.add(helpOption);
-        webElements1.add(createGoogleAccount);
-        webElements1.add(checkGoogleAccount);
-        webElements1.add (checkGoogleAccountEnterEmail);
-        webElements1.add(enterYourEmailAddress);
-        webElements1.add(recoverAccount);
-        webElements1.add(googleAccount);
-
-        List<String> list = new ArrayList<>();
-        for (int i = 0; i<webElements1.size();i++){
-            list.add(webElements1.get(i).getText());
-        }
-        System.out.println(list);
-        return list;
-    }
+//    public List webElementList1(){
+//        List<WebElement> webElements1 = new ArrayList<>();
+//        webElements1.add(helpOption);
+//        webElements1.add(createGoogleAccount);
+//        webElements1.add(checkGoogleAccount);
+//        webElements1.add (checkGoogleAccountEnterEmail);
+//        webElements1.add(enterYourEmailAddress);
+//        webElements1.add(recoverAccount);
+//        webElements1.add(googleAccount);
+//
+//        List<String> list = new ArrayList<>();
+//        for (int i = 0; i<webElements1.size();i++){
+//            list.add(webElements1.get(i).getText());
+//        }
+//        System.out.println(list);
+//        return list;
+//    }
     //Readxls readxls = PageFactory.initElements(driver,Readxls.class);
     Readxls xlData = new Readxls("/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/Data/Gmail.xlsx");
 
     public List expectedWebElement(){
-        int rowcount = xlData.getRowCount("HomeReview your privacy setting");
+        int rowcount = xlData.getRowCount("HelpOptions");
         List<String> expect = new ArrayList<>();
         for(int i = 1; i <= rowcount; i++){
-            expect.add(xlData.getCellData("HomeReview your privacy setting","HomeReview your privacy setting",i));
+            expect.add(xlData.getCellData("HelpOptions","HelpOptions",i));
         }
         System.out.println(expect);
         return expect;
     }
 
-    Readxls xlData1 = new Readxls("/Users/nazibahfariha/Downloads/TeamAutomation2018-master/Gmail/Data/Gmail.xlsx");
-    public List expectedWebElement1(){
-        int rowcount = xlData1.getRowCount("Payments & Sub");
-        List<String> expect = new ArrayList<>();
-        for(int i = 1; i <= rowcount; i++){
-            expect.add(xlData1.getCellData("Payments & Sub","Payments & Sub",i));
-        }
-        System.out.println(expect);
-        return expect;
-    }
 }
