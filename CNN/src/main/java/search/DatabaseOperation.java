@@ -21,7 +21,7 @@ public class DatabaseOperation {
     public static List<String> getHeaderValue() {
         List<String> headerList = new ArrayList<>();
         headerList.add("My Account");
-        headerList.add("Cards");
+        headerList.add("asia");
         headerList.add("Travel");
         headerList.add("Rewards");
         headerList.add("Business");
@@ -40,8 +40,8 @@ public class DatabaseOperation {
     @FindBy(how = How.CSS, css = "#label-myAccount")
     WebElement myAccount;
     @FindBy(css = "#label-cards")
-    WebElement cards;
-    @FindBy(css = "#label-travel")
+    WebElement asia;
+    @FindBy(css = "#label-asia")
     WebElement travel;
     @FindBy(css = "#label-rewards")
     WebElement rewards;
@@ -53,7 +53,7 @@ public class DatabaseOperation {
     public List getHeadersValue1() {
         List<WebElement> headerList1 = new ArrayList<>();
         headerList1.add(myAccount);
-        headerList1.add(cards);
+        headerList1.add(asia);
         headerList1.add(travel);
         headerList1.add(rewards);
         headerList1.add(business);

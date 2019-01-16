@@ -11,41 +11,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadCNNWebElements extends CommonApi {
-    @FindBy(how = How.XPATH, xpath = "//h2[contains(text(),'About')]")
-    WebElement about;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='About American Express'][contains(text(),'About American Express')]")
-    WebElement aboutCNN;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Investor Relations'][contains(text(),'Investor Relations')]")
-    WebElement investorRelations;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Careers'][contains(text(),'Careers')]")
-    WebElement careers;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Site Map'][contains(text(),'Site Map')]")
-    WebElement siteMap;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Contact Us'][contains(text(),'Contact Us')]")
-    WebElement contactUs;
-    @FindBy(how = How.XPATH, xpath = "//h2[contains(text(),'Products & Services')]")
-    WebElement productAndServices;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Credit Cards'][contains(text(),'Credit Cards')]")
-    WebElement creditCards;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Small Business Credit Cards'][contains(text(),'Small Business Credit Cards')]")
-    WebElement smallBusinessCreditCards;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Corporate Cards'][contains(text(),'Corporate Cards')]")
-    WebElement corporateCards;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Prepaid Cards'][contains(text(),'Prepaid Cards')]")
-    WebElement prepaidCards;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Savings Accounts & CDs'][contains(text(),'Savings Accounts & CDs')]")
-    WebElement savingsAcoountsAndCds;
-    @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Gift Cards'][contains(text(),'Gift Cards')]")
-    WebElement giftCards;
+
+    @FindBy(how = How.XPATH, xpath = "//a[@class='nav-menu-links__link'][contains(text(),'U.S.')]")
+    WebElement US;
+    @FindBy(xpath = "//a[@class='nav-menu-links__link'][contains(text(),'World')]")
+    WebElement World;
+    @FindBy(xpath = "//a[contains(text(),'Politics')]")
+    WebElement Politics;
+    @FindBy(xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Business')]")
+    WebElement Business;
+    @FindBy(xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Opinion')]")
+    WebElement Opinion;
+    @FindBy(xpath = "//a[contains(text(),'Health')]")
+    WebElement Health;
+    @FindBy(how = How.XPATH, xpath = "//a[contains(text(),'Entertainment')]")
+    WebElement Entertainment;
+    @FindBy(xpath = "//a[contains(text(),'Style')]")
+    WebElement Style;
+    @FindBy(xpath = "//a[contains(text(),'Travel')]")
+    WebElement Travel;
+    @FindBy(xpath = "//a[contains(text(),'Sports')]")
+    WebElement Sports;
+    @FindBy(xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Video')]")
+    WebElement Video;
+    @FindBy(xpath = "//a[@class='m-footer__title__link'][contains(text(),'Coupons')]")
+    WebElement Coupons;
+    @FindBy(xpath = "//a[@class='m-footer__title__link'][contains(text(),'More…')]")
+    WebElement More;
 
     public List webElementList() {
         List<WebElement> webElements = new ArrayList<>();
-        webElements.add(about);
-        webElements.add(aboutCNN);
-        webElements.add(investorRelations);
-        webElements.add(careers);
-        webElements.add(siteMap);
-        webElements.add(contactUs);
+        webElements.add(US);
+        webElements.add(World);
+        webElements.add(Politics);
+        webElements.add(Business);
+        webElements.add(Opinion);
+        webElements.add(Health);
 
         List<String> list = new ArrayList<>();
         for (int i = 0; i < webElements.size(); i++) {
@@ -57,13 +58,14 @@ public class ReadCNNWebElements extends CommonApi {
 
     public List webElementList1() {
         List<WebElement> webElements1 = new ArrayList<>();
-        webElements1.add(productAndServices);
-        webElements1.add(creditCards);
-        webElements1.add(smallBusinessCreditCards);
-        webElements1.add(corporateCards);
-        webElements1.add(prepaidCards);
-        webElements1.add(savingsAcoountsAndCds);
-        webElements1.add(giftCards);
+        webElements1.add(Entertainment);
+        webElements1.add(Style);
+        webElements1.add(Travel);
+        webElements1.add(Sports);
+        webElements1.add(Video);
+        webElements1.add(Coupons);
+        webElements1.add(More);
+
 
         List<String> list = new ArrayList<>();
         for (int i = 0; i < webElements1.size(); i++) {
