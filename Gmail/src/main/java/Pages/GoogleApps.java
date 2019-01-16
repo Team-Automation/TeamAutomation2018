@@ -11,20 +11,6 @@ public class GoogleApps extends GmailCommonAPI {
     public static WebElement loginUsername;
     @FindBy(xpath = "//input[@name='password']")
     public static WebElement loginPassword;
-    @FindBy(css = ".T-I.J-J5-Ji.T-I-KE.L3")
-    public static WebElement composeButton;
-    @FindBy(xpath = "//*[@id=':px']")
-    public static WebElement recipientEmail;
-    @FindBy(xpath = "//*[@id=':pf']")
-    public static WebElement emailSubject;
-    @FindBy(xpath = "//*[@id=':qk']")
-    public static WebElement emailBody;
-    @FindBy(xpath = "//*[@id=':p5']")
-    public static WebElement sendButton;
-    @FindBy(xpath = "//a[contains(text(),'Help')]")
-    public static WebElement helpOption;
-    @FindBy(xpath = "//*[@id=\"gb\"]/div[2]/div[1]/div[1]/svg/path")
-    public static WebElement viewBox;
     @FindBy(xpath = "//*[@class='gb_kf']")
     public static WebElement googleAppsViewBox;
     @FindBy (xpath = "//*[@id='gb192']/span[1]")
@@ -53,12 +39,6 @@ public class GoogleApps extends GmailCommonAPI {
     public static WebElement googlePhotos;
 
 
-
-
-    public void login(){
-        loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
-        loginPassword.sendKeys("nazi1995", Keys.ENTER);
-    }
 
     public void ShowGoogleApps(){
         login();
@@ -112,6 +92,10 @@ public class GoogleApps extends GmailCommonAPI {
     public void ShowGooglePhotos(){
         ShowGoogleApps();
         googlePhotos.click();
+    }
+    public void login(){
+        loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
+        loginPassword.sendKeys("nazi1995", Keys.ENTER);
     }
 
 
