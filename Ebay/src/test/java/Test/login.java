@@ -82,7 +82,7 @@ public class login extends EbayApi {
     }
     @AfterMethod
     public void clear(){
-        cleanUp();
+        //cleanUp();
     }
 }
 

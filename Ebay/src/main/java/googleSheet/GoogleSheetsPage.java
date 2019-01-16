@@ -14,17 +14,20 @@ import static googleApi.GoogleSheetReader.getSheetsService;
 import static org.openqa.selenium.support.How.*;
 
     public class GoogleSheetsPage extends CommonApi {
-        @FindBy(how = CSS, using = "#login-user")
+        @FindBy(how =XPATH, using = "//a[contains(text(),'Sign in')]")
+        public static WebElement signin;
+        @FindBy(how = CSS, using = "#userid")
         public static WebElement user;
-        @FindBy(how = CSS, using = "#login-password")
+        @FindBy(how = CSS, using = "#pass")
         public static WebElement password;
-        @FindBy(css = "#login-submit")
+        @FindBy(css = "#sgnBt")
         public static WebElement logInButton;
-        @FindBy(css = "#alertMsg")
+        @FindBy(css = "#errf")
         public static WebElement logInErrorMesage;
 
         public void clickLogIn() throws InterruptedException {
             sleepFor(4);
+            signin.click();
             logInButton.click();
         }
 //    public void switchToLogInForm() {
