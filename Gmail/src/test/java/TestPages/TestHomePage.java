@@ -42,6 +42,10 @@ public class TestHomePage extends HomePage {
     public void TestEmailOlderMessages(){homepage.EmailOlderMessages();}
     @Test
     public void test1 (){homepage.term();}
+    @Test
+    public void test2 (){homepage.privacy();}
+    @Test
+    public void test3 (){homepage.GoogleAppsViewBox();}
 
 
 }

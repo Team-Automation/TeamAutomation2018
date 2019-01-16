@@ -1,11 +1,9 @@
 package Pages;
 
 import GmailAPI.GmailCommonAPI;
-import base.CommonApi;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import reporting.TestLogger;
 
 public class HomePage extends GmailCommonAPI {
 
@@ -37,7 +35,7 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement getstarted;
     @FindBy(xpath = "//*[@id=\":kh\"]/div/div[2]/span/a")
     public static WebElement starred;
-    @FindBy(xpath = "//div[@class='asa']")
+    @FindBy(xpath = "//div[@id=':2h']//div[@class='asa']")
     public static WebElement emailSettings;
     @FindBy(xpath = "//div[contains(text(),'Themes')]")
     public static WebElement settingsThemes;
@@ -89,13 +87,28 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement termsViewArchivedVersions;
     @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/c-wiz[1]/div[1]/div/div/content/span/svg/path[2]")
     public static WebElement menu;
+    @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[1]/a")
+    public static WebElement help;
+    @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[2]/a")
+    public static WebElement privacy;
+    @FindBy(xpath = "//a[@class='farYT'][contains(text(),'Introduction')]")
+    public static WebElement introduction;
+    @FindBy(xpath = "//div[contains(text(),'Display density')]")
+    public static WebElement displayDensity;
+    @FindBy(xpath = "//*[@id=\"gbwa\"]/div/a/svg/path")
+    public static WebElement getGoogleAppsViewBox;
+
 
 
 
     public void term(){
         terms.click();
         termsViewArchivedVersions.click();
-        
+
+    }
+    public void privacy(){
+        privacy.click();
+        introduction.click();
     }
 
 
@@ -171,12 +184,22 @@ public class HomePage extends GmailCommonAPI {
     public void EmailSettings(){
         login();
         emailSettings.click();
-        settingsThemes.click();
+     //   settingsThemes.click();
+    }
+    public void EmailSettingsDisplayDensity(){
+        login();
+        emailSettings.click();
+        displayDensity.click();
     }
     public void EmailOlderMessages(){
         login();
         olderMessages.click();
 
     }
+    public void GoogleAppsViewBox(){
+        login();
+        getGoogleAppsViewBox.click();
+    }
+
 
 }
