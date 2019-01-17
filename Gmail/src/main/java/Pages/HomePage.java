@@ -70,13 +70,13 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement getstarted;
     @FindBy(xpath = "//*[@id=\":kh\"]/div/div[2]/span/a")
     public static WebElement starred;
-    @FindBy(xpath = "//div[@id=':2h']//div[@class='asa']")
+    @FindBy(xpath = "//div[@id=':28']//div[@class='asa']")
     public static WebElement emailSettings;
     @FindBy(xpath = "//div[contains(text(),'Themes')]")
     public static WebElement settingsThemes;
     @FindBy(xpath = "//div[@id=':14x.custom-6']//div[@class='a7U']")
     public static WebElement themes;
-    @FindBy (xpath = "//div[@id=':jx']")
+    @FindBy (xpath = "//div[@id=':k6']")
     public static  WebElement olderMessages;
     @FindBy(xpath = "//section[@class='primary-container']//section[1]//h2[1]//*[2]")
     public static WebElement popularArticles;
@@ -118,7 +118,7 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement termsYourGoogleAccount;
     @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/c-wiz[1]/div[2]/div[3]/ul/li[1]/a")
     public static WebElement termsOverview;
-    @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/div[2]/div[3]/c-wiz/div/div/p[1]/a")
+    @FindBy(xpath = "//a[contains(text(),'view archived versions')]")
     public static WebElement termsViewArchivedVersions;
     @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/c-wiz[1]/div[1]/div/div/content/span/svg/path[2]")
     public static WebElement menu;
@@ -144,9 +144,8 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement replyEmailSendButton;
     @FindBy(xpath ="//*[@id=\":kc\"]/div/div[2]/span/a")
     public static WebElement sentEmails;
-    @FindBy(xpath = "//a[@title='Sent']")
+    @FindBy(id = "#:kc")
     public static WebElement sent;
-
 
 
     public void searchEmail(){
@@ -156,11 +155,12 @@ public class HomePage extends GmailCommonAPI {
         emailReply.click();
         replyEmailBody.sendKeys("wuv you");
         replyEmailSendButton.click();
-        sentEmails.click();
+        //sentEmails.click();
     }
 
-    public void SentEmails(){
-        login();
+    public void SentEmails() throws Exception {
+        loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
+        loginPassword.sendKeys("nazi1995", Keys.ENTER);
         sent.click();
     }
 
@@ -344,7 +344,7 @@ public class HomePage extends GmailCommonAPI {
     }
     public void GoogleAppsViewBox(){
         login();
-        getGoogleAppsViewBox.click();
+        googleAppsViewBox.click();
     }
 
 

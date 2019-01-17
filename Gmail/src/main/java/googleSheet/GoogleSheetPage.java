@@ -24,9 +24,6 @@ public class GoogleSheetPage extends CommonApi {
         sleepFor(4);
         logInButton.click();
     }
-//    public void switchToLogInForm() {
-//        driver.switchTo().frame("Amex login");
-//   }
 
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
         // Build a new authorized API client service.

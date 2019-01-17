@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadGmailWebElements extends CommonApi {
-    @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[1]/a")
-    public static WebElement help;
-    @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[2]/a")
-    public static WebElement privacy;
-    @FindBy (xpath = "//*[@id=\"initialView\"]/footer/ul/li[3]/a")
-    public static WebElement terms;
+    @FindBy(xpath = "//a[contains(text(),'Help')]")
+    WebElement help;
+    @FindBy(xpath = "//a[contains(text(),'Privacy')]")
+    WebElement privacy;
+    @FindBy (xpath = "//a[contains(text(),'Terms')]")
+    WebElement terms;
 
     public List webElementList(){
         List<WebElement> webElements = new ArrayList<>();

@@ -15,15 +15,24 @@ public class TestHomePage extends HomePage {
     public void gmailLogin(){homepage.login(); }
     @Test
     public void Email() throws InterruptedException {homepage.sendEmail();}
-    //@Test
-    //public void TestHelpCreateGoogleAccount(){homepage.HelpCreateGoogleAccount(); }
-   //@Test
-    //public void TesthelpGoogleAccount(){homepage.helpGoogleAccount();}
-//    @Test
-//    public void TestGoogleAccount(){homepage.GoogleAccount();}
+    @Test
+    public void TestEmailSettings (){homepage.EmailSettings();}
+    @Test
+    public void TestSendEmailCompose (){homepage.sendEmailCompose();}
+    @Test
+    public void TestSendEmailRecipientEmail(){homepage.sendEmailRecipientEmail();}
+    @Test
+    public void TestSendEmailemailSubject(){homepage.sendEmailemailSubject();}
+    @Test
+    public void TestSendEmailemailBody(){homepage.sendEmailemailBody();}
+    @Test
+    public void TestSendEmailSendButton() throws InterruptedException {homepage.sendEmailSendButton();}
+    @Test
+    public void TestEmailOlderMessages(){homepage.EmailOlderMessages();}
+    @Test
+    public void TestGoogleAppsViewBox(){homepage.GoogleAppsViewBox();}
     @Test
     public void TestGoogleApps(){homepage.GoogleApps();}
-
     @Test
     public void TestShowGoogleApps(){homepage.ShowGoogleApps();}
     @Test
@@ -50,41 +59,39 @@ public class TestHomePage extends HomePage {
     public void TestShowGoogleTranslate(){homepage.ShowGoogleTranslate();}
     @Test
     public void TestShowGooglePhotos(){homepage.ShowGooglePhotos();}
-
-
-
-
-
-
-
-
-
+    @Test
+    public void TestSearchEmail(){homepage.searchEmail();}//works
+    @Test
+    public void test5()throws Exception{homepage.SentEmails();}
     @Test
     public void TestEmailStarred(){homepage.EmailStarred();}
     @Test
-    public void TestEmailSettings (){homepage.EmailSettings();}
+    public void TestTerm (){homepage.term();}
     @Test
-    public void TestSendEmailCompose (){homepage.sendEmailCompose();}
+    public void TestPrivacy (){homepage.privacy();}
     @Test
-    public void TestSendEmailRecipientEmail(){homepage.sendEmailRecipientEmail();}
+    public void TestHelpCreateGoogleAccount(){homepage.HelpCreateGoogleAccount(); }
     @Test
-    public void TestSendEmailemailSubject(){homepage.sendEmailemailSubject();}
+    public void TesthelpGoogleAccount(){homepage.helpGoogleAccount();}
     @Test
-    public void TestSendEmailemailBody(){homepage.sendEmailemailBody();}
-    @Test
-    public void TestSendEmailSendButton() throws InterruptedException {homepage.sendEmailSendButton();}
-    @Test
-    public void TestEmailOlderMessages(){homepage.EmailOlderMessages();}
-    @Test
-    public void test1 (){homepage.term();}
-    @Test
-    public void test2 (){homepage.privacy();}
-    @Test
-    public void test3 (){homepage.GoogleAppsViewBox();}
-    @Test
-    public void test4(){homepage.searchEmail();}//works
-    @Test
-    public void test5(){homepage.SentEmails();}
-
-
+    public void TestGoogleAccount(){homepage.GoogleAccount();}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

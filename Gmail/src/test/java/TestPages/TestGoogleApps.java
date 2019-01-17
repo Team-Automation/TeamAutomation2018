@@ -13,7 +13,7 @@ public class TestGoogleApps extends GoogleApps {
     public void initializeElement(){ googleApps = PageFactory.initElements(driver,GoogleApps.class); }
 
     @Test
-    public void TestShowGoogleApps(){googleApps.ShowGoogleApps();}
+    public void TestShowGoogleApps(){ googleApps.ShowGoogleApps();}
     @Test
     public void TestShowUserAccount(){googleApps.ShowUserAccount();}
     @Test
