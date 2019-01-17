@@ -9,60 +9,78 @@ import org.testng.annotations.Test;
 public class SearchTest extends SearchPage {
     SearchPage searchPage;
     @BeforeMethod
-    public void initializeElement(){
-        searchPage = PageFactory.initElements(driver, SearchPage.class); }
+    public void initializeElement(){ searchPage = PageFactory.initElements(driver, SearchPage.class); }
     @Test
     public void searchBangladesh(){
         searchPage.getBangladesh().click();
-        searchPage.getTypeBangladesh().sendKeys("bangladesh",Keys.ENTER);
-    }
+        searchPage.getTypeBangladesh().sendKeys("bangladesh",Keys.ENTER); }
     @Test
     public void showLiveTV(){
         searchPage.liveTv(); }
     @Test
     public void liveVideos(){
         searchPage.getVideoLive().click();
-        searchPage.getLiveVideo().click();
-    }
+        searchPage.getLiveVideo().click(); }
     @Test
     public void style(){
-        searchPage.getStyle().click();
-    }
+        searchPage.getStyle().click(); }
     @Test
     public void sports(){
         searchPage.getSports().click();
-        searchPage.getNFL().click();
-    }
+        searchPage.getNFL().click(); }
     @Test
     public void opinion(){
         searchPage.getOpinion().click();
         searchPage.getSocialC().click();
-        searchPage.getFirstArticle();
-    }
+        searchPage.getFirstArticle(); }
     @Test
     public void USEnergy(){
         searchPage.getUSEnergy().click();
         searchPage.getUSEE().click();
-        searchPage.getFirstA().click();
-    }
+        searchPage.getFirstA().click(); }
     @Test
     public void travelFood(){
         searchPage.getTravelFood().click();
         searchPage.getTravelFoods().click();
-        searchPage.getTravelFoodsArticle1st();
-    }
+        searchPage.getTravelFoodsArticle1st(); }
     @Test
     public void SpaceAndScience1stArticle(){
         searchPage.getUSSpace().click();
         searchPage.getUSSpacekAndScience();
-        searchPage.getUSSpaceFirstArt();
-    }
+        searchPage.getUSSpaceFirstArt(); }
     @Test
     public void AsiaFirstArticle(){
         searchPage.getWorld().click();
         searchPage.getWorldAsia().click();
-        searchPage.getWorldAsiaHeadline().click();
+        searchPage.getWorldAsiaHeadline().click(); }
+    @Test
+    public void goDubai(){
+        searchPage.getTravels().click();
+        searchPage.getDestinations().click();
+        searchPage.getDubai().click(); }
+    @Test
+    public void goGermany(){
+        searchPage.getTravel().click();
+        searchPage.getDestination().click();
+        searchPage.getGermany().click();
     }
+    @Test
+    public void goCuba(){
+        searchPage.getTraveling().click();
+        searchPage.getDesti().click();
+        searchPage.getCuba().click();
+    }
+    @Test
+    public void letsStay(){
+        searchPage.gettravels().click();
+        searchPage.getStay().click();
+    }
+    @Test
+    public void gettingTicket(){
+        searchPage.getTicketWay().click();
+        searchPage.getTicket().click();
+    }
+
     //logInProblem
     @Test
     public void wayToLogIn() throws InterruptedException{
@@ -71,8 +89,7 @@ public class SearchTest extends SearchPage {
         Thread.sleep(2000);
         searchPage.getLogIn().click();
         searchPage.getEmail().sendKeys("Ahmed", Keys.ENTER);
-        searchPage.getPassword().sendKeys("fewggfguqgw",Keys.ENTER);
-    }
+        searchPage.getPassword().sendKeys("fewggfguqgw",Keys.ENTER); }
     @Test
     public void LogInTest(){logIn();}
     @Test

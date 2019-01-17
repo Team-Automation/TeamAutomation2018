@@ -37,27 +37,27 @@ public class DatabaseOperation {
 
     }
 
-    @FindBy(how = How.CSS, css = "#label-myAccount")
-    WebElement myAccount;
-    @FindBy(css = "#label-cards")
-    WebElement asia;
-    @FindBy(css = "#label-asia")
-    WebElement travel;
-    @FindBy(css = "#label-rewards")
-    WebElement rewards;
-    @FindBy(css = "#label-business")
-    WebElement business;
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__hiddenSmDown___2bPWN axp-global-header__GlobalHeader__helpLink___XEGy0 axp-global-header__dls__btn___GqzcQ axp-global-header__dls__btnInline___1JW2H axp-global-header__dls__btnSm___3wi1D axp-global-header__dls__btnTertiary___i3wVn axp-global-header__dls__margin1R___1LOzX']")
-    WebElement help;
+    @FindBy(how = How.XPATH, xpath = "//a[@class='m-legal__links'][contains(text(),'Terms of Use')]")
+    WebElement TermOfUse;
+    @FindBy(xpath = "//a[@class='m-legal__links'][contains(text(),'Privacy Policy')]")
+    WebElement PrivatePolicy;
+    @FindBy(xpath = "//a[contains(text(),'Accessibility & CC')]")
+    WebElement Accessibility;
+    @FindBy(xpath = "//a[contains(text(),'AdChoices')]")
+    WebElement AdChoices;
+    @FindBy(xpath = "//a[contains(text(),'CNN Studio Tours')]")
+    WebElement CNNStudioTours;
+    @FindBy(xpath = "//a[contains(text(),'CNN Newsource')]")
+    WebElement CNNNewsource;
 
     public List getHeadersValue1() {
         List<WebElement> headerList1 = new ArrayList<>();
-        headerList1.add(myAccount);
-        headerList1.add(asia);
-        headerList1.add(travel);
-        headerList1.add(rewards);
-        headerList1.add(business);
-        headerList1.add(help);
+        headerList1.add(TermOfUse);
+        headerList1.add(PrivatePolicy);
+        headerList1.add(Accessibility);
+        headerList1.add(AdChoices);
+        headerList1.add(CNNStudioTours);
+        headerList1.add(CNNNewsource);
 
 
         List<String> list = new ArrayList<>();

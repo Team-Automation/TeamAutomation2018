@@ -144,6 +144,50 @@ public class SearchPage extends Common {
     public WebElement getPassword(){
         return password;
     }
+
+
+    @FindBy (xpath = "//a[contains(text(),'Travel')]")
+    WebElement Travels;
+    public WebElement getTravels (){return Travels;}
+    @FindBy (xpath = "//a[@class='Header__section'][contains(text(),'Destinations')]")
+    WebElement Destinations;
+    public WebElement getDestinations (){return Destinations;}
+    @FindBy (xpath = "//a[contains(text(),'Dubai')]")
+    WebElement Dubai;
+    public WebElement getDubai (){return Dubai;}
+    @FindBy (xpath = "//a[contains(text(),'Travel')]")
+    WebElement Travel;
+    public WebElement getTravel (){return Travel;}
+    @FindBy (xpath = "//a[@class='Header__section'][contains(text(),'Destinations')]")
+    WebElement Destination;
+    public WebElement getDestination (){return Destination;}
+    @FindBy (xpath = "//a[contains(text(),'Germany')]")
+    WebElement Germany;
+    public WebElement getGermany (){return Germany;}
+    @FindBy (xpath = "//a[contains(text(),'Travel')]")
+    WebElement traveling;
+    public WebElement getTraveling (){return traveling;}
+    @FindBy (xpath = "//a[@class='Header__section'][contains(text(),'Destinations')]")
+    WebElement Desti;
+    public WebElement getDesti (){return Desti;}
+    @FindBy (xpath = "//a[contains(text(),'Cuba')]")
+    WebElement Cuba;
+    public WebElement getCuba (){return Cuba;}
+    @FindBy (xpath = "//a[contains(text(),'Travel')]")
+    WebElement travels;
+    public WebElement gettravels (){return travels;}
+    @FindBy (xpath = "//a[@class='Header__section'][contains(text(),'Stay')]")
+    WebElement Stay;
+    public WebElement getStay (){return Stay;}
+
+    @FindBy (xpath = "//a[contains(text(),'Sports')]")
+    WebElement ticketWay;
+    public WebElement getTicketWay (){return ticketWay;}
+    @FindBy (xpath = "/html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/nav[1]/ol[1]/li[4]/a[1]")
+    WebElement ticket;
+    public WebElement getTicket (){return ticket;}
+
+
     public void logIn(){
         clickByXpath("//div[@class='nav-menu__hamburger']");
         clickByClass("nav-flyout__submenu-link");
@@ -158,10 +202,10 @@ public class SearchPage extends Common {
     public void worldAfrica (){
         clickByXpath("//a[@class='nav-menu-links__link'][contains(text(),'World')]");
         clickByXpath("//a[@class='nav-section__submenu-item'][contains(text(),'Africa')]");
-        clickByXpath("/html[1]/body[1]/div[6]/section[2]/div[6]/div[1]/div[1]/ul[1]/li[1]/article[1]/div[1]/div[1]/h3[1]/a[1]"); }
+        clickByClass("cd__headline-text"); }
     public void LatestPolitics() {
         clickByXpath("//a[contains(text(),'Politics')]");
-        clickByXpath("//p[@id='cnnix-clock-title']"); }
+        clickByClass("cd__headline-text"); }
     public void facebook(){
         clickByXpath("//div[@class='nav-menu__hamburger']");
         clickByXpath("//a[@class='nav-flyout-footer__social-link nav-flyout-footer__social-link--facebook']");
