@@ -179,13 +179,62 @@ public class SearchPage extends Common {
     @FindBy (xpath = "//a[@class='Header__section'][contains(text(),'Stay')]")
     WebElement Stay;
     public WebElement getStay (){return Stay;}
-
     @FindBy (xpath = "//a[contains(text(),'Sports')]")
     WebElement ticketWay;
     public WebElement getTicketWay (){return ticketWay;}
     @FindBy (xpath = "/html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/nav[1]/ol[1]/li[4]/a[1]")
     WebElement ticket;
-    public WebElement getTicket (){return ticket;}
+    public WebElement getticket (){return ticket;}
+    @FindBy (xpath = "//a[contains(text(),'Entertainment')]")
+    WebElement Entertainments;
+    public WebElement getEntertainments (){return Entertainments;}
+    @FindBy (xpath = "//a[@title='Stars']")
+    WebElement Stars;
+    public WebElement getStars (){return Stars;}
+    @FindBy (className = "nav-menu__hamburger")
+    WebElement Menu;
+    public WebElement getMenu (){return Menu;}
+    @FindBy (xpath = "//a[@class='nav-flyout__submenu-link'][contains(text(),'TV Schedule')]")
+    WebElement TVSchedule;
+    public WebElement getTVSchedule (){return TVSchedule;}
+    @FindBy (xpath = "//li[contains(text(),'Afternoon')]")
+    WebElement Afternoon;
+    public WebElement getAfternoon (){return Afternoon;}
+    @FindBy (xpath = "//a[contains(text(),'Health')]")
+    WebElement Healths;
+    public WebElement getHealths (){return Healths;}
+    @FindBy (xpath = "//a[@class='nav-section__submenu-item'][contains(text(),'Live Longer')]")
+    WebElement liveLonger;
+    public WebElement getLiveLonger (){return liveLonger;}
+    @FindBy(className = "cd__headline-text")
+    WebElement Headline;
+    public WebElement getHeadline (){return Headline;}
+    @FindBy (className = "nav-menu__hamburger")
+    WebElement Menus;
+    public WebElement getMenus (){return Menus;}
+    @FindBy (xpath = "//a[@class='nav-flyout__submenu-link'][contains(text(),'Space + Science')]")
+    WebElement Science;
+    public WebElement getScience (){return Science;}
+
+    @FindBy (className = "nav-menu__hamburger")
+    WebElement menu;
+    public WebElement getmenu (){return menu;}
+    @FindBy (xpath = "//a[@class='nav-flyout__submenu-link'][contains(text(),'Work for CNN')]")
+    WebElement workForCNN;
+    public WebElement getWorkForCNN (){return workForCNN;}
+    @FindBy (xpath = "//a[contains(text(),'Corporate')]")
+    WebElement Corporate;
+    public WebElement getCorporate (){return Corporate;}
+
+    @FindBy (xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Business')]")
+    WebElement Business;
+    public WebElement getBusiness (){return Business;}
+    @FindBy (xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Tech')]")
+    WebElement Tec;
+    public WebElement getTec (){return Tec;}
+    @FindBy (className = "cd__headline-text")
+    WebElement topStories;
+    public WebElement getTopStories (){return topStories;}
 
 
     public void logIn(){

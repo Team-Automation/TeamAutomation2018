@@ -62,24 +62,48 @@ public class SearchTest extends SearchPage {
     public void goGermany(){
         searchPage.getTravel().click();
         searchPage.getDestination().click();
-        searchPage.getGermany().click();
-    }
+        searchPage.getGermany().click(); }
     @Test
     public void goCuba(){
         searchPage.getTraveling().click();
         searchPage.getDesti().click();
-        searchPage.getCuba().click();
-    }
+        searchPage.getCuba().click(); }
     @Test
     public void letsStay(){
         searchPage.gettravels().click();
-        searchPage.getStay().click();
-    }
+        searchPage.getStay().click(); }
     @Test
     public void gettingTicket(){
         searchPage.getTicketWay().click();
-        searchPage.getTicket().click();
-    }
+        searchPage.getticket().click(); }
+    @Test
+    public void Stars(){
+        searchPage.getEntertainments().click();
+        searchPage.getStars().click(); }
+    @Test
+    public void AfternoonTVSchedule(){
+        searchPage.getMenu().click();
+        searchPage.getTVSchedule().click();
+        searchPage.getAfternoon().click(); }
+    @Test
+    public void longLive(){
+        searchPage.getHealths().click();
+        searchPage.getLiveLonger().click();
+        searchPage.getHeadline().click(); }
+    @Test
+    public void goScience(){
+        searchPage.getMenus().click();
+        searchPage.getScience().click(); }
+    @Test
+    public void workForCNNNews(){
+        searchPage.getMenu().click();
+        searchPage.getWorkForCNN().click();
+        searchPage.getCorporate().click(); }
+    @Test
+    public void businessTechTopStories(){
+        searchPage.getBusiness().click();
+        searchPage.getTec().click();
+        searchPage.getTopStories().click(); }
 
     //logInProblem
     @Test
