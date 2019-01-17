@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchPage extends Common {
 
-
     @FindBy(xpath = "//a[@id='nav-mobileTV']")
     public static WebElement televition;
     public void liveTv() {
@@ -24,128 +23,78 @@ public class SearchPage extends Common {
     public WebElement getTypeBangladesh(){ return TypeBangladesh; }
     @FindBy (className = "nav-section__submenu-item")
     WebElement liveVideo;
-    public WebElement getLiveVideo() {
-        return liveVideo;
-    }
+    public WebElement getLiveVideo() { return liveVideo; }
     @FindBy (xpath = "//a[contains(text(),'Style')]")
     WebElement style;
-    public WebElement getStyle(){
-        return style;
-    }
+    public WebElement getStyle(){ return style; }
     @FindBy (xpath = "//a[contains(text(),'Sports')]")
     WebElement sports;
-    public WebElement getSports(){
-        return sports;
-    }
+    public WebElement getSports(){ return sports; }
     @FindBy (xpath = "//a[contains(text(),'NFL')]")
     WebElement NFL;
-    public WebElement getNFL(){
-        return NFL;
-    }
+    public WebElement getNFL(){ return NFL; }
     @FindBy (className = "nav-menu-links__link")
     WebElement opinion;
-    public WebElement getOpinion(){
-        return opinion;
-    }
+    public WebElement getOpinion(){ return opinion; }
     @FindBy (className = "nav-section__submenu-item")
     WebElement socialC;
-    public WebElement getSocialC() {
-        return socialC;
-    }
+    public WebElement getSocialC() { return socialC; }
     @FindBy (className = "cd__headline-text")
     WebElement firstArticle;
-    public WebElement getFirstArticle() {
-        return firstArticle;
-    }
+    public WebElement getFirstArticle() { return firstArticle; }
     @FindBy (className = "nav-menu-links__link")
     WebElement USEnergy;
-    public WebElement getUSEnergy() {
-        return USEnergy;
-    }
+    public WebElement getUSEnergy() { return USEnergy; }
     @FindBy (className = "nav-section__submenu-item")
     WebElement USEE;
-    public WebElement getUSEE() {
-        return USEE;
-    }
+    public WebElement getUSEE() { return USEE; }
     @FindBy (className = "cd__headline-text")
     WebElement firstA;
-    public WebElement getFirstA(){
-        return firstA;
-    }
+    public WebElement getFirstA(){ return firstA; }
     @FindBy (xpath = "//a[contains(text(),'Travel')]")
     WebElement travelFood;
-    public WebElement getTravelFood(){
-        return travelFood;
-    }
+    public WebElement getTravelFood(){ return travelFood; }
     @FindBy (className = "Header__section")
     WebElement travelFoods;
-    public WebElement getTravelFoods() {
-        return travelFoods;
-    }
+    public WebElement getTravelFoods() { return travelFoods; }
     @FindBy (className = "CardBasic__title")
     WebElement travelFoodsArticle1st;
-    public WebElement getTravelFoodsArticle1st() {
-        return travelFoodsArticle1st;
-    }
+    public WebElement getTravelFoodsArticle1st() { return travelFoodsArticle1st; }
     @FindBy (className = "nav-menu-links__link")
     WebElement USSpace;
-    public WebElement getUSSpace() {
-        return USSpace;
-    }
+    public WebElement getUSSpace() { return USSpace; }
     @FindBy (className = "nav-section__submenu-item")
     WebElement USSpacekAndScience;
-    public WebElement getUSSpacekAndScience() {
-        return USSpacekAndScience;
-    }
+    public WebElement getUSSpacekAndScience() { return USSpacekAndScience; }
     @FindBy (className = "cd__headline-text")
     WebElement USSpaceFirstArt;
-    public WebElement getUSSpaceFirstArt() {
-        return USSpaceFirstArt;
-    }
+    public WebElement getUSSpaceFirstArt() { return USSpaceFirstArt; }
     @FindBy (className = "nav-menu-links__link")
     WebElement world;
-    public WebElement getWorld(){
-        return world;
-    }
+    public WebElement getWorld(){ return world; }
     @FindBy (className = "nav-section__submenu-item")
     WebElement worldAsia;
-    public WebElement getWorldAsia(){
-        return worldAsia;
-    }
+    public WebElement getWorldAsia(){ return worldAsia; }
     @FindBy (className = "cd__headline-text")
     WebElement worldAsiaHeadline;
-    public WebElement getWorldAsiaHeadline(){
-        return worldAsiaHeadline;
-    }
+    public WebElement getWorldAsiaHeadline(){ return worldAsiaHeadline; }
 
     //LogInProblem
     @FindBy (id = "menu")
     WebElement processToLogInLogIn;
-    public WebElement getProcessToLogInLogIn() {
-        return processToLogInLogIn;
-    }
+    public WebElement getProcessToLogInLogIn() { return processToLogInLogIn; }
     @FindBy (linkText = "CNN Store")
     WebElement CNNStore;
-    public WebElement getCNNStore(){
-        return CNNStore;
-    }
+    public WebElement getCNNStore(){ return CNNStore; }
     @FindBy (xpath = "//a[@class='nav-account-link']")
     WebElement logIn;
-    public WebElement getLogIn(){
-        return logIn;
-    }
+    public WebElement getLogIn(){ return logIn; }
     @FindBy (css = "#user_email")
     WebElement email;
-    public WebElement getEmail(){
-        return email;
-    }
+    public WebElement getEmail(){ return email; }
     @FindBy (css = "#user_password")
     WebElement password;
-    public WebElement getPassword(){
-        return password;
-    }
-
-
+    public WebElement getPassword(){ return password; }
     @FindBy (xpath = "//a[contains(text(),'Travel')]")
     WebElement Travels;
     public WebElement getTravels (){return Travels;}
@@ -215,7 +164,6 @@ public class SearchPage extends Common {
     @FindBy (xpath = "//a[@class='nav-flyout__submenu-link'][contains(text(),'Space + Science')]")
     WebElement Science;
     public WebElement getScience (){return Science;}
-
     @FindBy (className = "nav-menu__hamburger")
     WebElement menu;
     public WebElement getmenu (){return menu;}
@@ -225,7 +173,6 @@ public class SearchPage extends Common {
     @FindBy (xpath = "//a[contains(text(),'Corporate')]")
     WebElement Corporate;
     public WebElement getCorporate (){return Corporate;}
-
     @FindBy (xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Business')]")
     WebElement Business;
     public WebElement getBusiness (){return Business;}
