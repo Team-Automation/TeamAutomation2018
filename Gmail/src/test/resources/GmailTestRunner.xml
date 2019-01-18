@@ -15,6 +15,7 @@
 
     <test name = "Gmail Home">
         <classes>
+            <class name="BrokenLink.TestBrokenLink"/>
             <class name="Database.DatabaseTest"/>
             <class name="dataDrivenTest.XLSXTest"/>
             <class name="GmailLogin.GmailTestLogin"/>
