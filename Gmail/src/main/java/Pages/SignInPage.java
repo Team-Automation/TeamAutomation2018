@@ -60,5 +60,9 @@ public class SignInPage extends CommonApi {
         boolean display = logo.isDisplayed();
         return display;
     }
+    public boolean logoEnabled(){
+        boolean enabled = logo.isEnabled ();
+        return enabled;
+    }
 
 }

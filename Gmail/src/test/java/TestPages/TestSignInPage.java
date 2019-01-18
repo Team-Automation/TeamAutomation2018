@@ -31,4 +31,10 @@ public class TestSignInPage extends CommonApi {
         boolean display = signInPage.gLogo();
         Assert.assertTrue (display);
     }
+
+    @Test
+    public void logoEnabled(){
+        boolean actual = signInPage.logoEnabled ();
+        Assert.assertTrue (actual);
+    }
 }
