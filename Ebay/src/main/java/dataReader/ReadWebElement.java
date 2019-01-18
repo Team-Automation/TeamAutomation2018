@@ -71,7 +71,7 @@ public class ReadWebElement extends CommonApi {
             int rowcount = xlData.getRowCount("BUY");
             List<String> expect = new ArrayList<>();
             for(int i = 1; i <= rowcount; i++){
-                expect.add(xlData.getCellData("BUY","BUY",i));
+                expect.add(xlData.getCellData("BUY","Buy",i));
             }
             System.out.println(expect);
             return expect;
@@ -82,7 +82,7 @@ public class ReadWebElement extends CommonApi {
             int rowcount = xlData1.getRowCount("SELL");
             List<String> expect = new ArrayList<>();
             for(int i = 1; i <= rowcount; i++){
-                expect.add(xlData1.getCellData("SELL","SELL",i));
+                expect.add(xlData1.getCellData("SELL","Sell",i));
             }
             System.out.println(expect);
             return expect;

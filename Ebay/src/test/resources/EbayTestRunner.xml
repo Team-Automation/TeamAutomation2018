@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Ebay Shopping Website " parallel="false">
-    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="useCloudEnv" value="false"/>
     <parameter name="userName" value="lazim122"/>
     <parameter name="key" value="3521de6c-5cf2-42cf-af5a-f5d0cf8afeb4"/>
     <parameter name="OS" value="macOS 10.12"/>
@@ -13,7 +13,8 @@
     <test name = "Ebay Home">
         <classes>
             <!--<class name="Test.login"/>-->
-            <class name="Test.TestGoogleSheet"/>
+            <!--<class name="Test.TestGoogleSheet"/>-->
+            <class name="Test.XLSXTest"/>
         </classes>
     </test>
 </suite>
