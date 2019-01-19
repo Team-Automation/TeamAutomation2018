@@ -1,3 +1,4 @@
+import findElements.Target;
 import org.testng.annotations.Test;
 
 public class TargetTest extends Target {
@@ -6,9 +7,7 @@ public class TargetTest extends Target {
     public void test1(){ search(); }
 
     @Test
-    public void test2 (){
-        signIn();
-    }
+    public void test2 (){ signIn(); }
 
     @Test
     public void test3 () { createAccount(); }
