@@ -62,15 +62,14 @@ public class TestHomePage extends HomePage {
     @Test
     public void TestEmailSettingsDisplayDensity(){homepage.EmailSettingsDisplayDensity();}
     @Test
+    public void TestPrivacy (){homepage.privacy();}
+    @Test
     public void TestSearchEmail(){homepage.searchEmail();}//works
-    @Test
-    public void test5()throws Exception{homepage.SentEmails();}
-    @Test
-    public void TestEmailStarred(){homepage.EmailStarred();}
     @Test
     public void TestTerm (){homepage.term();}
     @Test
-    public void TestPrivacy (){homepage.privacy();}
+    public void Test(){homepage.EmailSettingsThemes();}
+
 }
 
 

@@ -23,8 +23,6 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement sendButton;
     @FindBy(xpath = "//a[contains(text(),'Help')]")
     public static WebElement helpOption;
-    @FindBy(xpath = "//*[@id=\"gb\"]/div[2]/div[1]/div[1]/svg/path")
-    public static WebElement viewBox;
     @FindBy(xpath = "//*[@class='gb_kf']")
     public static WebElement googleAppsViewBox;
     @FindBy (xpath = "//*[@id='gb192']/span[1]")
@@ -53,36 +51,18 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement googlePhotos;
     @FindBy (xpath = "//div[contains(text(),'Get started')]")
     public static WebElement getstarted;
-    @FindBy(xpath = "//*[@id=\":kh\"]/div/div[2]/span/a")
-    public static WebElement starred;
     @FindBy(xpath = "//div[@id=':28']//div[@class='asa']")
     public static WebElement emailSettings;
     @FindBy(xpath = "//div[contains(text(),'Themes')]")
     public static WebElement settingsThemes;
-    @FindBy(xpath = "//div[@id=':14x.custom-6']//div[@class='a7U']")
-    public static WebElement themes;
     @FindBy (xpath = "//div[@id=':k6']")
     public static  WebElement olderMessages;
-    @FindBy(xpath = "/html/body/div[2]/div/section/div/div/article/nav/section[1]/div/div/div[1]/a")
-    public static WebElement createGoogleAccount;
-    @FindBy(xpath = "//h3[@class='zippy index1 goog-zippy-expanded']")
-    public static WebElement checkGoogleAccount;
-    @FindBy(xpath = "//a[contains(text(),'enter your email address')]")
-    public static WebElement checkGoogleAccountEnterEmail;
-    @FindBy(xpath = "//input[@id='identifierId']")
-    public static WebElement enterYourEmailAddress;
     @FindBy (xpath = "/html/body/div[2]/header/div[4]/div/div/div/div/span/a/span")
     public static WebElement googleAccount;
     @FindBy (xpath = "//a[contains(text(),'Terms')]")
     public static WebElement terms;
-    @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/c-wiz[1]/div[2]/div[3]/ul/li[1]/a")
-    public static WebElement termsOverview;
-    @FindBy(xpath = "//a[contains(text(),'view archived versions')]")
-    public static WebElement termsViewArchivedVersions;
     @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[2]/a")
     public static WebElement privacy;
-    @FindBy(xpath = "//a[@class='farYT'][contains(text(),'Introduction')]")
-    public static WebElement introduction;
     @FindBy(xpath = "//div[contains(text(),'Display density')]")
     public static WebElement displayDensity;
     @FindBy(xpath = "//input[@placeholder='Search mail']")
@@ -95,8 +75,6 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement replyEmailBody;
     @FindBy (xpath = "//*[@id=\":18p\"]")//div[@id=':17n']")
     public static WebElement replyEmailSendButton;
-    @FindBy(id = "#:kc")
-    public static WebElement sent;
 
 
     public void searchEmail(){
@@ -107,18 +85,8 @@ public class HomePage extends GmailCommonAPI {
         replyEmailBody.sendKeys("wuv you");
         replyEmailSendButton.click();
     }
-    public void SentEmails() throws Exception {
-        loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
-        loginPassword.sendKeys("nazi1995", Keys.ENTER);
-        sent.click();
-    }
     public void term(){
         terms.click();
-        termsViewArchivedVersions.click();
-    }
-    public void privacy(){
-        privacy.click();
-        introduction.click();
     }
     public void login(){
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
@@ -216,13 +184,14 @@ public class HomePage extends GmailCommonAPI {
         ShowGoogleApps();
         googlePhotos.click();
     }
-    public void EmailStarred(){
-        login();
-        starred.click();
-    }
     public void EmailSettings(){
         login();
         emailSettings.click();
+    }
+    public void EmailSettingsThemes(){
+        login();
+        emailSettings.click();
+        settingsThemes.click();
     }
     public void EmailSettingsDisplayDensity(){
         login();
@@ -236,5 +205,8 @@ public class HomePage extends GmailCommonAPI {
     public void GoogleAppsViewBox(){
         login();
         googleAppsViewBox.click();
+    }
+    public void privacy(){
+        privacy.click();
     }
 }

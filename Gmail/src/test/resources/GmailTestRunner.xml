@@ -19,9 +19,11 @@
             <class name="Database.DatabaseTest"/>
             <class name="dataDrivenTest.XLSXTest"/>
             <class name="GmailLogin.GmailTestLogin"/>
+            <class name="GoogleSheet.TestGoogleSheet"/>
             <class name="TestPages.TestCreateAccount"/>
             <class name="TestPages.TestGoogleApps"/>
             <class name="TestPages.TestHomePage"/>
+            <class name="TestPages.TestSignInPage"/>
 
 
         </classes>
