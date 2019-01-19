@@ -69,7 +69,6 @@ public class TestHomePage extends HomePage {
     public void TestTerm (){homepage.term();}
     @Test
     public void Test(){homepage.EmailSettingsThemes();}
-
 }
 
 

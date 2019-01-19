@@ -38,6 +38,4 @@ public class TestGoogleApps extends GoogleApps {
     public void TestShowGoogleTranslate(){googleApps.ShowGoogleTranslate();}
     @Test
     public void TestShowGooglePhotos(){googleApps.ShowGooglePhotos();}
-
-
 }

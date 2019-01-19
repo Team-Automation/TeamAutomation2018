@@ -93,6 +93,4 @@ public class TestCreateAccount extends CommonApi {
         System.out.println(actual);
         Assert.assertEquals(actual, expected);
     }
-
-
 }
