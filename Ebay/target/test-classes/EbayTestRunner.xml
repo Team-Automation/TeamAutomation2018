@@ -14,7 +14,10 @@
         <classes>
             <!--<class name="Test.login"/>-->
             <!--<class name="Test.TestGoogleSheet"/>-->
-            <class name="Test.XLSXTest"/>
+            <!--<class name="Test.XLSXTest"/>-->
+            <!--<class name="TestHome"/>-->
+            <!--<class name="Test.TestbuyandSell"/>-->
+            <class name="Test.TestSell"/>
         </classes>
     </test>
 </suite>

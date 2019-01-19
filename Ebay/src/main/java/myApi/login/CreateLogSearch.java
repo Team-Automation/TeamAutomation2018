@@ -32,9 +32,7 @@ public class CreateLogSearch extends EbayApi {
     @FindBy (id ="ppaFormSbtBtn" )
     WebElement clickregister;
 
-    public void clicksign(){
-    sign.click();
-    }
+    public void clicksign(){ sign.click(); }
     public void setUserName(String Value){
         userName.sendKeys(Value);
     }

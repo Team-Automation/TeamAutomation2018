@@ -20,25 +20,25 @@ public class TestbuyandSell extends EbayApi {
         buys.clickit();
         buys.clickpolo();
     }
-//   @Test
-//  public void startSearch(){
-//        buys.dosearch(searchproduct);
-//    }
-//    @Test
-//    public void startclick()  {
-//        buys.clickit();
-//    }
-//    @Test
-//    public void clickmypolo(){
-//        buys.clickpolo();
-//    }
-//    @Test
-//    public void sellclick(){
-//        buys.clickSell();
-//    }
-//    @Test
-//    public void motorclick(){
-//        buys.clickmotor();
-//    }
+   @Test
+  public void startSearch(){
+        buys.dosearch(searchproduct);
+    }
+    @Test
+    public void startclick()  {
+        buys.clickit();
+    }
+    @Test
+    public void clickmypolo(){
+        buys.clickpolo();
+    }
+    @Test
+    public void sellclick(){
+        buys.clickSell();
+    }
+    @Test
+    public void motorclick(){
+        buys.clickmotor();
+    }
 }
 

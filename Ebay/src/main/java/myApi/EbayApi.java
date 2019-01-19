@@ -101,6 +101,7 @@ public class EbayApi extends CommonApi {
     public String typelName= "haque";
     public String cpassword="710727";
     public String searchproduct="polo";
+    public String item="laptop";
 
 //    public static String convertToString(String st) {
 //        String splitString;
