@@ -17,9 +17,9 @@ public class DatabaseOperation {
 
     public static List<String> getSearchValue() {
         List<String> searchList = new ArrayList<>();
-        searchList.add("help");
-        searchList.add("privacy");
-        searchList.add("terms");
+        searchList.add("Help");
+        searchList.add("Privacy");
+        searchList.add("Terms");
         return searchList;
     }
 

@@ -17,7 +17,7 @@
         <classes>
             <class name="BrokenLink.TestBrokenLink"/>
             <class name="Database.DatabaseTest"/>
-            <class name="dataDrivenTest.XLSXTest"/>
+            <class name="DataDrivenTest.XLSXTest"/>
             <class name="GmailLogin.GmailTestLogin"/>
             <class name="GoogleSheet.TestGoogleSheet"/>
             <class name="TestPages.TestCreateAccount"/>
