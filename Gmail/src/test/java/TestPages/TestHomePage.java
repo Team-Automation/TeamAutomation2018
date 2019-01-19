@@ -60,6 +60,8 @@ public class TestHomePage extends HomePage {
     @Test
     public void TestShowGooglePhotos(){homepage.ShowGooglePhotos();}
     @Test
+    public void TestEmailSettingsDisplayDensity(){homepage.EmailSettingsDisplayDensity();}
+    @Test
     public void TestSearchEmail(){homepage.searchEmail();}//works
     @Test
     public void test5()throws Exception{homepage.SentEmails();}
@@ -69,12 +71,6 @@ public class TestHomePage extends HomePage {
     public void TestTerm (){homepage.term();}
     @Test
     public void TestPrivacy (){homepage.privacy();}
-    @Test
-    public void TestHelpCreateGoogleAccount(){homepage.HelpCreateGoogleAccount(); }
-    @Test
-    public void TesthelpGoogleAccount(){homepage.helpGoogleAccount();}
-    @Test
-    public void TestGoogleAccount(){homepage.GoogleAccount();}
 }
 
 

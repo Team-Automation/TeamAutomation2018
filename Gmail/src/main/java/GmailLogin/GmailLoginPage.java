@@ -15,8 +15,7 @@ public class GmailLoginPage extends GmailCommonAPI {
     }
 
     public void clickCreateAccount(){
-        selectElementOnxpath("//*[@id=\"view_container\"]/div/div/div[2]/div/div[2]/div/div[2]/div/div/content/span");
-
+        selectElementOnxpath("//span[contains(text(),'Create account')]");
     }
 
     public void createAccountFirstName(){
@@ -55,11 +54,9 @@ public class GmailLoginPage extends GmailCommonAPI {
         Thread.sleep(3000);
     }
 
-
     public void googleApps(){
         login();
         selectElementOnclass("gb_mf");
         getEelementsByxpath("//*[@id='gb192']/span[1]");
     }
-
 }

@@ -51,21 +51,6 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement googleTranslate;
     @FindBy(xpath = "//a[@id='gb31']//span[@class='gb_W']")
     public static WebElement googlePhotos;
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @FindBy (xpath = "//div[@class='GiKO7c'][contains(text(),'Home')]")
-    public static WebElement homeGoogleAccount;
     @FindBy (xpath = "//div[contains(text(),'Get started')]")
     public static WebElement getstarted;
     @FindBy(xpath = "//*[@id=\":kh\"]/div/div[2]/span/a")
@@ -78,8 +63,6 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement themes;
     @FindBy (xpath = "//div[@id=':k6']")
     public static  WebElement olderMessages;
-    @FindBy(xpath = "//section[@class='primary-container']//section[1]//h2[1]//*[2]")
-    public static WebElement popularArticles;
     @FindBy(xpath = "/html/body/div[2]/div/section/div/div/article/nav/section[1]/div/div/div[1]/a")
     public static WebElement createGoogleAccount;
     @FindBy(xpath = "//h3[@class='zippy index1 goog-zippy-expanded']")
@@ -88,50 +71,20 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement checkGoogleAccountEnterEmail;
     @FindBy(xpath = "//input[@id='identifierId']")
     public static WebElement enterYourEmailAddress;
-    @FindBy(id = "identifierId")
-    public static WebElement recoverAccount;
-    @FindBy (xpath = "//a[contains(text(),'Create a strong password & a more secure account')]")
-    public static WebElement createStrongPassword;
-    @FindBy (xpath = "//a[@class='zippy index1 goog-zippy-collapsed']")
-    public static WebElement makeYourPasswordUnique;
-    @FindBy (xpath = "//a[contains(text(),'use a tool to manage your saved passwords')]")
-    public static WebElement manageYourSavedPasswords;
-    @FindBy(xpath = "//a[contains(text(),'Verify your account')]")
-    public static WebElement verifyYourAccount;
-    @FindBy (xpath = "//a[contains(text(),'Control what others see about you across Google se')]")
-    public static WebElement controlWhatOthersSeeAboutYouAcrossGoogleSearch;
-    @FindBy(xpath = "//h3[@class='zippy index1 goog-zippy-collapsed']")
-    public static WebElement whatInfoCanBeShared;
-    @FindBy(xpath = "//h3[@class='zippy index2 goog-zippy-expanded']")
-    public static WebElement whereThisInfoShowsUp;
-    @FindBy(xpath = "//h3[@class='zippy index3 goog-zippy-collapsed']")
-    public static WebElement previewWhatYourInfoLooksLikeToOthers;
-    @FindBy (xpath = "//a[contains(text(),'Someone changed your password')]")
-    public static WebElement someoneChangedYourPassword;
-    @FindBy (xpath = "//a[contains(text(),'recover your account')]")
-    public static WebElement recoverYourAccount;
     @FindBy (xpath = "/html/body/div[2]/header/div[4]/div/div/div/div/span/a/span")
     public static WebElement googleAccount;
     @FindBy (xpath = "//a[contains(text(),'Terms')]")
     public static WebElement terms;
-    @FindBy(xpath = "//a[@class='bCzwPe YySNWc']")
-    public static WebElement termsYourGoogleAccount;
     @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/c-wiz[1]/div[2]/div[3]/ul/li[1]/a")
     public static WebElement termsOverview;
     @FindBy(xpath = "//a[contains(text(),'view archived versions')]")
     public static WebElement termsViewArchivedVersions;
-    @FindBy(xpath = "//*[@id='yDmH0d']/c-wiz/div/div/c-wiz[1]/div[1]/div/div/content/span/svg/path[2]")
-    public static WebElement menu;
-    @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[1]/a")
-    public static WebElement help;
     @FindBy(xpath = "//*[@id=\"initialView\"]/footer/ul/li[2]/a")
     public static WebElement privacy;
     @FindBy(xpath = "//a[@class='farYT'][contains(text(),'Introduction')]")
     public static WebElement introduction;
     @FindBy(xpath = "//div[contains(text(),'Display density')]")
     public static WebElement displayDensity;
-    @FindBy(xpath = "//*[@id=\"gbwa\"]/div/a/svg/path")
-    public static WebElement getGoogleAppsViewBox;
     @FindBy(xpath = "//input[@placeholder='Search mail']")
     public static WebElement searchMail;
     @FindBy (xpath = "//*[@id=\":n3\"]/span")
@@ -142,8 +95,6 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement replyEmailBody;
     @FindBy (xpath = "//*[@id=\":18p\"]")//div[@id=':17n']")
     public static WebElement replyEmailSendButton;
-    @FindBy(xpath ="//*[@id=\":kc\"]/div/div[2]/span/a")
-    public static WebElement sentEmails;
     @FindBy(id = "#:kc")
     public static WebElement sent;
 
@@ -155,34 +106,24 @@ public class HomePage extends GmailCommonAPI {
         emailReply.click();
         replyEmailBody.sendKeys("wuv you");
         replyEmailSendButton.click();
-        //sentEmails.click();
     }
-
     public void SentEmails() throws Exception {
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
         loginPassword.sendKeys("nazi1995", Keys.ENTER);
         sent.click();
     }
-
-
-
-
     public void term(){
         terms.click();
         termsViewArchivedVersions.click();
-
     }
     public void privacy(){
         privacy.click();
         introduction.click();
     }
-
-
     public void login(){
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
         loginPassword.sendKeys("nazi1995", Keys.ENTER);
     }
-
     public void sendEmailCompose(){
         login();
         composeButton.click();
@@ -204,7 +145,6 @@ public class HomePage extends GmailCommonAPI {
         sendButton.click();
         Thread.sleep(3000);
     }
-
     public void sendEmail() throws InterruptedException {
         login();
         composeButton.click();
@@ -214,38 +154,20 @@ public class HomePage extends GmailCommonAPI {
         sendButton.click();
         Thread.sleep(3000);
     }
-
-    public void HelpCreateGoogleAccount() {
-        helpOption.click();
-//        popularArticles.click();
-        createGoogleAccount.click();
-        checkGoogleAccount.click();
-        checkGoogleAccountEnterEmail.click();
-        enterYourEmailAddress.sendKeys("chocolategirl1995", Keys.ENTER);
-    }
-
     public void helpGoogleAccount(){
         helpOption.click();
         googleAccount.click();
     }
-
-    public void GoogleAccount(){
-        helpOption.click();
-        viewBox.click();
-    }
-
-    public void GoogleApps(){
+    public void GoogleApps() {
         login();
         googleAppsViewBox.click();
         userAccount.click();
-//        homeGoogleAccount.click();
-        getstarted.click();//*[@id="yDmH0d"]/div[2]/c-wiz/div[1]/c-wiz/c-wiz/div/div[4]/div/div/c-wiz/section/article[1]/div/div/div[2]/div[2]/a/div
+        getstarted.click();
     }
     public void ShowGoogleApps(){
         login();
         googleAppsViewBox.click();
     }
-
     public void ShowUserAccount(){
         ShowGoogleApps();
         userAccount.click();
@@ -294,43 +216,13 @@ public class HomePage extends GmailCommonAPI {
         ShowGoogleApps();
         googlePhotos.click();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public void EmailStarred(){
         login();
         starred.click();
     }
-
     public void EmailSettings(){
         login();
         emailSettings.click();
-     //   settingsThemes.click();
     }
     public void EmailSettingsDisplayDensity(){
         login();
@@ -340,12 +232,9 @@ public class HomePage extends GmailCommonAPI {
     public void EmailOlderMessages(){
         login();
         olderMessages.click();
-
     }
     public void GoogleAppsViewBox(){
         login();
         googleAppsViewBox.click();
     }
-
-
 }

@@ -38,8 +38,6 @@ public class GoogleApps extends GmailCommonAPI {
     @FindBy(xpath = "//a[@id='gb31']//span[@class='gb_W']")
     public static WebElement googlePhotos;
 
-
-
     public void ShowGoogleApps(){
         login();
         googleAppsViewBox.click();
@@ -97,10 +95,4 @@ public class GoogleApps extends GmailCommonAPI {
         loginUsername.sendKeys("chocolategirl1995", Keys.ENTER);
         loginPassword.sendKeys("nazi1995", Keys.ENTER);
     }
-
-
-
-
-
-
 }

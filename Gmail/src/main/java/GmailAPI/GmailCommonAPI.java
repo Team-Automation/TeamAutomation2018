@@ -23,7 +23,7 @@ public class GmailCommonAPI extends CommonApi {
     @AfterMethod
     public void tearDownTest() {
 
-        System.out.println("Closing the brow ser : Chrome");
+        System.out.println("Closing the browser : Chrome");
     }
 
     public void brokenLink() throws IOException {

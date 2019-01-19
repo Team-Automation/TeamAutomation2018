@@ -37,7 +37,6 @@ public class DatabaseOperation {
     @FindBy (xpath = "//*[@id=\"initialView\"]/footer/ul/li[3]/a")
     WebElement terms;
 
-
     public List getHeadersValue1() {
         List<WebElement> headerList1 = new ArrayList<>();
         headerList1.add(help);
@@ -52,9 +51,7 @@ public class DatabaseOperation {
         return list;
     }
 
-
-
-        public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         insertDataIntoDB();
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
         List<String> list = connectToSqlDB.readDataBase("searchList", "searchItems");
