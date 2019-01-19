@@ -40,19 +40,14 @@ public class GoogleSheetPage extends CommonApi {
 
     // //ALI_GS_TC1 LogIn by using Google Sheet sheet data
     public List<String> signInByInvalidIdPass(String spreadsheetId, String range) throws IOException, InterruptedException {
-
         List<List<Object>> col2Value = getSpreadSheetRecords(spreadsheetId, range);
         List<String> actual = new ArrayList<>();
         for (List row : col2Value) {
             sleepFor(1);
             inputValueInTextBoxByWebElement(user, row.get(0).toString());
-            //inputValueInTextBoxByWebElement(password, row.get(1).toString());
-          //  sleepFor(1);
-            //actual.add(getCurrentPageTitle());
             actual.add(getTextByWebElement(logInErrorMesage));
             System.out.println(getTextByWebElement(logInErrorMesage));
             clearInputBox(user);
-            //clearInputBox(password);
             sleepFor(1);
         }
         return actual;

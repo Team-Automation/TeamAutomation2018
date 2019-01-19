@@ -9,6 +9,12 @@ import java.util.List;
 public class CreateAccount extends CommonApi {
     @FindBy(xpath = "//span[contains(text(),'Create account')]")
     WebElement createAccount;
+    @FindBy(xpath = "//div[@class='m6Azde DbQnIe OcVpRe']//div[1]//div[1]//div[2]//div[2]//div[1]")
+    WebElement firstNameErrorMessage;
+    @FindBy(xpath = "//div[@class='m6Azde DbQnIe OcVpRe']//div[2]//div[1]//div[2]//div[2]//div[1]")
+    WebElement lastNameErrorMessage;
+    @FindBy(xpath = "//*[@id='view_container']/form/div[2]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div")
+    WebElement usernameErrorMessage;
     @FindBy(xpath = "//span[@class='RveJvd snByac']")
     WebElement nextSumbit;
     @FindBy(xpath = "//input[@id='username']")
@@ -29,15 +35,8 @@ public class CreateAccount extends CommonApi {
     WebElement invalidPasswordErrorMessage;
     @FindBy(xpath = "//div[@id='passwd']//div[@class='GQ8Pzc']")
     WebElement passwordErrorMessage;
-    @FindBy(xpath = "//div[@class='m6Azde DbQnIe OcVpRe']//div[1]//div[1]//div[2]//div[2]//div[1]")
-    WebElement firstNameErrorMessage;
-    @FindBy(xpath = "//div[@class='m6Azde DbQnIe OcVpRe']//div[2]//div[1]//div[2]//div[2]//div[1]")
-    WebElement lastNameErrorMessage;
-    @FindBy(xpath = "//*[@id='view_container']/form/div[2]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div")
-    WebElement usernameErrorMessage;
     @FindBy(xpath = "//div[@class='GQ8Pzc']")
     WebElement confirmEmailErrorMessage;
-
 
     public List WithoutInfo() {
         List<String> list = new ArrayList<>();
@@ -51,7 +50,6 @@ public class CreateAccount extends CommonApi {
         System.out.println(usernameErrorMessage.getText());
         list.add(passwordErrorMessage.getText());
         System.out.println(passwordErrorMessage.getText());
-
         return list;
     }
 
@@ -155,6 +153,4 @@ public class CreateAccount extends CommonApi {
         String text = confirmEmailErrorMessage.getText();
         return text;
     }
-
-
 }

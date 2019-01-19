@@ -69,13 +69,12 @@ public class HomePage extends GmailCommonAPI {
     public static WebElement searchMail;
     @FindBy (xpath = "//*[@id=\":n3\"]/span")
     public static WebElement searchEmailResult;
-    @FindBy(xpath = "//*[@id=\":159\"]")//*[@id=\":15f\"]")   //*[@id=\":15c\"]"//*[@id=":159"]
+    @FindBy(xpath = "//*[@id=\":159\"]")
     public static WebElement emailReply;
-    @FindBy (xpath = "//*[@id=\":1a4\"]")//*[@id=':1as']")//*[@id=\":1as\"]")//*[@id=":1a4"]
+    @FindBy (xpath = "//*[@id=\":1a4\"]")
     public static WebElement replyEmailBody;
-    @FindBy (xpath = "//*[@id=\":18p\"]")//div[@id=':17n']")
+    @FindBy (xpath = "//*[@id=\":18p\"]")
     public static WebElement replyEmailSendButton;
-
 
     public void searchEmail(){
         login();

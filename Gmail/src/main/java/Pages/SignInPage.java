@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SignInPage extends CommonApi {
+    @FindBy(xpath = "//*[@viewBox='0 0 74 37']")
+    WebElement logo;
     @FindBy(xpath = "//a[contains(text(),'Help')]")
     WebElement help;
     @FindBy(xpath = "//a[contains(text(),'Privacy')]")
@@ -19,13 +21,8 @@ public class SignInPage extends CommonApi {
     WebElement forgotEmail;
     @FindBy(xpath = "//a[contains(text(),'Learn more')]")
     WebElement learnMore;
-    @FindBy(xpath = "//content[contains(text(),'\u202AEnglish (United States)\u202C')]")
-    WebElement location;
     @FindBy(xpath = "//span[contains(text(),'Next')]")
     WebElement Next;
-    @FindBy(xpath = "//*[@viewBox='0 0 74 37']")
-    WebElement logo;
-
 
     public List SignInPage() {
         List<WebElement> webElements = new ArrayList<>();

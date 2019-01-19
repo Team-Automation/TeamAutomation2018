@@ -1,14 +1,7 @@
 package GmailLogin;
-
-
 import GmailAPI.GmailCommonAPI;
-import base.CommonApi;
-import org.openqa.selenium.support.PageFactory;
-
 
 public class GmailLoginPage extends GmailCommonAPI {
-
-
     public void login(){
         typeOnElementEntry("//*[@id='identifierId']", "chocolategirl1995");
         typeOnElementEntry("password", "nazi1995");
@@ -44,7 +37,6 @@ public class GmailLoginPage extends GmailCommonAPI {
     }
 
     public void composeMail() throws InterruptedException {
-
         login();
         getEelementsByCss(".T-I.J-J5-Ji.T-I-KE.L3");
         typeByXpath("//*[@id=':px']","chocolategirl1995@gmail.com");
