@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="findElements.Target Shopping Website " >
+    <!--<parameter name="cloudEnvName" value="browserstack"/>-->
+    <!--<parameter name="os" value="OS X"/>-->
+    <!--<parameter name="os_version" value="Sierra"/>-->
+
+    <parameter name="cloudEnvName" value="Saucelabs"/>
+    <!--<parameter name="os" value="Mac"/>-->
+    <parameter name="os_version" value="macOS 10.14"/>
+
+    <parameter name="url" value="https://www.target.com"/>
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="71.0"/>
+    <test name = "findElements.Target Home">
+     <classes>
+         <class name="loginTest.TestXlsxSheet"/>
+         <class name="validation.ValidateText"/>
+         <class name="validation.ValidateLink"/>
+        <class name="validation.ValidateNavigationBar"/>
+         <class name="CreateAccountPageTest"/>
+         <class name="CategoriesPageTest"/>
+         <class name="LoginPageTest"/>
+         <class name="TargetTest"/>
+         <class name="TestSearch"/>
+        <!--<class name="searchTest.TestGoogleSheet"/>-->
+     </classes>
+  </test>
+</suite>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Target Shopping Website " duration-ms="24983" started-at="2019-01-16T03:46:36Z" finished-at="2019-01-16T03:47:01Z">
+    <groups>
+    </groups>
+    <test name="Target Home" duration-ms="24983" started-at="2019-01-16T03:46:36Z" finished-at="2019-01-16T03:47:01Z">
+      <class name="validation.ValidateNavigationBar">
+        <test-method status="PASS" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:validation.ValidateNavigationBar@147ed70f]" name="setUp" is-config="true" duration-ms="12761" started-at="2019-01-16T03:46:36Z" finished-at="2019-01-16T03:46:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Saucelabs]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[macOS Mojave]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[macOS 10.14]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[64.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.target.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateMainHeader()[pri:0, instance:validation.ValidateNavigationBar@147ed70f]" name="validateMainHeader" duration-ms="437" started-at="2019-01-16T03:46:49Z" finished-at="2019-01-16T03:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMainHeader -->
+        <test-method status="PASS" signature="cleanUP()[pri:0, instance:validation.ValidateNavigationBar@147ed70f]" name="cleanUP" is-config="true" duration-ms="632" started-at="2019-01-16T03:46:49Z" finished-at="2019-01-16T03:46:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUP -->
+        <test-method status="PASS" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:validation.ValidateNavigationBar@147ed70f]" name="setUp" is-config="true" duration-ms="10247" started-at="2019-01-16T03:46:50Z" finished-at="2019-01-16T03:47:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Saucelabs]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[macOS Mojave]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[macOS 10.14]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[64.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.target.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateTopHeader()[pri:0, instance:validation.ValidateNavigationBar@147ed70f]" name="validateTopHeader" duration-ms="182" started-at="2019-01-16T03:47:00Z" finished-at="2019-01-16T03:47:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTopHeader -->
+        <test-method status="PASS" signature="cleanUP()[pri:0, instance:validation.ValidateNavigationBar@147ed70f]" name="cleanUP" is-config="true" duration-ms="710" started-at="2019-01-16T03:47:00Z" finished-at="2019-01-16T03:47:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUP -->
+      </class> <!-- validation.ValidateNavigationBar -->
+    </test> <!-- Target Home -->
+  </suite> <!-- Target Shopping Website  -->
+</testng-results>

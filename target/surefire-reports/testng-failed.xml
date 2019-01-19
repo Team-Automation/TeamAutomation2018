@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Target Shopping Website ]">
+  <parameter name="useCloudEnv" value="true"/>
+  <parameter name="os_version" value="macOS 10.14"/>
+  <parameter name="browserVersion" value="64.0"/>
+  <parameter name="browserName" value="firefox"/>
+  <parameter name="cloudEnvName" value="Saucelabs"/>
+  <parameter name="url" value="https://www.facebook.com"/>
+  <listeners>
+    <listener class-name="Listeners"/>
+    <listener class-name="extendReports.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Target Home(failed)">
+    <classes>
+      <class name="validation.ValidateNavigationBar">
+        <methods>
+          <include name="validateMainHeader"/>
+          <include name="validateTopHeader"/>
+          <include name="setUp"/>
+          <include name="cleanUP"/>
+        </methods>
+      </class> <!-- validation.ValidateNavigationBar -->
+    </classes>
+  </test> <!-- Target Home(failed) -->
+</suite> <!-- Failed suite [Target Shopping Website ] -->
