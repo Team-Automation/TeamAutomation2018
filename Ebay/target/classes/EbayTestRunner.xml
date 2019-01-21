@@ -12,13 +12,13 @@
 
     <test name = "Ebay Home">
         <classes>
-            <!--<class name="Test.login"/>-->
+            <class name="Test.login"/>
             <!--<class name="Test.TestGoogleSheet"/>-->
             <!--<class name="Test.XLSXTest"/>-->
             <!--<class name="TestHome"/>-->
             <!--<class name="Test.TestbuyandSell"/>-->
             <!--<class name="Test.TestSell"/>-->
-            <class name="Test.BrokenLink"/>
+            <!--<class name="Test.BrokenLink"/>-->
         </classes>
     </test>
 </suite>

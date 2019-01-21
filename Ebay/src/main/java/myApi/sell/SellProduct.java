@@ -4,6 +4,8 @@ import myApi.EbayApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.IOException;
+
 public class SellProduct extends EbayApi {
     @FindBy(xpath = "//*[@id=\"mainContent\"]/div[1]/ul/li[5]/a")
     WebElement Electronics;
@@ -18,8 +20,9 @@ public class SellProduct extends EbayApi {
     @FindBy(className= ".addonbtn.addonnothx.addon-overlay-close-button")
     WebElement popup;
 
-    public void clickelectronics(){
+    public void clickelectronics()  {
         Electronics.click();
+
     }
     public void finditem(String Value){
         item.sendKeys(Value);

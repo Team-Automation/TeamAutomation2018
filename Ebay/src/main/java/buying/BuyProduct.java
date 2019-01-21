@@ -3,9 +3,7 @@ package buying;
 import myApi.EbayApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.io.IOException;
-
 public class BuyProduct extends EbayApi{
         @FindBy (css = "#gh-ac")
         WebElement searchproduct;
@@ -17,7 +15,6 @@ public class BuyProduct extends EbayApi{
         WebElement sell;
         @FindBy (xpath = "//*[@id=\"mainContent\"]/div[1]/ul/li[3]/a")
         WebElement motor;
-
         public void dosearch(String Value) {
             searchproduct.sendKeys(Value);
         }

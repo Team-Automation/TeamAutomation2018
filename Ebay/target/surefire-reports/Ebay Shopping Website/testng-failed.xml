@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Ebay Shopping Website ]">
+  <parameter name="useCloudEnv" value="false"/>
+  <parameter name="OS" value="macOS 10.12"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="browserVersion" value="71.0"/>
+  <parameter name="userName" value="lazim122"/>
+  <parameter name="key" value="3521de6c-5cf2-42cf-af5a-f5d0cf8afeb4"/>
+  <parameter name="url" value="https://www.ebay.com"/>
+  <test thread-count="5" verbose="0" name="Ebay Home(failed)">
+    <classes>
+      <class name="Test.login">
+        <methods>
+          <include name="initialize"/>
+          <include name="enterFName"/>
+          <include name="afterEachTestMethod"/>
+          <include name="emailBoxcheck"/>
+          <include name="extentSetup"/>
+          <include name="startExtent"/>
+          <include name="cleanUp"/>
+          <include name="clear"/>
+          <include name="tearDownTest"/>
+          <include name="initializeTest"/>
+          <include name="generateReport"/>
+          <include name="setUp"/>
+          <include name="enterLName"/>
+        </methods>
+      </class> <!-- Test.login -->
+    </classes>
+  </test> <!-- Ebay Home(failed) -->
+</suite> <!-- Failed suite [Ebay Shopping Website ] -->

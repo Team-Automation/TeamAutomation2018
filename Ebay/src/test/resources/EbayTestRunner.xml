@@ -17,7 +17,8 @@
             <!--<class name="Test.XLSXTest"/>-->
             <!--<class name="TestHome"/>-->
             <!--<class name="Test.TestbuyandSell"/>-->
-            <class name="Test.TestSell"/>
+            <!--<class name="Test.TestSell"/>-->
+            <class name="Test.BrokenLink"/>
         </classes>
     </test>
 </suite>
