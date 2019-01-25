@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.reflect.Method;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -39,11 +40,8 @@ public class CommonApi {
     public WebDriver driver = null;
    public static ExtentReports extent;
 //    public static Logger logger = Logger.getLogger(CommonApi.class);
-//    public String browserstack_username= "joynabaminadib1";
-//    public String browserstack_accesskey = "ZgKEp1eLEcYqFVVWqow3";
-//    public String saucelabs_username = "joynabaminadib";
-//    public String saucelabs_accesskey = "a9127a33-4076-4273-8976-1941775c3a1f";
-@BeforeMethod
+
+@BeforeSuite
 public void extentSetup(ITestContext context) {
     ExtentManager.setOutputDirectory(context);
     extent = ExtentManager.getInstance();
@@ -84,7 +82,7 @@ public void extentSetup(ITestContext context) {
         }
         driver.quit();
     }
-    @AfterMethod
+    @AfterSuite
     public void generateReport() {
         extent.close();
     }
@@ -126,14 +124,10 @@ public void extentSetup(ITestContext context) {
             System.setProperty("webdriver.gecko.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\geckodriver.exe");
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("chrome")) {
-            if (OS.equalsIgnoreCase("mac")) {
-                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
-                driver = new ChromeDriver();
-            } else if (OS.equalsIgnoreCase("Windows 10")) {
-                System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
-                driver = new ChromeDriver();
-            }
-        } else if (browser.equalsIgnoreCase("ie")) {
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Generic\\selenium-browser-driver\\chromedriver.exe");
+            driver = new ChromeDriver();
+        }
+         else if (browser.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", "Generic\\selenium-browser-driver\\IEDriverServer.exe");
 
             driver = new InternetExplorerDriver();
@@ -156,10 +150,10 @@ public void extentSetup(ITestContext context) {
 
         return driver;
     }
-    @AfterMethod
+    /*@AfterMethod
     public void cleanUp() {
         driver.close();
-    }
+    }*/
 
     //Helping methods
     public void clickByCss(String locator) {
@@ -270,10 +264,8 @@ public void extentSetup(ITestContext context) {
         return text;
     }
     public void inputValueInTextBoxByWebElement(WebElement webElement, String value){
-        //System.out.println(value +"\n");
 
         webElement.sendKeys(value + Keys.ENTER);
-
 
     }
     public void clearInputBox(WebElement webElement){
@@ -390,5 +382,73 @@ public void extentSetup(ITestContext context) {
         String splitString ;
         splitString = StringUtils.join(StringUtils.splitByCharacterTypeCamelCase(st), ' ');
         return splitString;
+    }
+    public List<String> getListOfString(List<WebElement> list) {
+        List<String> items = new ArrayList<String>();
+        for (WebElement element : list) {
+            items.add(element.getText());
+        }
+        return items;
+    }
+    public List<WebElement> getListOfWebElementsById(String locator) {
+        List<WebElement> list = new ArrayList<WebElement>();
+        list = driver.findElements(By.id(locator));
+        return list;
+    }
+    public List<String> getTextFromWebElements(String locator){
+        List<WebElement> element = new ArrayList<WebElement>();
+        List<String> text = new ArrayList<String>();
+        element = driver.findElements(By.cssSelector(locator));
+        for(WebElement web:element){
+            String st = web.getText();
+            text.add(st);
+        }
+
+        return text;
+    }
+    public List<WebElement> getListOfWebElementsByCss(String locator) {
+        List<WebElement> list = new ArrayList<WebElement>();
+        list = driver.findElements(By.cssSelector(locator));
+        return list;
+    }
+    public List<WebElement> getListOfWebElementsByXpath(String locator) {
+        List<WebElement> list = new ArrayList<WebElement>();
+        list = driver.findElements(By.xpath(locator));
+        return list;
+    }
+    public String  getCurrentPageUrl(){
+        String url = driver.getCurrentUrl();
+        return url;
+    }
+    public void brokenLink() throws IOException {
+        //Step:1-->Get the list of all the links and images
+        List<WebElement> linkslist = driver.findElements(By.tagName("a"));
+        linkslist.addAll(driver.findElements(By.tagName("img")));
+
+        System.out.println("Total number of links and images--------->>> "+ linkslist.size());
+
+        List<WebElement> activeLinks = new ArrayList<WebElement>();
+        //Step:2-->Iterate linksList: exclude all links/images which does not have any href attribute
+        for(int i=0; i<linkslist.size(); i++){
+            //System.out.println(linkslist.get(i).getAttribute("href"));
+            if(linkslist.get(i).getAttribute("href") !=null && ( ! linkslist.get(i).getAttribute("href").contains("javascript") && ( ! linkslist.get(i).getAttribute("href").contains("mailto")))){
+                activeLinks.add(linkslist.get(i));
+            }
+
+        }
+        System.out.println("Total number of active links and images-------->>> "+ activeLinks.size());
+
+        //Step:3--> Check the href url, with http connection api
+        for(int j=0; j<activeLinks.size(); j++){
+
+            HttpURLConnection connection = (HttpURLConnection)new URL(activeLinks.get(j).getAttribute("href")).openConnection();
+
+            connection.connect();
+            String response = connection.getResponseMessage();
+            connection.disconnect();
+            System.out.println(activeLinks.get(j).getAttribute("href")+"--------->>> "+response);
+
+        }
+
     }
 }

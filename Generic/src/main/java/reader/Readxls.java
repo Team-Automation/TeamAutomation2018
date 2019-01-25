@@ -10,9 +10,9 @@ import java.io.FileInputStream;
 import java.util.Calendar;
 
 public class Readxls {
-    public XSSFSheet ExcelWSheet;
-    public XSSFWorkbook ExcelWBook;
-    public XSSFCell Cell;
+    public static XSSFSheet ExcelWSheet;
+    public static XSSFWorkbook ExcelWBook;
+    public static XSSFCell Cell;
     public XSSFRow Row;
 
     public void setExcelFile(String Path) throws Exception {
@@ -140,6 +140,17 @@ public class Readxls {
             e.printStackTrace();
             return "row " + rowNum + " or column " + colName + " does not exist in xls";
         }
+    }
+
+    public static void setExcelFile(String Path, String SheetName) throws Exception {
+        FileInputStream ExcelFile = new FileInputStream(Path);
+        ExcelWBook = new XSSFWorkbook(ExcelFile);
+        ExcelWSheet = ExcelWBook.getSheet(SheetName);
+    }
+    public static String getCellData(int RowNum, int ColNum) throws Exception {
+        Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
+        String CellData = Cell.getStringCellValue();
+        return CellData;
     }
 
 
