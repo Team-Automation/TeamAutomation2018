@@ -12,7 +12,7 @@ import java.util.List;
 public class DatabaseTest extends CommonApi {
     DatabaseOperation databaseOperation;
     @BeforeMethod
-    public void setUP(){
+    public void intializedElements(){
         databaseOperation = PageFactory.initElements(driver, DatabaseOperation.class);
 
     }

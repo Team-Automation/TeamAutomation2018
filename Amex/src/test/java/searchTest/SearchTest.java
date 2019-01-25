@@ -5,14 +5,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import search.SearchCards;
 import search.SearchPage;
 
 public class SearchTest extends SearchPage {
     SearchPage searchPage = null;
 
     @BeforeMethod
-    public void setUp() {
+    public void intializedElements() {
 
         searchPage = PageFactory.initElements(driver, SearchPage.class);
 

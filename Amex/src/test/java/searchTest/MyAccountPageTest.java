@@ -10,7 +10,7 @@ public class MyAccountPageTest extends MyAccountPage {
 
     MyAccountPage myAccountPage;
     @BeforeMethod
-    public void setUP(){
+    public void intializedElements(){
         myAccountPage = PageFactory.initElements(driver,MyAccountPage.class);
     }
     @Test

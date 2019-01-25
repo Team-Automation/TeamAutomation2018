@@ -14,7 +14,7 @@ public class XLSXTest extends CommonApi {
     ReadAmexWebElements readAmexWebElements;
 
     @BeforeMethod
-    public void setUP(){
+    public void intializedElements(){
         readAmexWebElements = PageFactory.initElements(driver,ReadAmexWebElements.class);
 
     }

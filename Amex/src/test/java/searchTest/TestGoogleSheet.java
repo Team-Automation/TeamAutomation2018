@@ -30,14 +30,44 @@ public class TestGoogleSheet extends GoogleSheetsPage {
         List<String> actualErrorMessage = googleSheetsPage.signInByInvalidIdPass(spreadsheetId, range);
         List<List<Object>> expectedErrorMessage = googleSheetsPage.getSpreadSheetRecords(spreadsheetId, range);
         for (List row : expectedErrorMessage) {
-            // Assert.assertTrue(actualErrorMessage.get(i).contains(row.get(3).toString()));
-            //System.out.println("expected"+row.get(3).toString());
             System.out.println(expectedErrorMessage.get(i) + ": Search - Passed");
             i++;
         }
         System.out.println("testLogInByInvalidIdPassUsingGoogleSheet Passed");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 //import googleSheet.GoogleSheetsPage;
 //import org.openqa.selenium.support.PageFactory;

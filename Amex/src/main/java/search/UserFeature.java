@@ -23,14 +23,10 @@ public class UserFeature {
     @FindBy(how = How.CSS, using = "#login-submit")
     public static WebElement submitButtonWebElement;
 
-
     public WebElement getUserInputWebElement() {
 
         return userInputWebElement;
     }
-
-
-
     public WebElement getSubmitButtonWebElement() {
         return submitButtonWebElement;
     }
@@ -38,8 +34,6 @@ public class UserFeature {
     public void searchForUser(String value) {
         getUserInputWebElement().sendKeys(value);
     }
-
-
 
     public void submitSearchButton() {
         getSubmitButtonWebElement().click();
@@ -56,7 +50,6 @@ public class UserFeature {
         data.add("12345");
         return data;
     }
-
 
     public void searchUserAndSubmitButtonwithoutPassword() throws Exception {
 //        DatabaseOperation databaseOperation = new DatabaseOperation();

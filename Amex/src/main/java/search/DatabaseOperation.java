@@ -58,8 +58,6 @@ public class DatabaseOperation {
         headerList1.add(rewards);
         headerList1.add(business);
         headerList1.add(help);
-
-
         List<String> list = new ArrayList<>();
         for (int i = 0; i<headerList1.size();i++){
             list.add(headerList1.get(i).getText());

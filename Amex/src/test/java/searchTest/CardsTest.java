@@ -13,22 +13,17 @@ public class CardsTest extends CommonApi {
     SearchCards searchCards = null;
 
     @BeforeMethod
-    public void setUp() {
+    public void intializedElements() {
 
         searchCards = PageFactory.initElements(driver, SearchCards.class);
 
     }
-
     @Test
     public void cardsTest1(){
-
-
         String actualText = searchCards.clickCards1();
         Assert.assertEquals(actualText, null);
         System.out.println("Personal cards Test Passed");
-
     }
-
     @Test
     public void cardsTest2(){
 
@@ -55,9 +50,6 @@ public class CardsTest extends CommonApi {
         System.out.println("Gift cards Test Passed");
 
     }
-//    @AfterMethod
-//    public void cleanup(){
-//        driver.quit();
-//    }
+
 }
 

@@ -71,7 +71,7 @@ public class ReadAmexWebElements extends CommonApi {
         System.out.println(list);
         return list;
     }
-//Readxls readxls = PageFactory.initElements(driver,Readxls.class);
+
    Readxls xlData = new Readxls("C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Amex\\Data\\AMEXWebElements.xlsx");
 
     public List expectedWebElement(){

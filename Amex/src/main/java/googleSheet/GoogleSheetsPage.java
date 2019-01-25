@@ -12,7 +12,7 @@ import java.util.List;
 import static googleApi.GoogleSheetReader.getSheetsService;
 import static org.openqa.selenium.support.How.*;
 
-public class GoogleSheetsPage extends CommonApi {
+    public class GoogleSheetsPage extends CommonApi {
     @FindBy(how = CSS, using = "#login-user")
     public static WebElement user;
     @FindBy(how = CSS, using = "#login-password")
@@ -26,9 +26,6 @@ public class GoogleSheetsPage extends CommonApi {
         sleepFor(4);
         logInButton.click();
     }
-//    public void switchToLogInForm() {
-//        driver.switchTo().frame("Amex login");
-//   }
 
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
         // Build a new authorized API client service.

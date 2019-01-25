@@ -8,23 +8,13 @@ import org.openqa.selenium.support.How;
 public class MyAccountPage extends CommonApi {
 
 
-    @FindBy(how = How.XPATH, xpath = "//label[@id='label-myAccount']")
+    @FindBy(how = How.ID, id = "label-myAccount")
     WebElement MyAccount1;
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k'][contains(text(),'BlueBird Alternative to Banking')]")
+    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
     WebElement blueBird;
     @FindBy(xpath = "//a[@class='tooltip-trigger']")
     WebElement why;
-
-    public void clickAccountHome1() throws Exception {
-        MyAccount1.click();
-        sleepFor(2);
-        blueBird.click();
-        sleepFor(2);
-        why.getText();
-    }
-
-
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k'][contains(text(),'Personal Loans')]")
+    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
     WebElement personalLoans;
     @FindBy(xpath = "//a[@class='nav-box-link']")
     WebElement checkYourRate;
@@ -32,7 +22,21 @@ public class MyAccountPage extends CommonApi {
     WebElement logIn;
     @FindBy(xpath = "//span[contains(text(),'Both the User ID and Password are required. Please')]")
     WebElement errorMsg;
-
+    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
+    WebElement creditScore;
+    @FindBy(xpath = "//p[contains(text(),'Receive alerts for compromised personal data, pote')]")
+    WebElement DetectionAndAlerts;
+    @FindBy(xpath = "//li[@class='block_sec _1']//p[@class='ng-binding']")
+    WebElement ScoresAndReports;
+    @FindBy(xpath = "//p[contains(text(),'Speak to dedicated representatives if you suspect ')]")
+    WebElement SupportAndAssistance;
+    public void clickAccountHome1() throws Exception {
+        MyAccount1.click();
+        sleepFor(2);
+        blueBird.click();
+        sleepFor(2);
+        why.getText();
+    }
     public String clickAccountHome2() throws Exception {
         MyAccount1.click();
         sleepFor(3);
@@ -44,12 +48,6 @@ public class MyAccountPage extends CommonApi {
         errorMsg.getText();
         return null;
     }
-
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k'][contains(text(),'CreditSecure')]")
-    WebElement creditScore;
-    @FindBy(xpath = "//p[contains(text(),'Receive alerts for compromised personal data, pote')]")
-    WebElement DetectionAndAlerts;
-
     public String clickAccountHome3() throws Exception {
         MyAccount1.click();
         sleepFor(3);
@@ -58,8 +56,6 @@ public class MyAccountPage extends CommonApi {
        String text = DetectionAndAlerts.getText();
         return text;
     }
-    @FindBy(xpath = "//li[@class='block_sec _1']//p[@class='ng-binding']")
-    WebElement ScoresAndReports;
 
     public String clickAccountHome4() throws Exception {
         MyAccount1.click();
@@ -69,8 +65,6 @@ public class MyAccountPage extends CommonApi {
         String text = ScoresAndReports.getText();
         return text;
     }
-    @FindBy(xpath = "//p[contains(text(),'Speak to dedicated representatives if you suspect ')]")
-    WebElement SupportAndAssistance;
     public String clickAccountHome5() throws Exception {
         MyAccount1.click();
         sleepFor(3);

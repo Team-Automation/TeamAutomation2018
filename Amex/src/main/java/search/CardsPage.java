@@ -11,9 +11,25 @@ public class CardsPage extends CommonApi {
     WebElement cards;
     @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k'][contains(text(),'Check for Pre-qualified Credit Card Offers')]")
     WebElement preQualified;
-    @FindBy(xpath = "//div[@class='pq_hero_headline blue-light mb']")
+    @FindBy(xpath = "//span[contains(text(),'Offers for you')]")
     WebElement offers;
-    public String clickCards1() throws Exception {
+    @FindBy(xpath = "//*[@id=\"amex-header\"]/div/div[2]/div[1]/div[2]/div/div[4]/div/ul/li[2]/div/div[1]/div/div[1]/ul/li[5]/a")
+    WebElement cashBackCreditCards;
+    @FindBy(xpath = "//p[contains(text(),'Get savings on dining, shopping, entertainment and')]")
+    WebElement amexOffers;
+    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
+    WebElement cardBenefits;
+    @FindBy(xpath = "//div[contains(text(),'Built in flexibility to help you manage your cash ')]")
+    WebElement plumCards;
+    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
+    WebElement businessCards;
+    @FindBy(xpath = "//div[contains(text(),'Enjoy premium travel experiences and elevate your ')]")
+    WebElement platinumCard;
+    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
+    WebElement corporateSolution;
+    @FindBy(id = "error-information-button")
+    WebElement errorMsg;
+    public  String clickCards1() throws Exception {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
        cards.click();
         sleepFor(2);
@@ -21,10 +37,6 @@ public class CardsPage extends CommonApi {
        String text = offers.getText();
         return text ;
     }
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k'][contains(text(),'Cash Back Credit Cards')]")
-    WebElement cashBackCreditCards;
-    @FindBy(xpath = "//p[contains(text(),'Get savings on dining, shopping, entertainment and')]")
-    WebElement amexOffers;
     public String clickCards2() throws Exception {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cards.click();
@@ -33,10 +45,6 @@ public class CardsPage extends CommonApi {
         String text = amexOffers.getText();
         return text ;
     }
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k'][contains(text(),'Compare Cards by Benefits')]")
-    WebElement cardBenefits;
-    @FindBy(xpath = "//div[contains(text(),'Built in flexibility to help you manage your cash ')]")
-    WebElement plumCards;
     public String clickCards3() throws Exception {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cards.click();
@@ -45,10 +53,6 @@ public class CardsPage extends CommonApi {
         String text = plumCards.getText();
         return text ;
     }
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k'][contains(text(),'View All Small Business Cards')]")
-    WebElement businessCards;
-    @FindBy(xpath = "//div[@class='card-tile-wrap']//div[1]//div[1]//section[1]//div[1]//div[3]//div[1]//div[1]//h3[1]//a[1]//span[1]")
-    WebElement platinumCard;
     public String clickCards4() throws Exception {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cards.click();
@@ -57,10 +61,6 @@ public class CardsPage extends CommonApi {
         String text  = platinumCard.getText();
         return text ;
     }
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k'][contains(text(),'Find a Custom Corporate Solution')]")
-    WebElement corporateSolution;
-    @FindBy(id = "error-information-button")
-    WebElement errorMsg;
     public String clickCards5() throws Exception {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cards.click();

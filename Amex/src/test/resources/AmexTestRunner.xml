@@ -6,7 +6,6 @@
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="userName" value="joynabaminadib"/>
     <parameter name="key" value="a9127a33-4076-4273-8976-1941775c3a1f"/>
-    <!--<parameter name="cloudEnvName" value="browserstack"/>-->
     <parameter name= "OS" value="Windows 10"/>
     <parameter name="browser" value="firefox"/>
     <parameter name="browserVersion" value="64.0 "/>
@@ -17,12 +16,13 @@
         <classes>
             <!--<class name="searchTest.SearchTest"/>-->
            <!--<class name="searchTest.UserTest"/>-->
-            <class name="searchTest.XLSXTest"/>
+            <!--<class name="searchTest.XLSXTest"/>-->
             <!--<class name="searchTest.DatabaseTest"/>-->
             <!--<class name="searchTest.TestGoogleSheet"/>-->
             <!--<class name="searchTest.CardsTest"/>-->
             <!--<class name="searchTest.MyAccountPageTest"/>-->
             <!--<class name="searchTest.CardsPageTest"/>-->
+            <class name="searchTest.KeywordDrivenTest"/>
         </classes>
     </test>
 
