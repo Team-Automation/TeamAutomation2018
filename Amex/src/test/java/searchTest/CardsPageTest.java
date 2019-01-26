@@ -61,7 +61,7 @@ public class CardsPageTest extends CardsPage {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         CardsPage cardsPage = PageFactory.initElements(driver,CardsPage.class);
         String actual = cardsPage.clickCards5();
-        String expected = "This site can’t be reached";
+        String expected = "Business Gift Cards are available in amounts $25-$3,000.";
         Assert.assertEquals (actual,expected);
         takeScreenShot();
 

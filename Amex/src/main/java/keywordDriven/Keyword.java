@@ -1,4 +1,5 @@
 package keywordDriven;
+import Report.TestLogger;
 import base.CommonApi;
 import org.openqa.selenium.By;
 import reader.Readxls;
@@ -15,6 +16,7 @@ public class Keyword extends CommonApi {
         driver.findElement(By.cssSelector("#login-submit")).click();
     }
     public void keywordWebElement() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         Keyword Actions = new Keyword();
         String sPath = "C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Amex\\Data\\AMEXWebElements.xlsx";
         Readxls.setExcelFile(sPath, "login2");

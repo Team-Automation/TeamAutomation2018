@@ -1,5 +1,6 @@
 package googleSheet;
 
+import Report.TestLogger;
 import base.CommonApi;
 import com.google.api.services.sheets.v4.model.*;
 import com.google.api.services.sheets.v4.Sheets;
@@ -28,7 +29,7 @@ import static org.openqa.selenium.support.How.*;
     }
 
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
-        // Build a new authorized API client service.
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         Sheets service = getSheetsService();
         ValueRange response = service.spreadsheets().values()
                 .get(spreadsheetId, range)
@@ -43,7 +44,7 @@ import static org.openqa.selenium.support.How.*;
 
     // //ALI_GS_TC1 LogIn by using Google Sheet sheet data
     public List<String> signInByInvalidIdPass(String spreadsheetId, String range) throws IOException, InterruptedException {
-
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         List<List<Object>> col2Value = getSpreadSheetRecords(spreadsheetId, range);
         List<String> actual = new ArrayList<>();
         for (List row : col2Value) {

@@ -1,4 +1,6 @@
 package searchTest;
+import Report.TestLogger;
+import base.CommonApi;
 import keywordDriven.Keyword;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
@@ -12,6 +14,7 @@ public class KeywordDrivenTest extends Keyword{
     }
     @Test
     public void keywordTest()throws Exception{
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         keyword.keywordWebElement();
 }
 }

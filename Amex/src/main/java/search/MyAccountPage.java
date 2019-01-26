@@ -1,5 +1,6 @@
 package search;
 
+import Report.TestLogger;
 import base.CommonApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,11 +11,11 @@ public class MyAccountPage extends CommonApi {
 
     @FindBy(how = How.ID, id = "label-myAccount")
     WebElement MyAccount1;
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
+    @FindBy(xpath = "//*[@id=\"amex-header\"]/div/div[2]/div[1]/div[2]/div/div[4]/div/ul/li[1]/div/div[1]/div/div[3]/ul/li[3]/a")
     WebElement blueBird;
-    @FindBy(xpath = "//a[@class='tooltip-trigger']")
-    WebElement why;
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
+    @FindBy(xpath = "//p[contains(text(),'Pay your phone, car, housing or any other bill wit')]")
+    WebElement pay;
+    @FindBy(xpath = "//*[@id=\"amex-header\"]/div/div[2]/div[1]/div[2]/div/div[4]/div/ul/li[1]/div/div[1]/div/div[3]/ul/li[5]/a")
     WebElement personalLoans;
     @FindBy(xpath = "//a[@class='nav-box-link']")
     WebElement checkYourRate;
@@ -22,22 +23,27 @@ public class MyAccountPage extends CommonApi {
     WebElement logIn;
     @FindBy(xpath = "//span[contains(text(),'Both the User ID and Password are required. Please')]")
     WebElement errorMsg;
-    @FindBy(xpath = "//a[@class='axp-global-header__dls__navLink___1AA5H axp-global-header__dls__pad0Lr___3Zo1k']")
+    @FindBy(xpath = "//*[@id=\"amex-header\"]/div/div[2]/div[1]/div[2]/div/div[4]/div/ul/li[1]/div/div[1]/div/div[4]/ul/li[2]/a")
     WebElement creditScore;
     @FindBy(xpath = "//p[contains(text(),'Receive alerts for compromised personal data, pote')]")
     WebElement DetectionAndAlerts;
-    @FindBy(xpath = "//li[@class='block_sec _1']//p[@class='ng-binding']")
+    @FindBy(xpath = "//h3[contains(text(),'Support & Assistance')]")
     WebElement ScoresAndReports;
     @FindBy(xpath = "//p[contains(text(),'Speak to dedicated representatives if you suspect ')]")
     WebElement SupportAndAssistance;
-    public void clickAccountHome1() throws Exception {
+
+    public String clickAccountHome1() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         MyAccount1.click();
         sleepFor(2);
         blueBird.click();
         sleepFor(2);
-        why.getText();
+        String text = pay.getText();
+        return text;
+
     }
     public String clickAccountHome2() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         MyAccount1.click();
         sleepFor(3);
         personalLoans.click();
@@ -49,6 +55,7 @@ public class MyAccountPage extends CommonApi {
         return null;
     }
     public String clickAccountHome3() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         MyAccount1.click();
         sleepFor(3);
         creditScore.click();
@@ -58,6 +65,7 @@ public class MyAccountPage extends CommonApi {
     }
 
     public String clickAccountHome4() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         MyAccount1.click();
         sleepFor(3);
         creditScore.click();
@@ -66,6 +74,7 @@ public class MyAccountPage extends CommonApi {
         return text;
     }
     public String clickAccountHome5() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         MyAccount1.click();
         sleepFor(3);
         creditScore.click();

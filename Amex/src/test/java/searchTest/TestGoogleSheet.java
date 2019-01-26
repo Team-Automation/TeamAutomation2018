@@ -1,4 +1,6 @@
 package searchTest;
+import Report.TestLogger;
+import base.CommonApi;
 import googleSheet.GoogleSheetsPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
@@ -21,10 +23,10 @@ public class TestGoogleSheet extends GoogleSheetsPage {
     // ALI_GS_TC1: Verify log in by taking data from a google sheets file
     @Test
     public void testLogInByInvalidIdPassUsingGoogleSheet() throws IOException, InterruptedException {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         sleepFor(3);
        googleSheetsPage.clickLogIn();
-
-        int i = 0;
+       int i = 0;
         String spreadsheetId = "1GNOnJJVcyoMrvOt9emuSUjVfEQDVKtrrCy-k8By8UVY";
         String range = "Sheet1!A2:Z";
         List<String> actualErrorMessage = googleSheetsPage.signInByInvalidIdPass(spreadsheetId, range);

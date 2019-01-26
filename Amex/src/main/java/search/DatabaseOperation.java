@@ -1,7 +1,9 @@
 package search;
 
+import Report.TestLogger;
 import Util.ConnectToSqlDB;
 
+import base.CommonApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -30,6 +32,7 @@ public class DatabaseOperation {
     }
 
     public List<String> getUserDatafromDB() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         List<String> list = new ArrayList<>();
         list = connectToSqlDB.readDataBase("headerList", "headers");
         System.out.println(list);
@@ -51,6 +54,7 @@ public class DatabaseOperation {
     WebElement help;
 
     public List getHeadersValue1() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         List<WebElement> headerList1 = new ArrayList<>();
         headerList1.add(myAccount);
         headerList1.add(cards);

@@ -22,11 +22,11 @@ public class SearchPage extends CommonApi {
     WebElement siteMap;
     @FindBy(xpath = "//a[@title='Where can I find my Annual Percentage Rate (APR) online?']")
     WebElement APR;
-    @FindBy(xpath = "//a[@title='Where can I find my Annual Percentage Rate (APR) online?']")
-    WebElement travelBenefits;
+    @FindBy(xpath = "//p[contains(text(),'Find travel experts or a travel specialist. Americ')]")
+    WebElement travelAgency;
     @FindBy(xpath = "//p[contains(text(),'American Express Serve® Cash Back, your prepaid de')]")
     WebElement cashback;
-    @FindBy(xpath = "//p[contains(text(),'American Express Serve® Cash Back, your prepaid de')]")
+    @FindBy(xpath = "//p[contains(text(),'Login to your American Express® reloadable prepaid')]")
     WebElement ATM;
     @FindBy(xpath = "//p[contains(text(),'American Express Serve® Cash Back, your prepaid de')]")
     WebElement prepaid;
@@ -37,6 +37,7 @@ public class SearchPage extends CommonApi {
     @FindBy(xpath = "//p[contains(text(),'Choose the Membership Rewards® Program best for yo')]")
     WebElement membership;
     public String clicksearch1() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("credit Score");
@@ -45,6 +46,7 @@ public class SearchPage extends CommonApi {
         return text ;
         }
         public String clicksearch2() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("Investor Relations");
@@ -52,7 +54,8 @@ public class SearchPage extends CommonApi {
         String text = siteMap.getText();
         return text ;
     }
-    public String clicksearch3() throws Exception {
+        public String clicksearch3() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("APR");
@@ -61,14 +64,16 @@ public class SearchPage extends CommonApi {
         return text ;
     }
     public String clicksearch4() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("Travel");
         searchSubmit.click();
-        String text = travelBenefits.getText();
+        String text = travelAgency.getText();
         return text ;
     }
     public String clicksearch5() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("Cash Back");
@@ -77,6 +82,7 @@ public class SearchPage extends CommonApi {
         return text ;
     }
     public String clicksearch6() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("ATM");
@@ -85,6 +91,7 @@ public class SearchPage extends CommonApi {
         return text ;
     }
     public String clicksearch7() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("Prepaid Cards");
@@ -94,6 +101,7 @@ public class SearchPage extends CommonApi {
 
     }
     public String clicksearch8() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("Accept Credit Card");
@@ -102,6 +110,7 @@ public class SearchPage extends CommonApi {
         return text ;
     }
     public String clicksearch9() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("Supplier Management");
@@ -110,6 +119,7 @@ public class SearchPage extends CommonApi {
         return text ;
     }
     public String clicksearch10() throws Exception {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchbutton.click();
         sleepFor(2);
         search.sendKeys("Membership");

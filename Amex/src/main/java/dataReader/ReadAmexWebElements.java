@@ -1,15 +1,12 @@
 package dataReader;
-
+import Report.TestLogger;
 import base.CommonApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import reader.Readxls;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class ReadAmexWebElements extends CommonApi {
     @FindBy(how = How.XPATH, xpath = "//h2[contains(text(),'About')]")
     WebElement about;
@@ -37,8 +34,8 @@ public class ReadAmexWebElements extends CommonApi {
     WebElement savingsAcoountsAndCds;
     @FindBy(xpath = "//ul[@class='axp-footer__dls__margin0___2Eiav axp-footer__dls__ulNav___31Cq4 axp-footer__dls__margin2T___1ZSVS axp-footer__dls__listLinks___2zEla']//a[@title='Gift Cards'][contains(text(),'Gift Cards')]")
     WebElement giftCards;
-
     public List webElementList(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         List<WebElement> webElements = new ArrayList<>();
         webElements.add(about);
         webElements.add(aboutAmericanExpress);
@@ -46,7 +43,6 @@ public class ReadAmexWebElements extends CommonApi {
         webElements.add(careers);
         webElements.add(siteMap);
         webElements.add(contactUs);
-
         List<String> list = new ArrayList<>();
         for (int i = 0; i<webElements.size();i++){
             list.add(webElements.get(i).getText());
@@ -55,6 +51,7 @@ public class ReadAmexWebElements extends CommonApi {
         return list;
     }
     public List webElementList1(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         List<WebElement> webElements1 = new ArrayList<>();
         webElements1.add(productAndServices);
         webElements1.add(creditCards);
@@ -63,7 +60,6 @@ public class ReadAmexWebElements extends CommonApi {
         webElements1.add(prepaidCards);
         webElements1.add(savingsAcoountsAndCds);
         webElements1.add(giftCards);
-
         List<String> list = new ArrayList<>();
         for (int i = 0; i<webElements1.size();i++){
             list.add(webElements1.get(i).getText());
@@ -71,10 +67,9 @@ public class ReadAmexWebElements extends CommonApi {
         System.out.println(list);
         return list;
     }
-
-   Readxls xlData = new Readxls("C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Amex\\Data\\AMEXWebElements.xlsx");
-
+    Readxls xlData = new Readxls("C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Amex\\Data\\AMEXWebElements.xlsx");
     public List expectedWebElement(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         int rowcount = xlData.getRowCount("ABOUT");
         List<String> expect = new ArrayList<>();
         for(int i = 1; i <= rowcount; i++){
@@ -83,9 +78,9 @@ public class ReadAmexWebElements extends CommonApi {
         System.out.println(expect);
         return expect;
     }
-
-   Readxls xlData1 = new Readxls("C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Amex\\Data\\AMEXWebElements.xlsx");
+    Readxls xlData1 = new Readxls("C:\\Users\\adibi\\Desktop\\nayna\\Team_Automation2018\\Amex\\Data\\AMEXWebElements.xlsx");
     public List expectedWebElement1(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonApi.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         int rowcount = xlData1.getRowCount("PRODUCTS & SERVICES");
         List<String> expect = new ArrayList<>();
         for(int i = 1; i <= rowcount; i++){
