@@ -2,16 +2,24 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Ebay Shopping Website " parallel="false">
-
-    <parameter name="OS" value="macOS Sierra"/>
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="userName" value="lazim122"/>
+    <parameter name="key" value="3521de6c-5cf2-42cf-af5a-f5d0cf8afeb4"/>
+    <parameter name="OS" value="macOS 10.12"/>
     <parameter name="browser" value="chrome"/>
-    <parameter name="browserVersion" value="64.0"/>
+    <parameter name="browserVersion" value="71.0"/>
     <parameter name="url" value="https://www.ebay.com"/>
 
     <test name = "Ebay Home">
         <classes>
-            <class name="Test.Buyingstuff"/>
-
+            <class name="Test.login"/>
+            <class name="Test.TestGoogleSheet"/>
+            <class name="Test.XLSXTest"/>
+            <class name="TestHome"/>
+            <class name="Test.TestbuyandSell"/>
+            <class name="Test.TestSell"/>
+            <class name="Test.BrokenLink"/>
+            <class name="Test.TestCareers"/>
         </classes>
     </test>
 </suite>

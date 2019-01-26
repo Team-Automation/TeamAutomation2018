@@ -2,6 +2,8 @@ package myApi.search;
 
 import base.CommonApi;
 import myApi.EbayApi;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class SearchPage extends CommonApi {
@@ -18,6 +20,8 @@ public class SearchPage extends CommonApi {
         typeByCss("#userid", "haquelazimul@yahoo.com");
         typeByCss("#pass", "710727");
         clickById("sgnBt");
+
+
     }
 
    public void SearchOption() {
