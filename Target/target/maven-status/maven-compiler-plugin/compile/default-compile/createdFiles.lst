@@ -1,1 +1,9 @@
+page/objects/HomePage.class
+page/objects/LoginPage.class
+page/objects/CategoriesPage.class
 datasource/DatabaseOperation.class
+findElements/Target.class
+page/objects/SearchPage.class
+applicationBase/ApplicationPageBase.class
+page/objects/CreateAccountPage.class
+brokenLink/BrokenLinkForHomePage.class
