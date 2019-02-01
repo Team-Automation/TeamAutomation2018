@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite name="CNN News" >
+<suite name="CNN News" parallel="false">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="userName" value="hasibahmed92"/>
     <parameter name="key" value="83da5359-90fb-4468-a525-2e38129f1e42"/>
-    <parameter name="OS" value="OS X"/>
+    <parameter name="OS" value="macOS"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="browserVersion" value="71.0.3578.98"/>
     <parameter name="url" value="https://www.cnn.com/"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="71.0"/>
 
 
     <test name = "CNN Search">
         <classes>
-            <class name="SearchTest.SearchTest"/>
+            <!--<class name="SearchTest.SearchTest"/>-->
+            <!--<class name="SearchTest.SearchMenuTest"/>-->
+            <!--<class name="SearchTest.DatabaseTest"/>-->
+            <!--<class name="SearchTest.XLSXTest"/>-->
+            <class name="SearchTest.TestGoogleSheet"/>
+
         </classes>
     </test>
 

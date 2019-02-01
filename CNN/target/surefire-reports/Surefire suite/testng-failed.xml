@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test thread-count="1" verbose="0" name="Surefire test(failed)">
+    <classes>
+      <class name="SearchTest.DatabaseTest">
+        <methods>
+          <include name="intializedElements"/>
+          <include name="afterEachTestMethod"/>
+          <include name="webElementName"/>
+          <include name="extentSetup"/>
+          <include name="setUp"/>
+          <include name="startExtent"/>
+        </methods>
+      </class> <!-- SearchTest.DatabaseTest -->
+      <class name="SearchTest.SearchTest">
+        <methods>
+          <include name="test10"/>
+          <include name="afterEachTestMethod"/>
+          <include name="test2"/>
+          <include name="test5"/>
+          <include name="test4"/>
+          <include name="goGermany"/>
+          <include name="test7"/>
+          <include name="extentSetup"/>
+          <include name="test6"/>
+          <include name="test9"/>
+          <include name="test8"/>
+          <include name="businessTechTopStories"/>
+          <include name="goScience"/>
+          <include name="showLiveTV"/>
+          <include name="searchBangladesh"/>
+          <include name="goDubai"/>
+          <include name="opinion"/>
+          <include name="test3"/>
+          <include name="USEnergy"/>
+          <include name="sports"/>
+          <include name="setUp"/>
+          <include name="Stars"/>
+          <include name="longLive"/>
+          <include name="AsiaFirstArticle"/>
+          <include name="workForCNNNews"/>
+          <include name="startExtent"/>
+          <include name="gettingTicket"/>
+          <include name="goCuba"/>
+          <include name="AfternoonTVSchedule"/>
+          <include name="test1"/>
+          <include name="letsStay"/>
+          <include name="SpaceAndScience1stArticle"/>
+          <include name="initializeElement"/>
+          <include name="liveVideos"/>
+          <include name="travelFood"/>
+          <include name="style"/>
+          <include name="LogInTest"/>
+          <include name="wayToLogIn"/>
+        </methods>
+      </class> <!-- SearchTest.SearchTest -->
+      <class name="SearchTest.XLSXTest">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="webElementName"/>
+          <include name="intializedElements"/>
+          <include name="webElementName1"/>
+          <include name="extentSetup"/>
+          <include name="setUp"/>
+          <include name="startExtent"/>
+        </methods>
+      </class> <!-- SearchTest.XLSXTest -->
+      <class name="SearchTest.buttonTest">
+        <methods>
+          <include name="initializeElement"/>
+          <include name="afterEachTestMethod"/>
+          <include name="Test5"/>
+          <include name="Test14"/>
+          <include name="Test6"/>
+          <include name="Test13"/>
+          <include name="Test7"/>
+          <include name="Test12"/>
+          <include name="Test8"/>
+          <include name="extentSetup"/>
+          <include name="Test11"/>
+          <include name="Test10"/>
+          <include name="Test2"/>
+          <include name="startExtent"/>
+          <include name="Test3"/>
+          <include name="Test4"/>
+          <include name="Test9"/>
+          <include name="Test1"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- SearchTest.buttonTest -->
+      <class name="SearchTest.SearchMenuTest">
+        <methods>
+          <include name="searchIndia"/>
+          <include name="foodAndDrink"/>
+          <include name="afterEachTestMethod"/>
+          <include name="TravelingVid"/>
+          <include name="extentSetup"/>
+          <include name="initializeElement"/>
+          <include name="startExtent"/>
+          <include name="showPhotos"/>
+          <include name="showVideos"/>
+          <include name="politicsCongress"/>
+          <include name="showMenu"/>
+          <include name="letsTravel"/>
+          <include name="showVideo"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- SearchTest.SearchMenuTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

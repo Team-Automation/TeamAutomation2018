@@ -1,12 +1,11 @@
 package SearchPage;
 
-import base.Common;
+import Mybase.Common;
 import base.CommonApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class SearchPage extends Common {
-
     @FindBy(xpath = "//a[@id='nav-mobileTV']")
     public static WebElement televition;
     public void liveTv() {
@@ -182,15 +181,12 @@ public class SearchPage extends Common {
     @FindBy (className = "cd__headline-text")
     WebElement topStories;
     public WebElement getTopStories (){return topStories;}
-
-
     public void logIn(){
         clickByXpath("//div[@class='nav-menu__hamburger']");
         clickByClass("nav-flyout__submenu-link");
         clickByXpath("//a[@class='nav-account-link']");
         typeByCss("#user_email","CR7@gmail.com");
         typeByCss("#user_password","ImTheBest"); }
-
     public void travelP() {
         clickByXpath("//a[contains(text(),'Travel')]");
         clickByXpath("//a[@class='Header__section'][contains(text(),'Destinations')]");
@@ -226,7 +222,4 @@ public class SearchPage extends Common {
         clickByXpath("//a[contains(text(),'Entertainment')]");
         clickByXpath("//a[@title='Stars']");
         clickByClass("cd__headline-text"); }
-
-
-
 }

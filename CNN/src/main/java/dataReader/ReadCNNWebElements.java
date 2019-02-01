@@ -4,69 +4,69 @@ import base.CommonApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import reader.Readxls;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReadCNNWebElements extends CommonApi {
 
-    @FindBy(how = How.XPATH, xpath = "//a[@class='nav-menu-links__link'][contains(text(),'U.S.')]")
-    WebElement US;
-    @FindBy(xpath = "//a[@class='nav-menu-links__link'][contains(text(),'World')]")
-    WebElement World;
-    @FindBy(xpath = "//a[contains(text(),'Politics')]")
-    WebElement Politics;
-    @FindBy(xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Business')]")
-    WebElement Business;
-    @FindBy(xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Opinion')]")
-    WebElement Opinion;
-    @FindBy(xpath = "//a[contains(text(),'Health')]")
-    WebElement Health;
-    @FindBy(how = How.XPATH, xpath = "//a[contains(text(),'Entertainment')]")
-    WebElement Entertainment;
-    @FindBy(xpath = "//a[contains(text(),'Style')]")
+    @FindBy(how = How.XPATH, xpath = "//a[@class='m-footer__title__link'][contains(text(),'Tech')]")
+    WebElement Tech;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Innovate')]")
+    WebElement Innovate;
+    @FindBy(xpath = "//ol[@class='m-footer__subtitles m-footer__subtitles--tech']//a[@class='m-footer__link'][contains(text(),'Gadget')]")
+    WebElement Gadget;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Mission: Ahead')]")
+    WebElement MissionAhead;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Upstarts')]")
+    WebElement Upstarts;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Work Transformed')]")
+    WebElement WorkTransformed;
+    @FindBy(how = How.XPATH, xpath = "//a[@class='m-footer__link'][contains(text(),'Innovative Cities')]")
+    WebElement InnovativeCities;
+    @FindBy(xpath = "//a[@class='m-footer__title__link']//img[@class='nav-menu__img-style']")
     WebElement Style;
-    @FindBy(xpath = "//a[contains(text(),'Travel')]")
-    WebElement Travel;
-    @FindBy(xpath = "//a[contains(text(),'Sports')]")
-    WebElement Sports;
-    @FindBy(xpath = "//a[@class='nav-menu-links__link'][contains(text(),'Video')]")
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Arts')]")
+    WebElement Arts;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Design')]")
+    WebElement Design;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Fashion')]")
+    WebElement Fashion;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Architecture')]")
+    WebElement Architecture;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Luxury')]")
+    WebElement Luxury;
+    @FindBy(xpath = "//a[@class='m-footer__link'][contains(text(),'Autos')]")
+    WebElement Autos;
+    @FindBy(xpath = "//ol[@class='m-footer__subtitles m-footer__subtitles--style']//a[@class='m-footer__link'][contains(text(),'Video')]")
     WebElement Video;
-    @FindBy(xpath = "//a[@class='m-footer__title__link'][contains(text(),'Coupons')]")
-    WebElement Coupons;
-    @FindBy(xpath = "//a[@class='m-footer__title__link'][contains(text(),'More…')]")
-    WebElement More;
 
-    public List webElementList() {
-        List<WebElement> webElements = new ArrayList<>();
-        webElements.add(US);
-        webElements.add(World);
-        webElements.add(Politics);
-        webElements.add(Business);
-        webElements.add(Opinion);
-        webElements.add(Health);
-
-        List<String> list = new ArrayList<>();
+    public List webElementList1() {
+        List<WebElement> webElements = new ArrayList<WebElement>();
+        webElements.add(Tech);
+        webElements.add(Innovate);
+        webElements.add(Gadget);
+        webElements.add(MissionAhead);
+        webElements.add(Upstarts);
+        webElements.add(WorkTransformed);
+        webElements.add(InnovativeCities);
+        List<String> list = new ArrayList<String>();
         for (int i = 0; i < webElements.size(); i++) {
             list.add(webElements.get(i).getText());
         }
         System.out.println(list);
         return list;
     }
-
-    public List webElementList1() {
+    public List webElementList2() {
         List<WebElement> webElements1 = new ArrayList<>();
-        webElements1.add(Entertainment);
         webElements1.add(Style);
-        webElements1.add(Travel);
-        webElements1.add(Sports);
+        webElements1.add(Arts);
+        webElements1.add(Design);
+        webElements1.add(Fashion);
+        webElements1.add(Architecture);
+        webElements1.add(Luxury);
+        webElements1.add(Autos);
         webElements1.add(Video);
-        webElements1.add(Coupons);
-        webElements1.add(More);
-
-
         List<String> list = new ArrayList<>();
         for (int i = 0; i < webElements1.size(); i++) {
             list.add(webElements1.get(i).getText());
@@ -74,11 +74,8 @@ public class ReadCNNWebElements extends CommonApi {
         System.out.println(list);
         return list;
     }
-
-    //Readxls readxls = PageFactory.initElements(driver,Readxls.class);
     Readxls xlData = new Readxls("/Users/hasibahmed/IdeaProjects/TeamAutomation2018/CNN/Data/Book1.xlsx");
-
-    public List expectedWebElement() {
+    public List expectedWebElement1() {
         int rowcount = xlData.getRowCount("Sheet1");
         List<String> expect = new ArrayList<>();
         for (int i = 1; i <= rowcount; i++) {
@@ -87,10 +84,8 @@ public class ReadCNNWebElements extends CommonApi {
         System.out.println(expect);
         return expect;
     }
-
     Readxls xlData1 = new Readxls("/Users/hasibahmed/IdeaProjects/TeamAutomation2018/CNN/Data/Book1.xlsx");
-
-    public List expectedWebElement1() {
+    public List expectedWebElement2() {
         int rowcount = xlData1.getRowCount("Sheet2");
         List<String> expect = new ArrayList<>();
         for (int i = 1; i <= rowcount; i++) {

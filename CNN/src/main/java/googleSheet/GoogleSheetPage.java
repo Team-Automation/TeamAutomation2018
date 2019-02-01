@@ -5,33 +5,32 @@ import com.google.api.services.sheets.v4.model.*;
 import com.google.api.services.sheets.v4.Sheets;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import static googleApi.GoogleSheetReader.getSheetsService;
-import static org.openqa.selenium.support.How.*;
 
 public class GoogleSheetPage extends CommonApi {
-    @FindBy(how = CSS, using = "#login-user")
-    public static WebElement user;
-    @FindBy(how = CSS, using = "#login-password")
-    public static WebElement password;
-    @FindBy(css = "#login-submit")
-    public static WebElement logInButton;
-    @FindBy(css = "#alertMsg")
-    public static WebElement logInErrorMesage;
 
-    public void clickLogIn() throws InterruptedException {
-        sleepFor(4);
-        logInButton.click();
+    /*@FindBy(xpath = "//div[@type='button']")
+    public static WebElement searchButton;*/
+    @FindBy (id = "search-button")
+    public WebElement searchButton;
+    @FindBy(css = "#search-input-field")
+    public static WebElement input;
+    @FindBy(css = "#submit-button")
+    public static WebElement submitButton;
+    String spreadsheetId = "1xQRqC1j2dRxIsKwJD8DdQJNevuEv4u7ndn9iPBqmoWc";
+    String range = "Sheet1!A1:Z1000";
+
+    public void clickSearchButton() throws InterruptedException {
+        //sleepFor(4);
+       searchButton.click();
     }
-//    public void switchToLogInForm() {
-//        driver.switchTo().frame("Amex login");
-//   }
 
-    public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
-        // Build a new authorized API client service.
+    public List<List<Object>> getSpreadSheetRecords() throws IOException {
+
         Sheets service = getSheetsService();
         ValueRange response = service.spreadsheets().values()
                 .get(spreadsheetId, range)
@@ -43,24 +42,32 @@ public class GoogleSheetPage extends CommonApi {
             return values;
         }
     }
+    public List<String> searchItems() throws IOException, InterruptedException {
 
-    // //ALI_GS_TC1 LogIn by using Google Sheet sheet data
-    public List<String> signInByInvalidIdPass(String spreadsheetId, String range) throws IOException, InterruptedException {
-
-        List<List<Object>> col2Value = getSpreadSheetRecords(spreadsheetId, range);
+        List<List<Object>> col2Value = getSpreadSheetRecords();
         List<String> actual = new ArrayList<>();
         for (List row : col2Value) {
             sleepFor(1);
-            inputValueInTextBoxByWebElement(user, row.get(0).toString());
-            inputValueInTextBoxByWebElement(password, row.get(1).toString());
+            inputValueInTextBoxByWebElement(input, row.get(0).toString());
+            //inputValueInTextBoxByWebElement(password, row.get(1).toString());
             sleepFor(1);
-            //actual.add(getCurrentPageTitle());
-            actual.add(getTextByWebElement(logInErrorMesage));
-            System.out.println(getTextByWebElement(logInErrorMesage));
-            clearInputBox(user);
-            clearInputBox(password);
+           // actual.add(getTextByWebElement(logInErrorMesage));
+            //System.out.println(getTextByWebElement(logInErrorMesage));
+            clearInputBox(input);
+           // clearInputBox(password);
             sleepFor(1);
         }
         return actual;
+    }
+//    public String getTextByWebElement (WebElement webElement){
+//        String text = webElement.getText();
+//        return text;
+//    }
+    public void testGoogleSheet() throws InterruptedException, IOException {
+        clickSearchButton();
+        List<String> actual = searchItems();
+        List<List<Object>> expected = getSpreadSheetRecords();
+
+        Assert.assertEquals(actual, expected);
     }
 }

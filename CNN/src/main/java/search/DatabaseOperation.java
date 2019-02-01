@@ -1,15 +1,14 @@
 package search;
 
 import Util.ConnectToSqlDB;
-
+import base.CommonApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class DatabaseOperation {
+public class DatabaseOperation extends CommonApi {
     public static ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 
     public static void insertDataIntoDB() {
@@ -17,7 +16,6 @@ public class DatabaseOperation {
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
         connectToSqlDB.insertStringDataFromArrayListToSqlTable(list, "headerList", "headers");
     }
-
     public static List<String> getHeaderValue() {
         List<String> headerList = new ArrayList<>();
         headerList.add("My Account");
@@ -28,15 +26,12 @@ public class DatabaseOperation {
         headerList.add("Help");
         return headerList;
     }
-
     public List<String> getUserDatafromDB() throws Exception {
         List<String> list = new ArrayList<>();
         list = connectToSqlDB.readDataBase("headerList", "headers");
         System.out.println(list);
         return list;
-
     }
-
     @FindBy(how = How.XPATH, xpath = "//a[@class='m-legal__links'][contains(text(),'Terms of Use')]")
     WebElement TermOfUse;
     @FindBy(xpath = "//a[@class='m-legal__links'][contains(text(),'Privacy Policy')]")
@@ -58,8 +53,6 @@ public class DatabaseOperation {
         headerList1.add(AdChoices);
         headerList1.add(CNNStudioTours);
         headerList1.add(CNNNewsource);
-
-
         List<String> list = new ArrayList<>();
         for (int i = 0; i<headerList1.size();i++){
             list.add(headerList1.get(i).getText());

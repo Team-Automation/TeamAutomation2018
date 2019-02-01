@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SearchTest extends SearchPage {
-    SearchPage searchPage;
+    SearchPage searchPage=null;
     @BeforeMethod
     public void initializeElement(){ searchPage = PageFactory.initElements(driver, SearchPage.class); }
     @Test
@@ -115,7 +115,7 @@ public class SearchTest extends SearchPage {
         searchPage.getEmail().sendKeys("Ahmed", Keys.ENTER);
         searchPage.getPassword().sendKeys("fewggfguqgw",Keys.ENTER); }
     @Test
-    public void LogInTest(){logIn();}
+    public void LogInTest(){ logIn();}
     @Test
     public void test1() { liveTv(); }
     @Test
