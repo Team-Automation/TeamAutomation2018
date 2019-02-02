@@ -1,6 +1,5 @@
 package googleSheet;
 
-
 import base.CommonApi;
 import com.google.api.services.sheets.v4.model.*;
 import com.google.api.services.sheets.v4.Sheets;
@@ -9,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import static googleApi.GoogleSheetReader.getSheetsService;
 import static org.openqa.selenium.support.How.*;
 
@@ -24,15 +22,11 @@ import static org.openqa.selenium.support.How.*;
         public static WebElement logInButton;
         @FindBy(css = "#errf")
         public static WebElement logInErrorMesage;
-
         public void clickLogIn() throws InterruptedException {
             sleepFor(4);
             signin.click();
             logInButton.click();
         }
-//    public void switchToLogInForm() {
-//        driver.switchTo().frame("Ebay login");
-//   }
         public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
             // Build a new authorized API client service.
             Sheets service = getSheetsService();
@@ -46,7 +40,6 @@ import static org.openqa.selenium.support.How.*;
                 return values;
             }
         }
-
         // //ALI_GS_TC1 LogIn by using Google Sheet sheet data
         public List<String> signInByInvalidIdPass(String spreadsheetId, String range) throws IOException, InterruptedException {
 

@@ -1,11 +1,7 @@
 package myApi.login;
-import base.CommonApi;
 import myApi.EbayApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import java.util.ArrayList;
-import java.util.List;
 public class CreateLogSearch extends EbayApi {
     @FindBy (xpath = "//span[@id='gh-ug']/a[@href='https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.com%2F']")
     WebElement sign;
@@ -27,15 +23,11 @@ public class CreateLogSearch extends EbayApi {
     WebElement cpassword;
     @FindBy (id ="ppaFormSbtBtn" )
     WebElement clickregister;
-    public void clicksign(){ sign.click(); }
+    public void clickSign(){ sign.click(); }
     public void setUserName(String Value){ userName.sendKeys(Value); }
     public void setPassword(String value) { password.sendKeys(value); }
-
-    public WebElement getSign() {
-        return signin;
-    }
-
-    public void clicksubmit() {
+    public WebElement getSign() { return signin; }
+    public void clickSubmit() {
         signin.click();
     }
     public void clickFb(){

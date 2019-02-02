@@ -3,7 +3,6 @@ package myApi.sell;
 import myApi.EbayApi;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.io.IOException;
 
 public class SellProduct extends EbayApi {
@@ -19,10 +18,8 @@ public class SellProduct extends EbayApi {
     WebElement buyitem;
     @FindBy(className= ".addonbtn.addonnothx.addon-overlay-close-button")
     WebElement popup;
-
     public void clickelectronics()  {
         Electronics.click();
-
     }
     public void finditem(String Value){
         item.sendKeys(Value);

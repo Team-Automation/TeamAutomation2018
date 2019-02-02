@@ -18,28 +18,28 @@ public class login extends EbayApi {
     }
     @Test
     public void invalidLogin() {
-        createLogSearch.clicksign();
+        createLogSearch.clickSign();
         createLogSearch.setUserName(username);
         createLogSearch.setPassword(password);
-        createLogSearch.clicksubmit();
+        createLogSearch.clickSubmit();
         Assert.assertFalse(createLogSearch.getSign().isDisplayed());
         logger.info("Tried using invalid password to log in");
     }
     @Test
     public void emailBoxcheck() {
-        createLogSearch.clicksign();
+        createLogSearch.clickSign();
         createLogSearch.setUserName(username);
         logger.info("email checked");
     }
     @Test
     public void passwordBoxCheck() {
-        createLogSearch.clicksign();
+        createLogSearch.clickSign();
         createLogSearch.setPassword(password);
         logger.info("Invalid password used to login");
     }
     @Test
     public void signWithFb() {
-        createLogSearch.clicksign();
+        createLogSearch.clickSign();
         createLogSearch.clickFb();
         logger.info("clicked alternative log in method");
     }
